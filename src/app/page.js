@@ -1,6 +1,8 @@
 import React from 'react';
 import Image from "next/image";
-import { motion } from 'framer-motion';
+// import { motion } from 'framer-motion';
+import { ArrowRight } from 'lucide-react';
+
 
 import HeroSection from "@/components/HeroSection";
 
@@ -77,9 +79,9 @@ const ClientShowcase = () => {
   return (
     <section className="w-full py-16 bg-gray-50">
       <div className="container mx-auto text-center">
-        <h2 className="text-lg font-bold mb-2">We Worked With</h2>
+        <h2 className="text font-bold mb-2">We Worked With</h2>
         <h3 className="text-lg font-bold mb-12">Meet Our Clients</h3>
-        
+{/*         
         <motion.div 
           className="flex overflow-hidden"
           animate={{ x: ["0%", "-50%"] }}
@@ -92,22 +94,141 @@ const ClientShowcase = () => {
             },
           }}
         >
-          {[...clients, ...clients].map((client, index) => (
+          {clients.map((client, index) => (
             <div key={index} className="flex-shrink-0 mx-8 w-[197px] h-[89.733px]">
               {client.logo}
             </div>
           ))}
-        </motion.div>
+        </motion.div> */}
       </div>
     </section>
   );
 };
+
+const EstimatingServices = () => {
+  const services = [
+    {
+      title: 'Certified Estimators for Every Project',
+      description: 'Precise estimates for residential, commercial, and industrial projects, following guidelines by the American Estimators Organization and ASPE.',
+      color: 'bg-purple-100',
+    },
+    {
+      title: 'Professional Estimating Services',
+      description: 'With 15 years in the industry, Unigan MetalBiz expert estimators deliver precise material estimates across all construction trades, ensuring timely and accurate results.',
+      color: 'bg-pink-100',
+    },
+    {
+      title: 'Cutting-Edge Tools at Competitive Prices',
+      description: 'Using Planswift, Bluebeam, RS Means & more, Unigan MetalBiz delivers quality estimates with up-to-date-based pricing. Get affordable, accurate estimates at unbelievable cost.',
+      color: 'bg-green-100',
+    },
+  ];
+
+  return (
+  
+    <div className="bg-gray-900 p-6 rounded-3xl  shadow-lg max-w-[1400px] mx-auto">
+      <h2 className="text-white text-2xs font-bold mb-4 text-center">Here You Check</h2>
+      <h2 className="text-white text-2xl font-bold mb-4 text-center">Our Estimating Services</h2>
+      <div className="flex flex-col lg:flex-row gap-6">
+        <div className="w-full lg:w-auto space-y-4 flex-shrink-0">
+          {services.map((service, index) => (
+            <div key={index} className={`${service.color} p-4 rounded-3xl w-full lg:w-[654px] h-[218px] flex-shrink-0`}>
+              <h3 className="text-gray-800 font-semibold mb-2">{service.title}</h3>
+              <p className="text-gray-600 text-sm">{service.description}</p>
+            </div>
+          ))}
+        </div>
+        <div className="w-full lg:w-[600px] h-[843px] flex-shrink-0 rounded-3xl overflow-hidden relative">
+
+         <Image
+            src="\Frame22.png"
+            alt="Estimating services illustration"
+            layout="fill"
+            objectFit="cover"
+            className="rounded-lg"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#13151B] opacity-80"></div>
+          <div className="absolute inset-0 flex items-center justify-center text-white">
+            Hehe wait
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+const ServiceCard = ({ title, description, imagePath }) => (
+  <div className="bg-white rounded-3xl shadow-md overflow-hidden">
+    <div className="h-48 w-full bg-gray-200" style={{
+      backgroundImage: `url(${imagePath})`,
+      backgroundSize: 'cover',
+      backgroundPosition: 'center'
+    }}></div>
+    <div className="p-4">
+      <h3 className="text-lg font-semibold mb-2">{title}</h3>
+      <p className="text-sm text-gray-600 mb-4">{description}</p>
+      <button className="flex items-center text-blue-600 hover:text-blue-800 text-sm font-medium">
+        Read More <ArrowRight className="ml-1 w-4 h-4" />
+      </button>
+    </div>
+  </div>
+);
+
+const ConstructionTakeoffPage = () => {
+  const services = [
+    {
+      title: "Bid Estimates",
+      description: "We provide accurate bid estimates for contractors and subcontractors, using location-specific material.",
+      imagePath: "dummyimage"
+    },
+    {
+      title: "Design Estimates",
+      description: "We provide design estimates for architects & designers. Our estimates include all stages.",
+      imagePath: "dummyimage"
+    },
+    {
+      title: "Construction Estimator",
+      description: "We provide accurate cost estimates for contractors and subcontractors using location-specific material.",
+      imagePath: "dummyimage"
+    }
+  ];
+
+  return (
+    <div className="bg-gray-100 min-h-screen py-8 px-4">
+      <div className="max-w-6xl mx-auto">
+        <div className="flex justify-between items-center mb-6">
+          <div>
+            <h1 className="text-2sl font-bold text-gray-800 text-center">Accurate Estimates, Faster Results</h1>
+            <h1 className="text-2xl font-bold text-gray-800 text-center">Construction Takeoff Services</h1>
+            <p className="text-sm text-gray-600 mt-1 text-center">
+              Accurate takeoff services and estimates for contractors, architects, and
+              builders, supporting bidding, budgeting, and procurement.
+            </p>
+          </div>
+          <button className="w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-md">
+            <ArrowRight className="w-6 h-6 text-gray-600" />
+          </button>
+        </div>
+        
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {services.map((service, index) => (
+            <ServiceCard key={index} {...service} />
+          ))}
+          <div className="bg-gray-200 rounded-3xl" style={{ height: '300px' }}></div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
 
 export default function Home() {
   return (
     <div className="flex flex-col items-center">
       <HeroSection />
       <ClientShowcase />
+      <EstimatingServices />
+      <ConstructionTakeoffPage />
     </div>
   );
 }
