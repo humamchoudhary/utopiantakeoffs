@@ -9,7 +9,7 @@ export default async function HeroSection() {
       <p className="text-lg mt-6">
         Material Takeoff & Construction Estimating Services
       </p>
-      <h1 className="ubuntu font-bold text-8xl">BID MORE WIN MORE!</h1>
+      <h1 className="font-bold text-8xl">BID MORE WIN MORE!</h1>
       <div className="flex lfex-row gap-2 items-center justify-center mt-6">
         <Link className="border px-6 py-3 border-fg rounded-2xl" href="/">
           Contact Us
