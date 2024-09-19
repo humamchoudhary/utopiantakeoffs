@@ -181,9 +181,10 @@ const EstimatingServices = () => {
               key={index}
               className={`${service.color} p-4 rounded-3xl w-full lg:w-[654px]  flex-shrink-0`}
             >
+              <div className="">
               <h3 className="text-gray-800 font-semibold mb-2">
                 {service.title}
-              </h3>
+              </h3></div>
               <p className="text-fg text-">{service.description}</p>
             </div>
           ))}
