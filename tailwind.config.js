@@ -7,6 +7,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      screens: {
+        laptop: "1440px",
+      },
       colors: {
         primaryhex: "#972A20",
         bghex: "#FFF",
