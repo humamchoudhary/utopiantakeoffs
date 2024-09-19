@@ -407,7 +407,7 @@ async function ServicesSection() {
           all CSI divisions. Some of them are listed below:
         </p>
       </div>
-      <div className="relative max-w-screen-laptop">
+      <div className="relative max-w-screen-laptop overflow-hidden">
         <div className="flex flex-row gap-4 ">
           {Services.map((item, index) => (
             <div
