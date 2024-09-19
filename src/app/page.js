@@ -5,8 +5,8 @@ import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import * as motion from "framer-motion/client";
 import HeroSection from "@/components/HeroSection";
-import WomanImage from "@/assets/images/woman.jpeg";
-import DummyImage from "@/assets/images/placeholder.jpeg";
+import WomanImage from "./assets/images/woman.jpeg";
+import DummyImage from "./assets/images/placeholder.jpeg";
 const clients = [
   {
     name: "Okta",
@@ -172,7 +172,7 @@ const EstimatingServices = () => {
       <h2 className="text-[#CAA4A2] text-xl font-semibold text-center">
         Here You Check
       </h2>
-      <h2 className="text-[#E4E4E4] text-4xl font-semibold text-center mb-[102px]">
+      <h2 className="text-[#E4E4E4] text-[40px] font-semibold text-center mb-[102px]">
         Our Estimating Services
       </h2>
       <div className="flex flex-row justify-center gap-12">
@@ -304,6 +304,167 @@ const ConstructionTakeoffPage = () => {
   );
 };
 
+async function WhyUs() {
+  const info = [
+    {
+      title: "Fast Turnaround",
+      desc: "Estimates and takeoffs delivered in 24-48 hours.",
+    },
+    {
+      title: "Affordable Pricing",
+      desc: "Estimates from $200, based on scope.",
+    },
+    {
+      title: "Accurate Estimates",
+      desc: "Precision with advanced software and cost databases.",
+    },
+    {
+      title: "Certified Experts",
+      desc: "Skilled estimators using top industry tools.",
+    },
+    {
+      title: "92% Bid Success",
+      desc: "EOver 92% success rate based on past contractor bids.",
+    },
+    {
+      title: "Skilled Team",
+      desc: "Our team includes estimators, engineers, and field experts.",
+    },
+  ];
+
+  return (
+    <div className="w-full rounded-[23px] flex flex-col items-center py-20 px-24 bg-fg">
+      <p className="text-[#CAA4A2] text-xl font-semibold text-center">
+        Why Many Clients
+      </p>
+      <h3 className="text-[40px] text-[#E4E4E4] font-semibold text-center">
+        Choose UtopianTakeoffs?
+      </h3>
+      <p className="text-[#B0B0B0] text-2xl leading-10 text-center mt-4 w-[873px] mb-20">
+        Contractors save time and estimating costs with our expert services,
+        helping them bid more and win jobs successfully.
+      </p>
+      <div className="grid grid-cols-3 gap-6">
+        {info.map((item, index) => (
+          <div
+            key={index}
+            className="flex p-6 flex-col bg-[#26272D] gap-4 border-[#4E4E4E] border rounded-[24px]"
+          >
+            <div className="bg-[#70332F] border border-[#9B5854] p-5 w-min h-min rounded-full">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="36"
+                height="36"
+                viewBox="0 0 36 36"
+                fill="none"
+              >
+                <path
+                  d="M25.4179 4.27097C27.5308 3.22469 28.5873 2.70156 29.3013 3.17654C30.0151 3.65153 29.9136 4.81007 29.7106 7.12715L29.6581 7.72659C29.6004 8.38505 29.5716 8.71426 29.6746 9.01268C29.7775 9.3111 30.0007 9.54493 30.4471 10.0126L30.8536 10.4384C32.4244 12.0841 33.2098 12.907 32.9509 13.7502C32.692 14.5933 31.5603 14.8983 29.2968 15.5083L28.7112 15.6662C28.068 15.8396 27.7464 15.9263 27.4899 16.1276C27.2335 16.3289 27.0712 16.6221 26.7466 17.2084L26.4511 17.7422C25.309 19.8057 24.7381 20.8374 23.8642 20.8834C22.9903 20.9295 22.3923 19.9594 21.1963 18.0195L20.887 17.5176C20.5471 16.9662 20.3772 16.6906 20.1157 16.5166C19.8543 16.3426 19.5307 16.29 18.8838 16.1847L18.2947 16.0889C16.0182 15.7183 14.8797 15.5331 14.5986 14.7184C14.3174 13.9038 15.0796 12.9992 16.6039 11.1902L16.9983 10.7222C17.4315 10.2081 17.6481 9.95105 17.7429 9.64218C17.8377 9.33333 17.8 9.00762 17.7247 8.35618L17.6562 7.76313C17.3913 5.47074 17.2588 4.32455 17.9589 3.77496C18.6589 3.22538 19.728 3.63638 21.8659 4.45836L22.4191 4.67103C23.0266 4.90461 23.3305 5.0214 23.6506 5.00451C23.9707 4.98762 24.2709 4.83897 24.8713 4.54164L25.4179 4.27097Z"
+                  fill="#E4E4E4"
+                />
+                <path
+                  d="M13.5668 16.9805C8.98573 19.9046 4.90667 25.1951 3.13621 30.0482C2.56178 31.6227 3.88604 33.0009 5.57502 33.0009H7.125C7.12511 32.4747 7.24836 31.8209 7.43058 31.1346C7.61814 30.4283 7.88829 29.6145 8.22501 28.7424C8.89832 26.9988 9.85587 24.9758 11.0043 23.0478C12.1486 21.1268 13.5093 19.2549 15.0018 17.8488C15.0387 17.814 15.0759 17.7795 15.1131 17.745C15.078 17.7344 15.0434 17.7236 15.0093 17.7126C14.5829 17.5754 14.05 17.357 13.5668 16.9805Z"
+                  fill="#E4E4E4"
+                />
+                <path
+                  d="M18.0303 18.3259C17.5522 18.6184 17.0557 19.005 16.5447 19.4865C15.2594 20.6974 14.0221 22.3782 12.9373 24.1993C11.8567 26.0134 10.9538 27.9219 10.324 29.5528C10.0091 30.3682 9.76704 31.1026 9.60524 31.7119C9.43835 32.3406 9.37512 32.7696 9.375 33.0009H13.6246C13.6247 31.3149 14.2086 28.1923 15.2653 25.0632C16.0408 22.7671 17.1145 20.3332 18.4983 18.4021L18.0303 18.3259Z"
+                  fill="#E4E4E4"
+                />
+                <path
+                  d="M19.9478 20.2705C18.9342 21.8361 18.0713 23.7885 17.3976 25.7836C16.3808 28.7946 15.8753 31.6567 15.875 33.0013H17.8082C19.4972 33.0013 20.8569 31.6417 20.9694 29.971C21.1626 27.0999 21.6059 24.5121 22.1122 22.6717C21.611 22.3774 21.2237 21.9907 20.9389 21.6562C20.6104 21.2706 20.2799 20.7889 19.9478 20.2705Z"
+                  fill="#E4E4E4"
+                />
+              </svg>
+            </div>
+            <div className="">
+              <p className="text-semibold text-2xl text-[#E4E4E4] font-bold">
+                {item.title}
+              </p>
+              <p className=" leading-8 text-xl text-[#A8A8A8] font-semibold">
+                {item.desc}
+              </p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+import { Services } from "@/constants/Info";
+async function ServicesSection() {
+  return (
+    <div className="overflow-hidden  py-20 px-4">
+      <div>
+        <p className="text-primary text-xl font-semibold text-center">
+          What We Provide
+        </p>
+        <h3 className="text-[40px] text-fg font-semibold text-center">
+          Utopian Takeoffs
+        </h3>
+        <p className="text-[#475464] text-2xl leading-10 text-center mt-4 w-[873px] mx-auto  mb-20">
+          Our construction estimators have expertise in construction takeoffs in
+          all CSI divisions. Some of them are listed below:
+        </p>
+      </div>
+      <div className="relative max-w-screen-laptop">
+        <div className="flex flex-row gap-4 ">
+          {Services.map((item, index) => (
+            <div
+              key={index}
+              className={` flex items-center justify-center flex-shrink-0 ${index % 2 === 0 ? "bg-fg" : "bg-primary"} h-32 w-72 rounded-2xl `}
+            >
+              <p className="text-xl text-bg text-center font-semibold">
+                {item.name}
+              </p>
+            </div>
+          ))}
+        </div>
+        <div className="flex flex-row gap-4 -translate-x-24 mt-6">
+          {Services.reverse().map((item, index) => (
+            <div
+              key={index}
+              className={` flex items-center justify-center flex-shrink-0 ${index % 2 === 0 ? "bg-fg" : "bg-primary"} h-32 w-72 rounded-2xl `}
+            >
+              <p className="text-xl text-bg text-center font-semibold">
+                {item.name}
+              </p>
+            </div>
+          ))}
+        </div>
+        <div className="fade" />
+      </div>
+    </div>
+  );
+}
+
+async function WorkWithUs() {
+  return (
+    <div className="px-12 w-full">
+      <div className="relative w-full flex flex-col justify-center items-center bg-primary rounded-3xl py-[72px]">
+        <div className="absolute right-0 bottom-0">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="1119"
+            height="342"
+            viewBox="0 0 1119 342"
+            fill="none"
+          >
+            <path
+              d="M302.559 146.38C24.0127 143.246 0 342 0 342H1139V0C1139 0 1062.96 191.592 851.649 232.775C640.337 273.958 581.106 149.513 302.559 146.38Z"
+              fill="white"
+              fill-opacity="0.04"
+            />
+          </svg>
+        </div>
+        <div className="px-5 py-4 border border-bg rounded-xl">
+          <p className="text-lg text-bg font-semibold">Save 30% Now</p>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export default async function Home() {
   return (
     <div className="flex flex-col items-center">
@@ -311,6 +472,9 @@ export default async function Home() {
       <ClientShowcase />
       <EstimatingServices />
       <ConstructionTakeoffPage />
+      <WhyUs />
+      <ServicesSection />
+      <WorkWithUs />
     </div>
   );
 }
