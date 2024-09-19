@@ -168,23 +168,23 @@ const EstimatingServices = () => {
 
   return (
     <div className="bg-[#13151B] w-full p-[70px] rounded-3xl">
-      <h2 className="text-white text-2xs font-bold mb-4 text-center">
+      <h2 className="text-[#CAA4A2] text-xl font-semibold text-center">
         Here You Check
       </h2>
-      <h2 className="text-white text-2xl font-bold text-center mb-[102px]">
+      <h2 className="text-[#E4E4E4] text-4xl font-semibold text-center mb-[102px]">
         Our Estimating Services
       </h2>
-      <div className="flex flex-row gap-12">
+      <div className="flex flex-row justify-center gap-12">
         <div className="w-full lg:w-auto space-y-4 flex-shrink-0">
           {services.map((service, index) => (
             <div
               key={index}
-              className={`${service.color} p-4 rounded-3xl w-full lg:w-[654px] h-[218px] flex-shrink-0`}
+              className={`${service.color} p-4 rounded-3xl w-full lg:w-[654px]  flex-shrink-0`}
             >
               <h3 className="text-gray-800 font-semibold mb-2">
                 {service.title}
               </h3>
-              <p className="text-gray-600 text-sm">{service.description}</p>
+              <p className="text-fg text-">{service.description}</p>
             </div>
           ))}
         </div>
