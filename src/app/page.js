@@ -6,6 +6,7 @@ import { ArrowRight } from "lucide-react";
 import * as motion from "framer-motion/client";
 import HeroSection from "@/components/HeroSection";
 import WomanImage from "@/assets/images/woman.jpeg";
+import DummyImage from "@/assets/images/placeholder.jpeg";
 const clients = [
   {
     name: "Okta",
@@ -149,7 +150,7 @@ const EstimatingServices = () => {
     {
       title: "Certified Estimators for Every Project",
       description:
-        "Precise estimates for residential, commercial, and industrial projects, following guidelines by the American Estimators Organization and ASPE.",
+        "Precise estimates for residential, commercial, and industrial projects, following guidelines by the American Estimators Organization and AACE.",
       color: "bg-purple-100",
     },
     {
@@ -161,13 +162,13 @@ const EstimatingServices = () => {
     {
       title: "Cutting-Edge Tools at Competitive Prices",
       description:
-        "Using Planswift, Bluebeam, RS Means & more, Unigan MetalBiz delivers quality estimates with up-to-date-based pricing. Get affordable, accurate estimates at unbelievable cost.",
+        "Using Planswift, Bluebeam, RS Means,& more, UtopianTakeoffs delivers quality estimates with zip-code-based pricing. Get affordable, accurate estimates all under one roof.",
       color: "bg-green-100",
     },
   ];
 
   return (
-    <div className="bg-[#13151B] w-full p-[70px] rounded-3xl">
+    <div className="bg-[#13151B] w-full px-16 py-20 rounded-3xl">
       <h2 className="text-[#CAA4A2] text-xl font-semibold text-center">
         Here You Check
       </h2>
@@ -179,13 +180,17 @@ const EstimatingServices = () => {
           {services.map((service, index) => (
             <div
               key={index}
-              className={`${service.color} p-4 rounded-3xl w-full lg:w-[654px]  flex-shrink-0`}
+              className={`${service.color} rounded-3xl w-full relative px-7 py-8 lg:w-[654px]  flex-shrink-0`}
             >
-              <div className="">
-              <h3 className="text-gray-800 font-semibold mb-2">
+              <h3 className="text-2xl text-fg font-semibold mb-2">
                 {service.title}
-              </h3></div>
-              <p className="text-fg text-">{service.description}</p>
+              </h3>
+              <p className="text-fg text-md mt-4 mr-4 leading-9">
+                {service.description}
+              </p>
+              <p className="text-6xl font-semibold absolute right-7 top-5  text-[#13151B] opacity-20">
+                {index + 1}
+              </p>
             </div>
           ))}
         </div>
@@ -193,14 +198,9 @@ const EstimatingServices = () => {
           <Image
             src={WomanImage}
             alt="Estimating services illustration"
-            layout="fill"
-            objectFit="cover"
-            className="rounded-lg"
+            className="rounded-lg object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#13151B] opacity-80"></div>
-          <div className="absolute inset-0 flex items-center justify-center text-white">
-            <Image />
-          </div>
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#13151B] "></div>
         </div>
       </div>
     </div>
@@ -208,20 +208,20 @@ const EstimatingServices = () => {
 };
 
 const ServiceCard = ({ title, description, imagePath }) => (
-  <div className="bg-white rounded-3xl shadow-md overflow-hidden">
-    <div
-      className="h-48 w-full bg-gray-200"
-      style={{
-        backgroundImage: `url(${imagePath})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-      }}
-    ></div>
-    <div className="p-4">
-      <h3 className="text-lg font-semibold mb-2">{title}</h3>
-      <p className="text-sm text-gray-600 mb-4">{description}</p>
-      <button className="flex items-center text-blue-600 hover:text-blue-800 text-sm font-medium">
-        Read More <ArrowRight className="ml-1 w-4 h-4" />
+  <div className="h-full min-w-[376px] flex flex-col items-stretch">
+    <Image
+      src={imagePath}
+      alt="Construction Estimator"
+      className="rounded-lg h-80 object-cover self-stretch"
+    />
+
+    <div className="py-4 mt-4">
+      <h2 className="font-bold text-2xl mb-4">{title}</h2>
+      <p className="text-fg leading-8 text-xl">{description}</p>
+    </div>
+    <div className="flex items-end justify-end mt-4">
+      <button className="flex  items-center text-fg font-semibold">
+        Read More
       </button>
     </div>
   </div>
@@ -233,53 +233,72 @@ const ConstructionTakeoffPage = () => {
       title: "Bid Estimates",
       description:
         "We provide accurate bid estimates for contractors and subcontractors, using location-specific material.",
-      imagePath: "dummyimage",
+      imagePath: DummyImage,
     },
     {
       title: "Design Estimates",
       description:
         "We provide design estimates for architects & designers. Our estimates include all stages.",
-      imagePath: "dummyimage",
+      imagePath: DummyImage,
     },
     {
       title: "Construction Estimator",
       description:
         "We provide accurate cost estimates for contractors and subcontractors using location-specific material.",
-      imagePath: "dummyimage",
+      imagePath: DummyImage,
+    },
+    {
+      title: "Construction Estimator",
+      description:
+        "We provide accurate cost estimates for contractors and subcontractors using location-specific material.",
+      imagePath: DummyImage,
+    },
+    {
+      title: "Construction Estimator",
+      description:
+        "We provide accurate cost estimates for contractors and subcontractors using location-specific material.",
+      imagePath: DummyImage,
+    },
+    {
+      title: "Construction Estimator",
+      description:
+        "We provide accurate cost estimates for contractors and subcontractors using location-specific material.",
+      imagePath: DummyImage,
+    },
+    {
+      title: "Construction Estimator",
+      description:
+        "We provide accurate cost estimates for contractors and subcontractors using location-specific material.",
+      imagePath: DummyImage,
     },
   ];
 
   return (
-    <div className="bg-gray-100 min-h-screen py-8 px-4">
-      <div className="max-w-6xl mx-auto">
-        <div className="flex justify-between items-center mb-6">
-          <div>
-            <h1 className="text-2sl font-bold text-gray-800 text-center">
-              Accurate Estimates, Faster Results
-            </h1>
-            <h1 className="text-2xl font-bold text-gray-800 text-center">
-              Construction Takeoff Services
-            </h1>
-            <p className="text-sm text-gray-600 mt-1 text-center">
-              Accurate takeoff services and estimates for contractors,
-              architects, and builders, supporting bidding, budgeting, and
-              procurement.
-            </p>
-          </div>
-          <button className="w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-md">
-            <ArrowRight className="w-6 h-6 text-gray-600" />
-          </button>
+    <div className="py-32 pl-14  max-w-screen-2xl flex flex-col items-center justify-center">
+      <div className="flex justify-between items-center mb-6">
+        <div>
+          <h1 className="text-xl font-semibold text-[#601E1A] text-center">
+            Accurate Estimates, Faster Results
+          </h1>
+          <h1 className="text-4xl font-semibold text-fg text-center">
+            Construction Takeoff Services
+          </h1>
+          <p className=" mb-40 text-[#475464] mt-4 px-64 text-2xl text-center">
+            Accurate takeoff services and estimates for contractors, architects,
+            and builders, supporting bidding, budgeting, and procurement.
+          </p>
         </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        {/* <button className="w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-md">
+          <ArrowRight className="w-6 h-6 text-gray-600" />
+        </button> */}
+      </div>
+      <div className="mx-14 overflow-hidden self-start w-[1300px] relative h-[580px]">
+        <div className=" flex flex-row gap-6 h-[560px] w-full  overflow-x-scroll  items-start justify-start">
           {services.map((service, index) => (
             <ServiceCard key={index} {...service} />
           ))}
-          <div
-            className="bg-gray-200 rounded-3xl"
-            style={{ height: "300px" }}
-          ></div>
         </div>
+        <div className="z-10 right-0 top-0 absolute  h-full w-96 bg-gradient-to-r from-transparent to-bg" />
       </div>
     </div>
   );
@@ -291,7 +310,7 @@ export default async function Home() {
       <HeroSection />
       <ClientShowcase />
       <EstimatingServices />
-      {/* <ConstructionTakeoffPage /> */}
+      <ConstructionTakeoffPage />
     </div>
   );
 }
