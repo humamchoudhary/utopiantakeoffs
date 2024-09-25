@@ -22,7 +22,7 @@ const ServiceCard = ({ title, description, imagePath }) => (
     </div>
     <div className="flex items-end justify-end mt-4  ">
       <button className="flex items-center gap-2 group">
-        <p className="text-fg font-semibold text-xl group-hover:underline duration-1000 transition-all  leading-8">
+        <p className="text-fg font-semibold text-xl group-hover:underline duration-150 leading-8">
           Read More
         </p>
         <svg
