@@ -26,7 +26,7 @@
 :root {
     --background: #fff;
     --foreground: #13151B;
-    --primary: #972A20;
+    --primary: #601E1A;
 }
 
 .fade {
@@ -51,7 +51,7 @@ body {
 }
 
 p {
-
+    line-height: normal;
     font-size: 16px;
 }
 
