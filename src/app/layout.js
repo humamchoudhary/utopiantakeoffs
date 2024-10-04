@@ -14,17 +14,22 @@ import Navbar from "@/components/Navbar";
 //   weight: "100 900",
 // });
 
+import { Toaster } from "react-hot-toast";
+
 export const metadata = {
   title: "Utopians Takeoff",
   description: "Utopians Takeoff website",
 };
 const sora = Sora({ subsets: ["latin"] });
+import emailjs from "@emailjs/browser";
 export default function RootLayout({ children }) {
+  emailjs.init({ publicKey: "3m5zvAEoGBZRSR7sJ" });
   return (
     <html lang="en">
       <body
         className={`antialiased bg-bg laptop:px-0 2xl:px-60 ${sora.className} `}
       >
+        <Toaster position="bottom-center" />
         <Navbar />
         {children}
       </body>
