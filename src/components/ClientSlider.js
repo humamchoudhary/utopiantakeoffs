@@ -7,32 +7,21 @@ const animation = { duration: 10000, easing: (t) => t };
 
 export default function CleintSlider({ clients }) {
   const [sliderRef] = useKeenSlider({
+    slides: {
+      perView: 5,
+      spacing: 48, // This corresponds to mx-8 in Tailwind
+    },
     loop: true,
     renderMode: "performance",
     drag: false,
-    slides: {
-      perView: 5,
-      spacing: 32, // This corresponds to mx-8 in Tailwind
-    },
     created(s) {
-      s.moveToIdx(clients.length * 2 - 1, true, animation);
+      s.moveToIdx(5, true, animation);
     },
     updated(s) {
-      console.log("update");
-      s.moveToIdx(
-        s.track.details.abs + clients.length * 2 - 1,
-        true,
-        animation,
-      );
+      s.moveToIdx(s.track.details.abs + 5, true, animation);
     },
-
     animationEnded(s) {
-      console.log("end");
-      s.moveToIdx(
-        s.track.details.abs + clients.length * 2 - 1,
-        true,
-        animation,
-      );
+      s.moveToIdx(s.track.details.abs + 5, true, animation);
     },
   });
 
@@ -41,10 +30,17 @@ export default function CleintSlider({ clients }) {
       <div className="container mx-auto text-center">
         <h2 className="text font-bold mb-2">We Worked With</h2>
         <h3 className="text-[40px] font-bold mb-12">Meet Our Clients</h3>
-        <div className="overflow-hidden relative">
-          <div ref={sliderRef} className=" flex items-center keen-slider">
-            {[...clients, ...clients].map((client, index) => (
-              <div key={index} className="keen-slider__slide">
+        <div className="overflow-hidden mx-auto w-[1200px] relative">
+          <div
+            ref={sliderRef}
+            className="flex items-center justify-center keen-slider"
+          >
+            {clients.map((client, index) => (
+              <div
+                key={index}
+                className="keen-slider__slide"
+                style={{ width: 200 }}
+              >
                 {client.logo}
               </div>
             ))}

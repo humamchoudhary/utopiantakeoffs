@@ -1,16 +1,18 @@
 "use server";
 import React from "react";
 import Image from "next/image";
-import { ArrowRight } from "lucide-react";
-import * as motion from "framer-motion/client";
+import { Download } from "lucide-react";
 import HeroSection from "@/components/HeroSection";
-import WomanImage from "./assets/images/woman.jpeg";
+import WomanImage from "./assets/images/building.png";
 import FileUpload from "@/components/HomeFileUpload";
 import Image1 from "@/app/assets/images/1.jpeg";
 import Image2 from "@/app/assets/images/2.jpeg";
 import Image3 from "@/app/assets/images/3.jpeg";
 import ConstructionTakeoffPage from "@/components/ConstructionTakeOff";
 import CleintSlider from "@/components/ClientSlider";
+import Footer from "@/components/Footer";
+import ReviewSlider from "@/components/Review_Audio";
+import ServiceSlider from "@/components/ServicesSlider";
 
 export default async function Home() {
   const services = [
@@ -39,6 +41,39 @@ export default async function Home() {
       imagePath: Image1,
     },
   ];
+
+  const a_reviews = [
+    {},
+    {
+      name: "Emily Rogers",
+      image: "/api/placeholder/50/50",
+    },
+    {
+      name: "Micheal Davis",
+      image: "/api/placeholder/50/50",
+    },
+    {
+      name: "Sarah Patel",
+      image: "/api/placeholder/50/50",
+    },
+    {
+      name: "Sarah Patel",
+      image: "/api/placeholder/50/50",
+    },
+
+    {
+      name: "Sarah Patel",
+      image: "/api/placeholder/50/50",
+    },
+    {
+      name: "Sarah Patel",
+      image: "/api/placeholder/50/50",
+    },
+    {
+      name: "Sarah Patel",
+      image: "/api/placeholder/50/50",
+    },
+  ];
   return (
     <div className="flex flex-col items-center">
       <HeroSection />
@@ -50,6 +85,8 @@ export default async function Home() {
       <WorkWithUs />
       <GetQoute />
       <OurWork />
+      <ReviewSlider reviews={a_reviews} />
+      <Footer />
     </div>
   );
 }
@@ -126,6 +163,23 @@ const ClientShowcase = () => {
         </svg>
       ),
     },
+
+    {
+      name: "accenture",
+      logo: (
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width={197}
+          height={90}
+          fill="none"
+        >
+          <path
+            fill="#999BA2"
+            d="M109.209 21.836v3.85l7.442 2.908-7.441 2.767v3.963l12.744-5.161v-3.194l-12.745-5.133Zm44.284 24.58h5.59c-.087-2.195-1.085-3.136-2.737-3.136-1.312 0-2.509.712-2.853 3.136Zm2.967 9.496c-4.306 0-7.242-2.568-7.242-7.53V48.1c0-4.99 3.107-7.728 7.098-7.728 3.707 0 6.816 2.08 6.816 7.015v1.797h-9.694c.171 2.68 1.311 3.707 3.107 3.707 1.596 0 2.451-.855 2.738-1.939h3.849c-.456 2.822-2.766 4.96-6.672 4.96Zm-17.195-15.227h4.163v2.737c.883-1.996 2.281-2.936 4.476-2.936v4.105c-2.823 0-4.476.856-4.476 3.338v7.67h-4.163V40.686ZM136.242 55.6h-4.164v-2.197c-.713 1.426-2.109 2.51-4.335 2.51-2.679 0-4.647-1.627-4.647-5.133V40.686h4.192v9.467c0 1.71.684 2.51 2.166 2.51 1.454 0 2.624-.913 2.624-2.766v-9.21h4.164v14.912ZM117.705 36.18v4.505h2.852v3.106h-2.852v7.074c0 1.113.514 1.626 1.483 1.626.599 0 1.055-.087 1.454-.256v3.25a8.473 8.473 0 0 1-2.339.312c-3.249 0-4.79-1.482-4.79-4.505v-7.5h-1.739v-3.105h1.739V37.89l4.192-1.71Zm-20.959 4.505h4.163v2.225c.743-1.398 2.224-2.539 4.506-2.539 2.709 0 4.505 1.625 4.505 5.246V55.6h-4.164v-9.353c0-1.74-.711-2.509-2.223-2.509-1.455 0-2.624.885-2.624 2.767V55.6h-4.163V40.685Zm-12.205 5.731h5.588c-.085-2.195-1.083-3.136-2.737-3.136-1.311 0-2.508.712-2.85 3.136Zm2.966 9.496c-4.306 0-7.243-2.568-7.243-7.53V48.1c0-4.99 3.108-7.728 7.1-7.728 3.707 0 6.815 2.08 6.815 7.015v1.797h-9.695c.171 2.68 1.312 3.707 3.108 3.707 1.597 0 2.452-.855 2.738-1.939h3.85c-.458 2.822-2.767 4.96-6.673 4.96Zm-15.628 0c-4.134 0-7.128-2.568-7.128-7.615V48.1c0-5.048 3.193-7.729 7.156-7.729 3.394 0 6.188 1.712 6.53 5.617h-3.991c-.257-1.453-.998-2.394-2.452-2.394-1.77 0-2.994 1.396-2.994 4.334v.456c0 3.023 1.083 4.391 3.022 4.391 1.426 0 2.48-1.055 2.708-2.68h3.793c-.284 3.392-2.594 5.817-6.644 5.817Zm-15.513 0c-4.134 0-7.128-2.568-7.128-7.615V48.1c0-5.048 3.193-7.729 7.156-7.729 3.394 0 6.188 1.712 6.53 5.617h-3.991c-.257-1.453-.998-2.394-2.452-2.394-1.77 0-2.994 1.396-2.994 4.334v.456c0 3.023 1.083 4.391 3.022 4.391 1.426 0 2.48-1.055 2.708-2.68h3.793c-.285 3.392-2.594 5.817-6.644 5.817Zm-13.603-5.275v-1.426H41.11c-2.052 0-3.107.57-3.107 1.91v.142c0 1.028.628 1.74 2.025 1.74 1.425 0 2.736-.798 2.736-2.366Zm-3.991 5.275c-2.68 0-4.905-1.368-4.905-4.393v-.168c0-3.68 3.193-4.878 7.044-4.878h1.852v-.711c0-1.484-.656-2.397-2.195-2.397-1.397 0-2.138.8-2.254 1.94h-3.99c.284-3.309 2.907-4.934 6.445-4.934 3.59 0 6.158 1.54 6.158 5.246V55.6h-4.078v-1.712c-.714 1.084-2.082 2.025-4.077 2.025Z"
+          />
+        </svg>
+      ),
+    },
   ];
   return <CleintSlider clients={clients} />;
 };
@@ -179,13 +233,13 @@ const EstimatingServices = () => {
             </div>
           ))}
         </div>
-        <div className="w-[600px] aspect-auto rounded-3xl overflow-hidden relative">
+        <div className="w-[600px] aspect-auto rounded-3xl overflow-hidden  relative">
           <Image
             src={WomanImage}
             alt="Estimating services illustration"
-            className="rounded-lg object-cover"
+            className="rounded-lg object-cover h-full"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#13151B] "></div>
+          <div className="absolute w-full  h-full bottom-0 bg-gradient-to-b from-transparent to-[#13151B] to-98% "></div>
         </div>
       </div>
     </div>
@@ -299,7 +353,7 @@ async function ServicesSection() {
     { name: "Sitework and Earthwork Takeoffs", color: "#A51818" },
   ];
   return (
-    <div className="overflow-hidden  py-20 px-4">
+    <div className="overflow-hidden  py-20 ">
       <div>
         <p className="text-primary text-xl font-semibold text-center">
           What We Provide
@@ -313,39 +367,10 @@ async function ServicesSection() {
           all CSI divisions. Some of them are listed below:
         </p>
       </div>
-      <div className="relative max-w-screen-laptop overflow-hidden">
-        <div className="flex flex-row gap-4 ">
-          {services1.map((item, index) => (
-            <div
-              key={index}
-              className={` flex items-center justify-center flex-shrink-0 h-32 w-72 rounded-2xl `}
-              style={{ backgroundColor: item.color }}
-            >
-              <p
-                className="text-xl text-bg text-center font-semibold"
-                style={{ color: item.text && item.text }}
-              >
-                {item.name}
-              </p>
-            </div>
-          ))}
-        </div>
-        <div className="flex flex-row gap-4 -translate-x-24 mt-6">
-          {services2.map((item, index) => (
-            <div
-              key={index}
-              className={` flex items-center justify-center flex-shrink-0 h-32 w-72 rounded-2xl  `}
-              style={{ backgroundColor: item.color }}
-            >
-              <p
-                className="text-xl text-bg text-center font-semibold"
-                style={{ color: item.text && item.text }}
-              >
-                {item.name}
-              </p>
-            </div>
-          ))}
-        </div>
+      <div className="overflow-hidden mx-auto w-[1200px] relative">
+        <ServiceSlider services={services1} rtl={true} />
+        <div className="h-[27px]" />
+        <ServiceSlider services={services1} rtl={false} />
         <div className="fade" />
       </div>
     </div>
@@ -521,6 +546,88 @@ const GetQoute = () => {
   );
 };
 
-const OurWork = () => {
-  return;
-};
+async function OurWork() {
+  const info = [
+    {
+      title: "Water Proofing",
+      desc: "Here are the samples which you can download of our work on water proofing.",
+    },
+    {
+      title: "Roofing",
+      desc: "Here are the samples which you can download of our work on water proofing.",
+    },
+    {
+      title: "Residential DC",
+      desc: "Here are the samples which you can download of our work on water proofing.",
+    },
+    {
+      title: "Lumber/Carpentary",
+      desc: "Here are the samples which you can download of our work on water proofing.",
+    },
+  ];
+
+  return (
+    <div className="w-full rounded-[23px] flex flex-col items-center py-20 mt-48 px-24 bg-fg">
+      <p className="text-[#CAA4A2] text-xl font-semibold text-center">
+        See Our Work in Action
+      </p>
+      <h3 className="text-[40px] text-[#E4E4E4] font-semibold text-center">
+        Our Project Samples
+      </h3>
+      <p className="text-[#B0B0B0] text-2xl leading-10 text-center mt-4 w-[873px] mb-20">
+        Explore a selection of estimates and takeoffs crafted by
+        UtopianTakeoffs, showcasing our expertise and attention to detail.
+      </p>
+      <div className="relative">
+        <div className="grid grid-cols-2 gap-6">
+          {info.map((item, index) => (
+            <div
+              key={index}
+              className="flex p-6 flex-col bg-[#26272D] gap-4 border-[#4E4E4E] border rounded-[24px]"
+            >
+              <div className="">
+                <p className="text-semibold text-2xl text-[#E4E4E4] font-bold">
+                  {item.title}
+                </p>
+
+                <p className=" leading-8 text-xl text-[#A8A8A8] font-semibold">
+                  {item.desc}
+                </p>
+              </div>
+              <div className="flex justify-end space-x-2">
+                <button className="flex items-center bg-gray hover:bg-gray-500 border border-[#E4E4E4] text-white py-1 px-3 rounded-lg">
+                  <Download size={16} className="mr-1" />
+                  pdf
+                </button>
+                <button className="flex items-center bg-[#C05852] hover:bg-[#C05840] text-white py-1 px-3 rounded-lg">
+                  <Download size={16} className="mr-1" />
+                  xsl
+                </button>
+              </div>
+            </div>
+          ))}
+        </div>
+        <div className="absolute w-full h-40 bg-gradient-to-t from-fg to-transparent bottom-0 " />
+      </div>
+      <div className="text-center relative z-10 mt-20">
+        <button className="bg-transparent text-white text-2xl leading-[normal] font-semibold py-2 px-4 inline-flex items-center">
+          View All Samples
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width={32}
+            height={32}
+            fill="none"
+          >
+            <path
+              stroke="#E4E4E4"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2.5}
+              d="m24.79 18.951 1.259-11.16m0 0-11.16-1.258m11.16 1.258L7.42 22.644"
+            />
+          </svg>
+        </button>
+      </div>
+    </div>
+  );
+}

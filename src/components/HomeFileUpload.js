@@ -59,7 +59,7 @@ const FileUpload = () => {
   };
 
   return (
-    <div className="">
+    <div className="px-[72px]">
       <div
         {...getRootProps()}
         className={`border-2 border-dashed duration-300 rounded-lg my-8 px-14 py-28 flex items-center justify-center flex-col text-center cursor-pointer transition-colors
