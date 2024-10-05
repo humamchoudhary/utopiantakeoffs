@@ -11,7 +11,7 @@ import Image3 from "@/app/assets/images/3.jpeg";
 import ConstructionTakeoffPage from "@/components/ConstructionTakeOff";
 import CleintSlider from "@/components/ClientSlider";
 import Footer from "@/components/Footer";
-import ReviewSlider from "@/components/Review_Audio";
+import ReviewSection from "@/components/ReviewSection";
 import ServiceSlider from "@/components/ServicesSlider";
 
 export default async function Home() {
@@ -73,6 +73,44 @@ export default async function Home() {
       name: "Sarah Patel",
       image: "/api/placeholder/50/50",
     },
+    {},
+  ];
+  const w_reviews = [
+    {
+      name: "Sarah Patel",
+      post: "Architecture",
+      stars: 5,
+      review:
+        "We’ve worked with UtopianTakeoffs for over a year, and their precision and reliability have been a game changer for our projects.",
+    },
+    {
+      name: "John Thompson",
+      post: "General Contractor",
+      stars: 4.8,
+      review:
+        "UtopianTakeoffs provided accurate estimates and helped us win several major projects. Their team is exceptional!",
+    },
+    {
+      name: "Sarah Patel",
+      post: "Architecture",
+      stars: 5,
+      review:
+        "We’ve worked with UtopianTakeoffs for over a year, and their precision and reliability have been a game changer for our projects.",
+    },
+    {
+      name: "Sarah Patel",
+      post: "Architecture",
+      stars: 5,
+      review:
+        "We’ve worked with UtopianTakeoffs for over a year, and their precision and reliability have been a game changer for our projects.",
+    },
+    {
+      name: "Sarah Patel",
+      post: "Architecture",
+      stars: 5,
+      review:
+        "We’ve worked with UtopianTakeoffs for over a year, and their precision and reliability have been a game changer for our projects.",
+    },
   ];
   return (
     <div className="flex flex-col items-center">
@@ -85,7 +123,7 @@ export default async function Home() {
       <WorkWithUs />
       <GetQoute />
       <OurWork />
-      <ReviewSlider reviews={a_reviews} />
+      <ReviewSection w_reviews={w_reviews} a_reviews={a_reviews} />
       <Footer />
     </div>
   );

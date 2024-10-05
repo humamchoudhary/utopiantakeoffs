@@ -139,7 +139,7 @@ const ConstructionTakeoffPage = ({ services }) => {
       <div className=" overflow-hidden self-start w-[1328px] relative">
         {loaded &&
           instanceRef.current.track.details.maxIdx === currentSlide && (
-            <div className="z-10 left-0 top-0 absolute  h-full w-[583px] bg-gradient-to-l from-transparent to-bg" />
+            <div className="z-10 left-0 top-0 absolute pointer-events-none h-full w-[583px] bg-gradient-to-l from-transparent to-bg" />
           )}
         <div ref={sliderRef} className="keen-slider w-full">
           {services.map((service, index) => (
@@ -147,7 +147,7 @@ const ConstructionTakeoffPage = ({ services }) => {
           ))}
           {loaded &&
             instanceRef.current.track.details.minIdx === currentSlide && (
-              <div className="z-10 right-0 top-0 absolute  h-full w-[583px] bg-gradient-to-r from-transparent to-bg" />
+              <div className="z-10 right-0 top-0 absolute pointer-events-none h-full w-[583px] bg-gradient-to-r from-transparent to-bg" />
             )}
         </div>
       </div>
