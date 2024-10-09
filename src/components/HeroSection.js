@@ -16,19 +16,22 @@ export default async function HeroSection() {
         </Link>
 
         <Link
-          className="border px-6 py-3 border-primary bg-primary text-bg rounded-2xl"
+          className="border flex gap-1 items-center justify-center px-6 py-3 border-primary bg-primary text-bg rounded-2xl"
           href="/"
         >
-          Get Estimation
+    <svg xmlns="http://www.w3.org/2000/svg" width={22} height={22} fill="none">
+    <path
+      stroke="#fff"
+      strokeLinejoin="round"
+      strokeWidth={1.5}
+      d="M19.25 17.417v-1.51c0-.749-.456-1.423-1.152-1.701l-1.865-.746a1.833 1.833 0 0 0-2.32.882l-.163.325s-2.292-.459-4.125-2.292C7.792 10.542 7.333 8.25 7.333 8.25l.325-.162a1.833 1.833 0 0 0 .882-2.32l-.746-1.866A1.833 1.833 0 0 0 6.092 2.75H4.583c-1.012 0-1.833.82-1.833 1.833 0 8.1 6.566 14.667 14.667 14.667 1.012 0 1.833-.82 1.833-1.833Z"
+    />
+  </svg>
+          Book a call
         </Link>
       </div>
 
-      <div className="flex items-end flex-row mt-16 gap-6">
-        <HeroBar h="h-[360px]" color=" bg-primary" />
-        <HeroBar h="h-[170px]" color=" bg-bg" />
-        <HeroBar h="h-[270px]" color=" bg-bg" />
-        <HeroBar h="h-[360px]" color=" bg-fg" />
-      </div>
+
     </div>
   );
 }

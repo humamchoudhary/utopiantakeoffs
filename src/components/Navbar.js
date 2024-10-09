@@ -131,11 +131,27 @@ export default function NavBar() {
           <Link className="hover:cursor-pointer" href={"/"}>
             About Us
           </Link>
-          <Link className="hover:cursor-pointer" href={"/"}>
-            Get Estimate
-          </Link>
+          
         </div>
-        <div>En</div>
+        <div className="flex flex-row justify-center items-center">
+          En
+          <svg className="mx-[10px]" xmlns="http://www.w3.org/2000/svg" width={2} height={16} fill="none">
+          <path stroke="#C3C3C3" strokeLinecap="round" d="M.667.5v15" />
+        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width={21} height={20} fill="none">
+          <path
+            stroke="#24292E"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={1.5}
+            d="m6.5 8.333 4.167 3.334 4.166-3.334"
+          />
+        </svg>  
+          
+        </div>
+        <div>
+          <button className="py-[14px] px-6 rounded-xl bg-primary text-bg "> Get Estimated </button>
+        </div>
       </div>
     </>
   );
