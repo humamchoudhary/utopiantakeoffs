@@ -10,7 +10,6 @@ import Image2 from "@/app/assets/images/2.jpeg";
 import Image3 from "@/app/assets/images/3.jpeg";
 import ConstructionTakeoffPage from "@/components/ConstructionTakeOff";
 import CleintSlider from "@/components/ClientSlider";
-import Footer from "@/components/Footer";
 import ReviewSection from "@/components/ReviewSection";
 import ServiceSlider from "@/components/ServicesSlider";
 
@@ -124,7 +123,6 @@ export default async function Home() {
       <GetQoute />
       <OurWork />
       <ReviewSection w_reviews={w_reviews} a_reviews={a_reviews} />
-      <Footer />
     </div>
   );
 }

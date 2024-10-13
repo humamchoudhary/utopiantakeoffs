@@ -86,59 +86,69 @@ const MenuItem = ({ name, icon, link }) => (
 
 export default function NavBar() {
   return (
-    <>
-      <div className="flex flex-row justify-between items-center px-12 py-8 ">
-        <Image src={Logo} width={52} height={52} />
-        <div className="flex flex-row gap-24 items-center">
-          <Link className="hover:cursor-pointer" href={"/"}>
-            Home
-          </Link>
-          <div className="group flex flex-col ">
-            <p className="hover:cursor-pointer flex flex-row">
-              Service
-              <ChevronDown />
-            </p>
-            <div className="group-hover:flex hover:flex hidden w-min flex-col gap-4 absolute -translate-x-12 shadow-md mt-6 p-6 bg-bg rounded-[16px] border-[#D5D5D5] border ">
-              {Services.map((item, index) => (
-                <MenuItem
-                  key={index}
-                  name={item.name}
-                  link={item.link}
-                  icon={item.icon}
-                />
-              ))}
-            </div>
+    <div className="flex flex-row justify-between items-center px-12 py-8 ">
+      <Image src={Logo} width={52} height={52} />
+      <div className="flex flex-row gap-24 items-center">
+        <Link className="hover:cursor-pointer" href={"/"}>
+          Home
+        </Link>
+        <div className="group flex flex-col ">
+          <p className="hover:cursor-pointer flex flex-row">
+            Service
+            <ChevronDown />
+          </p>
+          <div className="group-hover:flex hover:flex hidden w-min flex-col gap-4 absolute -translate-x-12 shadow-md mt-6 p-6 bg-bg rounded-[16px] border-[#D5D5D5] border ">
+            {Services.map((item, index) => (
+              <MenuItem
+                key={index}
+                name={item.name}
+                link={item.link}
+                icon={item.icon}
+              />
+            ))}
           </div>
-          <div className="group flex flex-col  ">
-            <p className="hover:cursor-pointer text-nowarp flex flex-row ">
-              Trades{"  "}
-              <ChevronDown />
-            </p>
-            <div className="group-hover:grid hover:grid hidden grid-cols-2 gap-x-4 gap-y-5 absolute -translate-x-12 shadow-md mt-6 p-6 bg-bg rounded-[16px] border-[#D5D5D5] border ">
-              {Trade.map((item, index) => (
-                <MenuItem
-                  key={index}
-                  name={item.name}
-                  link={item.link}
-                  icon={item.icon}
-                />
-              ))}
-            </div>
-          </div>
-          <Link className="hover:cursor-pointer" href={"/"}>
-            Sample
-          </Link>
-          <Link className="hover:cursor-pointer" href={"/"}>
-            About Us
-          </Link>
-          
         </div>
-        <div className="flex flex-row justify-center items-center">
-          En
-          <svg className="mx-[10px]" xmlns="http://www.w3.org/2000/svg" width={2} height={16} fill="none">
+        <div className="group flex flex-col  ">
+          <p className="hover:cursor-pointer text-nowarp flex flex-row ">
+            Trades{"  "}
+            <ChevronDown />
+          </p>
+          <div className="group-hover:grid hover:grid hidden grid-cols-2 gap-x-4 gap-y-5 absolute -translate-x-12 shadow-md mt-6 p-6 bg-bg rounded-[16px] border-[#D5D5D5] border ">
+            {Trade.map((item, index) => (
+              <MenuItem
+                key={index}
+                name={item.name}
+                link={item.link}
+                icon={item.icon}
+              />
+            ))}
+          </div>
+        </div>
+        <Link className="hover:cursor-pointer" href={"/"}>
+          Sample
+        </Link>
+        <Link className="hover:cursor-pointer" href={"/"}>
+          About Us
+        </Link>
+      </div>
+
+      <div className="flex flex-row justify-center items-center gap-4">
+        En
+        <svg
+          className="mx-[10px]"
+          xmlns="http://www.w3.org/2000/svg"
+          width={2}
+          height={16}
+          fill="none"
+        >
           <path stroke="#C3C3C3" strokeLinecap="round" d="M.667.5v15" />
         </svg>
-        <svg xmlns="http://www.w3.org/2000/svg" width={21} height={20} fill="none">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width={21}
+          height={20}
+          fill="none"
+        >
           <path
             stroke="#24292E"
             strokeLinecap="round"
@@ -146,13 +156,12 @@ export default function NavBar() {
             strokeWidth={1.5}
             d="m6.5 8.333 4.167 3.334 4.166-3.334"
           />
-        </svg>  
-          
-        </div>
-        <div>
-          <button className="py-[14px] px-6 rounded-xl bg-primary text-bg "> Get Estimated </button>
-        </div>
+        </svg>
+        <button className="py-[14px] px-6 rounded-xl bg-primary text-bg ">
+          {" "}
+          Get Estimated{" "}
+        </button>
       </div>
-    </>
+    </div>
   );
 }

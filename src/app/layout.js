@@ -13,7 +13,7 @@ import Navbar from "@/components/Navbar";
 //   variable: "--font-geist-mono",
 //   weight: "100 900",
 // });
-
+import Footer from "@/components/Footer";
 import { Toaster } from "react-hot-toast";
 
 export const metadata = {
@@ -32,6 +32,7 @@ export default function RootLayout({ children }) {
         <Toaster position="bottom-center" />
         <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );
