@@ -3,7 +3,7 @@ import React from "react";
 import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
 
-const animation = { duration: 10000, easing: (t) => t };
+const animation = { duration: 20000, easing: (t) => t };
 
 export default function ServiceSlider({ services, rtl = false }) {
   const [sliderRef] = useKeenSlider({

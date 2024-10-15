@@ -12,9 +12,17 @@ export default async function HeroSection() {
       <h1 className="font-bold text-8xl">BID MORE WIN MORE!</h1>
       <div className="flex lfex-row gap-2 items-center justify-center mt-6">
         <Link
-          className="border px-6 py-3 border-fg rounded-2xl"
+          className="border flex gap-[10px] items-center justify-center px-6 py-3 border-fg rounded-2xl"
           href="/contact"
         >
+          <svg xmlns="http://www.w3.org/2000/svg" width={22} height={22} fill="none">
+            <path
+              stroke="#13151B"
+              strokeLinejoin="round"
+              strokeWidth={1.5}
+              d="M19.25 17.417v-1.51c0-.749-.456-1.423-1.152-1.701l-1.865-.746a1.833 1.833 0 0 0-2.32.882l-.163.325s-2.292-.459-4.125-2.292C7.792 10.542 7.333 8.25 7.333 8.25l.325-.162a1.833 1.833 0 0 0 .882-2.32l-.746-1.866A1.833 1.833 0 0 0 6.092 2.75H4.583c-1.012 0-1.833.82-1.833 1.833 0 8.1 6.566 14.667 14.667 14.667 1.012 0 1.833-.82 1.833-1.833Z"
+            />
+          </svg>
           Contact Us
         </Link>
 
@@ -22,17 +30,16 @@ export default async function HeroSection() {
           className="border flex gap-1 items-center justify-center px-6 py-3 border-primary bg-primary text-bg rounded-2xl"
           href="/"
         >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width={22}
-            height={22}
-            fill="none"
-          >
+          <svg xmlns="http://www.w3.org/2000/svg" width={22} height={22} fill="none">
             <path
               stroke="#fff"
-              strokeLinejoin="round"
               strokeWidth={1.5}
-              d="M19.25 17.417v-1.51c0-.749-.456-1.423-1.152-1.701l-1.865-.746a1.833 1.833 0 0 0-2.32.882l-.163.325s-2.292-.459-4.125-2.292C7.792 10.542 7.333 8.25 7.333 8.25l.325-.162a1.833 1.833 0 0 0 .882-2.32l-.746-1.866A1.833 1.833 0 0 0 6.092 2.75H4.583c-1.012 0-1.833.82-1.833 1.833 0 8.1 6.566 14.667 14.667 14.667 1.012 0 1.833-.82 1.833-1.833Z"
+              d="M1.833 7.333A3.667 3.667 0 0 1 5.5 3.667h6.417a3.667 3.667 0 0 1 3.666 3.666v7.334a3.667 3.667 0 0 1-3.666 3.666H5.5a3.667 3.667 0 0 1-3.667-3.666V7.333Z"
+            />
+            <path
+              stroke="#fff"
+              strokeWidth={1.5}
+              d="m15.583 8.556 1.413-1.507c1.137-1.213 3.17-.408 3.17 1.254v5.394c0 1.662-2.034 2.467-3.17 1.254l-1.413-1.507V8.556ZM11.917 9.167a1.833 1.833 0 1 1-3.667 0 1.833 1.833 0 0 1 3.667 0Z"
             />
           </svg>
           Book a call

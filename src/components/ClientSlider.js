@@ -3,7 +3,7 @@ import React, { useEffect } from "react";
 import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
 
-const animation = { duration: 10000, easing: (t) => t };
+const animation = { duration: 20000, easing: (t) => t };
 
 export default function CleintSlider({ clients }) {
   const [sliderRef] = useKeenSlider({

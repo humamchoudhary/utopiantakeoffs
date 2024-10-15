@@ -170,7 +170,7 @@ const ContactPage = () => {
           <div>
             <button
               type="submit"
-              className="w-full py-3 px-4 justify-center items-center gap-2 rounded-xl bg-primary text-bg text-lg font-semibold leading-[normal] "
+              className="w-full h-14 py-3 px-4 justify-center items-center gap-2 rounded-xl bg-primary text-bg text-lg font-semibold leading-[normal] "
             >
               Submit
             </button>
@@ -329,7 +329,7 @@ const ContactPage = () => {
               <h2 className="text-[24px] font-semibold mb-6">
                 Get a Quick Quote
               </h2>
-              <p className="text-[20px] text-[#475464] ">
+              <p className="text-[20px] text-[#475464] leading-10">
                 Connect with us today by submitting your information in the
                 contact form to receive a quick quote, including an invoice and
                 turnaround time, in just 5 minutes. If you have any additional

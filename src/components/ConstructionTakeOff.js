@@ -13,7 +13,7 @@ const ServiceCard = ({ title, description, imagePath }) => (
     <Image
       src={imagePath}
       alt="Construction Estimator"
-      className="rounded-lg h-80 object-cover self-stretch"
+      className="rounded-3xl h-80 object-cover self-stretch"
     />
 
     <div className="py-4 mt-4">

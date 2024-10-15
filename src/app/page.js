@@ -260,7 +260,7 @@ const EstimatingServices = () => {
               <h3 className="text-2xl text-fg font-semibold mb-2">
                 {service.title}
               </h3>
-              <p className="text-fg text-md mt-4 mr-4 leading-9">
+              <p className="text-fg text-[18px] mt-4 mr-4 leading-9">
                 {service.description}
               </p>
               <p className="text-6xl font-semibold absolute right-7 top-5  text-[#13151B] opacity-20">
@@ -398,7 +398,7 @@ async function ServicesSection() {
         <h3 className="text-[40px] text-fg font-semibold text-center">
           Utopian Takeoffs
         </h3>
-        <p className="text-[#475464] text-xl leading-10 text-center mt-4 w-[873px] mx-auto  mb-20">
+        <p className="text-[#475464] text-2xl leading-10 text-center mt-4 w-[873px] mx-auto  mb-20">
           Our construction estimators have expertise in construction takeoffs in
           all CSI divisions. Some of them are listed below:
         </p>
@@ -442,7 +442,7 @@ async function WorkWithUs() {
         </p>
         <div className="px-[32px] py-4 mt-7  mb-[100px] bg-bg rounded-xl">
           <p className="text-lg text-primary font-semibold leading-[normal]">
-            Save 30% Now
+            Get Quotes Now
           </p>
         </div>
       </div>
@@ -460,7 +460,7 @@ const GetQoute = () => {
         <h1 className="text-center font-semibold text-[40px] text-[#13151B]">
           Construction Estimate & Quantity Takeoff
         </h1>
-        <p className="text-center text-xl leading-10 text-[#475464]">
+        <p className="text-center text-2xl leading-10 text-[#475464]">
           Get precise construction estimates and quantity takeoffs, tailored to
           your project needs, delivered quickly and accurately by our expert
           team.
