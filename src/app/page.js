@@ -452,8 +452,8 @@ async function WorkWithUs() {
 
 const GetQoute = () => {
   return (
-    <div className="mt-[120px] flex flex-col justify-center items-center">
-      <div className="w-full px-56">
+    <div className="mt-[120px] px-[72px] flex flex-col justify-center items-center">
+      <div className="w-full ">
         <p className="text-center font-semibold text-xl text-[#601E1A]">
           How To Begin With Us
         </p>

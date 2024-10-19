@@ -6,7 +6,8 @@ const ContactPage = () => {
   const [files, setFiles] = useState([]);
 
   return (
-    <main className="min-h-screen flex flex-col items-center ">
+    <main className="min-h-screen relative flex flex-col items-center ">
+      <div className="w-60 h-screen bg-primaryhex/10 absolute my-auto mx-auto mt-16 blur-[200px]" />
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width={572}
@@ -70,7 +71,7 @@ const ContactPage = () => {
           Book a call
         </div>
       </div>
-      <div className="flex flex-row gap-10 mt-32 px-14 rounded-lg ">
+      <div className="flex flex-row gap-10 mt-32 px-[110px] rounded-lg ">
         <form className="flex flex-col w-1/2 gap-8">
           <div className="grid grid-cols-2 gap-4">
             <div className="">
@@ -162,7 +163,7 @@ const ContactPage = () => {
             <textarea
               id="projectDescription"
               name="projectDescription"
-              rows="3"
+              rows="8"
               className="px-4 py-[14px] block w-full rounded-lg border-[#C6C6C6] border shadow-sm "
               placeholder="Leave the project description here"
             ></textarea>
@@ -329,7 +330,7 @@ const ContactPage = () => {
               <h2 className="text-[24px] font-semibold mb-6">
                 Get a Quick Quote
               </h2>
-              <p className="text-[20px] text-[#475464] leading-10">
+              <p className="text-[20px] text-[#475464] leading-10 tracking-[-0.4px]">
                 Connect with us today by submitting your information in the
                 contact form to receive a quick quote, including an invoice and
                 turnaround time, in just 5 minutes. If you have any additional

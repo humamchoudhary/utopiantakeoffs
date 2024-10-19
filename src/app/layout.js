@@ -27,7 +27,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`antialiased bg-bg laptop:px-0 2xl:px-60 ${sora.className} bg-gradient-to-b from-bg to-primaryhex/5 `}
+        className={`antialiased bg-bg laptop:px-0 2xl:px-60 ${sora.className}  `}
       >
         <Toaster position="bottom-center" />
         <Navbar />

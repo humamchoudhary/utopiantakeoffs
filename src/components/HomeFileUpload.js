@@ -59,20 +59,33 @@ const FileUpload = () => {
   };
 
   return (
-    <div className="px-[72px]">
+    <div className="">
       <div
         {...getRootProps()}
-        className={`border-2 border-dashed duration-300 rounded-lg my-8 px-14 py-28 flex items-center justify-center flex-col text-center cursor-pointer transition-colors
+        className={`border-2 border-dashed duration-300 rounded-lg my-8 px-28 py-14 flex items-center justify-center flex-col text-center cursor-pointer transition-colors
           ${isDragActive ? "border-primary bg-primaryhex/30" : "border-primaryhex/50 bg-[#F9E8E8] hover:border-primaryhex"}`}
       >
         <input {...getInputProps()} />
-        <Upload className="mx-auto h-12 w-12 text-gray-400" />
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width={39}
+          height={37}
+          fill="none"
+        >
+          <path
+            stroke="#601E1A"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={3}
+            d="M19.5 1.834c5.408 0 9.792 4.384 9.792 9.792v1.959a7.833 7.833 0 0 1 7.833 7.833c0 2.9-1.575 5.5-3.917 6.854m-23.5-14.687v-1.959c0-2.204.729-4.238 1.958-5.875m-1.958 7.833a7.833 7.833 0 0 0-7.833 7.834c0 2.9 1.575 5.5 3.917 6.854m3.916-14.687c.848 0 1.664.134 2.429.383m7.363 3.533v17.625m0-17.625 5.875 5.875M19.5 17.501l-5.875 5.875"
+          />
+        </svg>
         <p className="mt-2 text-base font-semibold leading-6 text-[#601E1A]">
           {isDragActive
             ? "Drop the files here..."
             : "Drag & drop files or Browse"}
         </p>
-        <p className="text-[#475464] text-sm leading-[18px]">
+        <p className="text-[#475464] text-sm  leading-[18px] text-nowrap">
           Supported formats for Plan will be PDF File, Word.
         </p>
       </div>
