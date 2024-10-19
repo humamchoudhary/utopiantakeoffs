@@ -26,12 +26,10 @@ export default function RootLayout({ children }) {
   emailjs.init({ publicKey: "3m5zvAEoGBZRSR7sJ" });
   return (
     <html lang="en">
-      <body
-        className={`antialiased bg-bg laptop:px-0 2xl:px-60 ${sora.className}  `}
-      >
+      <body className={`antialiased  ${sora.className}  `}>
         <Toaster position="bottom-center" />
         <Navbar />
-        {children}
+        <main className="bg-bg laptop:px-0 2xl:px-60">{children}</main>
         <Footer />
       </body>
     </html>

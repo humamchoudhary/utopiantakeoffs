@@ -243,7 +243,7 @@ const EstimatingServices = () => {
   ];
 
   return (
-    <div className="bg-[#13151B] w-full px-16 py-20 rounded-3xl">
+    <div className="bg-[#13151B]  w-full  2xl:w-[1440px]  px-16 py-20 rounded-3xl">
       <h2 className="text-[#CAA4A2] text-xl font-semibold text-center">
         Here You Check
       </h2>
@@ -251,7 +251,7 @@ const EstimatingServices = () => {
         Our Estimating Services
       </h2>
       <div className="flex flex-row justify-center gap-12">
-        <div className="w-full lg:w-auto space-y-4 flex-shrink-0">
+        <div className="w-full lg:w-auto  space-y-4 flex-shrink-0">
           {services.map((service, index) => (
             <div
               key={index}
@@ -269,7 +269,7 @@ const EstimatingServices = () => {
             </div>
           ))}
         </div>
-        <div className="w-[600px] aspect-auto rounded-3xl overflow-hidden  relative">
+        <div className=" flex-shrink-0 w-[600px] aspect-auto rounded-3xl overflow-hidden  relative">
           <Image
             src={WomanImage}
             alt="Estimating services illustration"
@@ -311,7 +311,7 @@ async function WhyUs() {
   ];
 
   return (
-    <div className="w-full rounded-[23px] flex flex-col items-center py-20 px-24 bg-fg">
+    <div className="w-full 2xl:w-[1440px] rounded-[23px] flex flex-col items-center py-20 px-24 bg-fg">
       <p className="text-[#CAA4A2] text-xl font-semibold text-center">
         Why Many Clients
       </p>
@@ -389,7 +389,7 @@ async function ServicesSection() {
     { name: "Sitework and Earthwork Takeoffs", color: "#A51818" },
   ];
   return (
-    <div className="overflow-hidden  py-20 ">
+    <div className="overflow-hidden w-full 2xl:w-[1440px]  py-20 ">
       <div>
         <p className="text-primary text-xl font-semibold text-center">
           What We Provide
@@ -415,7 +415,7 @@ async function ServicesSection() {
 
 async function WorkWithUs() {
   return (
-    <div className="px-12 w-full">
+    <div className="px-12 w-full 2xl:w-[1440px]">
       <div className="relative w-full flex flex-col justify-center items-center bg-primary rounded-3xl py-[72px]">
         <div className="absolute right-0 bottom-0">
           <svg
@@ -452,7 +452,7 @@ async function WorkWithUs() {
 
 const GetQoute = () => {
   return (
-    <div className="mt-[120px] px-[72px] flex flex-col justify-center items-center">
+    <div className="mt-[120px] px-[72px] w-full 2xl:w-[1440px] flex flex-col justify-center items-center">
       <div className="w-full ">
         <p className="text-center font-semibold text-xl text-[#601E1A]">
           How To Begin With Us
@@ -603,7 +603,7 @@ async function OurWork() {
   ];
 
   return (
-    <div className="w-full rounded-[23px] flex flex-col items-center py-20 mt-48 px-24 bg-fg">
+    <div className="w-full 2xl:w-[1440px] rounded-[23px] flex flex-col items-center py-20 mt-48 px-24 bg-fg">
       <p className="text-[#CAA4A2] text-xl font-semibold text-center">
         See Our Work in Action
       </p>

@@ -86,7 +86,7 @@ const MenuItem = ({ name, icon, link }) => (
 
 export default function NavBar() {
   return (
-    <div className="flex flex-row justify-between items-center px-12 py-8 ">
+    <div className="flex flex-row w-full 2xl:w-[1440px] mx-auto justify-between items-center px-12 py-8 ">
       <Image src={Logo} width={52} height={52} />
       <div className="flex flex-row gap-24 items-center">
         <Link className="hover:cursor-pointer" href={"/"}>
@@ -133,7 +133,7 @@ export default function NavBar() {
       </div>
 
       <div className="flex flex-row justify-center items-center gap-4">
-       <button className="py-[14px] px-6 rounded-xl bg-primary text-bg ">
+        <button className="py-[14px] px-6 rounded-xl bg-primary text-bg ">
           {" "}
           Get Estimated{" "}
         </button>

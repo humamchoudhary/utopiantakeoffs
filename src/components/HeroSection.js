@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default async function HeroSection() {
   return (
-    <div className="h-screen w-full bg-gradient-to-b  from-bg to-[#F8E5E3] rounded-b-[56px] flex flex-col items-center mt-10 ">
+    <div className="h-screen w-full 2xl:w-[1440px] bg-gradient-to-b  from-bg to-[#F8E5E3] rounded-b-[56px] flex flex-col items-center mt-10 ">
       <div className="px-5 py-3 border-2 border-primary bg-primaryhex/10 rounded-xl ">
         Save 60% on Estimation
       </div>
@@ -15,7 +15,12 @@ export default async function HeroSection() {
           className="border flex gap-[10px] items-center justify-center px-6 py-3 border-fg rounded-2xl"
           href="/contact"
         >
-          <svg xmlns="http://www.w3.org/2000/svg" width={22} height={22} fill="none">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width={22}
+            height={22}
+            fill="none"
+          >
             <path
               stroke="#13151B"
               strokeLinejoin="round"
@@ -30,7 +35,12 @@ export default async function HeroSection() {
           className="border flex gap-1 items-center justify-center px-6 py-3 border-primary bg-primary text-bg rounded-2xl"
           href="/"
         >
-          <svg xmlns="http://www.w3.org/2000/svg" width={22} height={22} fill="none">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width={22}
+            height={22}
+            fill="none"
+          >
             <path
               stroke="#fff"
               strokeWidth={1.5}

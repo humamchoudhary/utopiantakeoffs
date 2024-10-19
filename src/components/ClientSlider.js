@@ -26,7 +26,7 @@ export default function CleintSlider({ clients }) {
   });
 
   return (
-    <section className="w-full py-16">
+    <section className="w-full 2xl:w-[1440px] py-16">
       <div className="container mx-auto text-center">
         <h2 className="text font-bold mb-2">We Worked With</h2>
         <h3 className="text-[40px] font-bold mb-12">Meet Our Clients</h3>

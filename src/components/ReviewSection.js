@@ -17,7 +17,10 @@ const ReviewCard = ({ name, image, currentIdx, index }) => (
         className={`bg-fg w-full flex flex-col justify-end rounded-[24px] px-6 py-8 ${currentIdx == index ? "h-full" : "h-2/3"} duration-150 `}
       >
         <div className="flex flex-row justify-between">
-          <p className="text-bg">{name}</p>
+          <div className="flex flex-col gap-1">
+            <p className="text-bg text-xs ">Review From</p>
+            <p className="text-bg text-lg">{name}</p>
+          </div>
           {currentIdx == index ? (
             <svg
               xmlns="http://www.w3.org/2000/svg"
