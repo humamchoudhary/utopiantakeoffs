@@ -36,7 +36,7 @@ const ContactPage = () => {
           </radialGradient>
         </defs>
       </svg>{" "}
-      <div className="mt-[243px] flex flex-col items-center justify-center gap-6 w-min px-14 z-10">
+      <div className="mt-[243px] flex flex-col items-center justify-center gap-6 w-min 2xl:w-[1440px] px-14 z-10">
         <div className="px-5 py-3 text-primary text-lg font-semibold leading-[normal] border border-primary rounded-xl bg-[#FAF3F2] text-nowrap">
           Affordable Estimate 30% Off
         </div>
@@ -71,7 +71,7 @@ const ContactPage = () => {
           Book a call
         </div>
       </div>
-      <div className="flex flex-row gap-10 mt-32 px-[110px] rounded-lg ">
+      <div className="flex flex-row w-full 2xl:w-[1440px] gap-10 mt-32 px-[110px] rounded-lg ">
         <form className="flex flex-col w-1/2 gap-8">
           <div className="grid grid-cols-2 gap-4">
             <div className="">
@@ -342,10 +342,10 @@ const ContactPage = () => {
         </div>
       </div>
       <div>
-        <h2 className="flex flex-row justify-center items-center font-bold mt-14 mb-16 text-[32px]">
+        <h2 className="flex flex-row justify-center  items-center font-bold mt-14 mb-16 text-[32px]">
           Other Ways To Get In Touch
         </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-4 ">
+        <div className="grid grid-cols-1 sm:grid-cols-2 w-full 2xl:w-[1440px] lg:grid-cols-4 gap-6 max-w-7xl mx-4 ">
           <div className="bg-bg border border-[#E7E7E9] p-6 rounded-xl">
             <div className="p-3 bg-bg rounded-xl border border-[#E7E7E9] w-min">
               <svg
