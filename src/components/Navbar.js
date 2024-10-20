@@ -93,7 +93,10 @@ export default function NavBar() {
     <div className="flex flex-row w-full 2xl:w-[1440px] mx-auto justify-between items-center px-12 py-8 ">
       <Image src={Logo} width={52} height={52} />
       <div className="flex flex-row gap-24 items-center">
-        <Link className={` ${path === "/"} hover:cursor-pointer`} href={"/"}>
+        <Link
+          className={` ${path === "/" && "font-semibold"} hover:cursor-pointer`}
+          href={"/"}
+        >
           Home
         </Link>
         <div className="group flex flex-col ">
@@ -129,13 +132,13 @@ export default function NavBar() {
           </div>
         </div>
         <Link
-          className={` ${path === "/sample"} hover:cursor-pointer`}
-          href={"/"}
+          className={` ${path === "/sample" && "font-semibold"} hover:cursor-pointer`}
+          href={"/sample"}
         >
           Sample
         </Link>
         <Link
-          className={` ${path === "/about"} hover:cursor-pointer`}
+          className={` ${path === "/about" && "font-semibold"} hover:cursor-pointer`}
           href={"/"}
         >
           About Us

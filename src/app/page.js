@@ -573,7 +573,7 @@ const GetQoute = () => {
           <path stroke="#E8E8E8" strokeWidth={2} d="M1.49 0v528" />
         </svg>
         <div className="w-full">
-          <p className="font-bold text-2xl text-fg leading-[normal]">
+          <p className="font-bold text-2xl mb-8 text-fg leading-[normal]">
             Upload Your Plane
           </p>
           <FileUpload />

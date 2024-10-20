@@ -59,10 +59,10 @@ const FileUpload = () => {
   };
 
   return (
-    <div className="">
+    <div className="flex flex-col gap-8">
       <div
         {...getRootProps()}
-        className={`border-2 border-dashed duration-300 rounded-lg my-8 px-28 py-14 flex items-center justify-center flex-col text-center cursor-pointer transition-colors
+        className={`border-2 border-dashed duration-300 rounded-lg  px-28 py-14 flex items-center justify-center flex-col text-center cursor-pointer transition-colors
           ${isDragActive ? "border-primary bg-primaryhex/30" : "border-primaryhex/50 bg-[#F9E8E8] hover:border-primaryhex"}`}
       >
         <input {...getInputProps()} />
@@ -90,8 +90,8 @@ const FileUpload = () => {
         </p>
       </div>
       {files.length > 0 && !uploaded && (
-        <div className="mt-6">
-          <h4 className="text-xl leading-6 font-semibold mb-3">
+        <div>
+          <h4 className="text-xl leading-6 mb-8 font-semibold">
             Upload files:
           </h4>
           <ul className="list-disc pl-5">
@@ -101,38 +101,11 @@ const FileUpload = () => {
               </li>
             ))}
           </ul>
-          <div className="flex flex-row w-full justify-end">
-            {status && (
-              <div className="mt-6">
-                <p className="text-xl leading-8 text-[#475464]">{status}</p>
-              </div>
-            )}
-            <button
-              onClick={sendFiles}
-              className="flex mr-1 font-semibold text-[18px] hover:bg-[#601E1A]/90 duration-300 text-bg bg-[#601E1A] px-6 py-4 rounded-2xl flex-row "
-            >
-              Send Now
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width={24}
-                height={24}
-                fill="none"
-              >
-                <path
-                  stroke="#E4E4E4"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2.5}
-                  d="m18.086 14.822.95-8.432m0 0-8.43-.951m8.43.95L4.964 17.613"
-                />
-              </svg>
-            </button>
-          </div>
         </div>
       )}
 
       {!files.length && !uploaded && (
-        <div className="mt-6">
+        <div>
           <h4 className="text-xl leading-6 font-semibold mb-3">Note:</h4>
           <p className="text-xl leading-8 text-[#475464]">
             Upload Your Document. So, We'll get back to you with a quote
@@ -142,13 +115,42 @@ const FileUpload = () => {
       )}
 
       {uploaded && (
-        <div className="mt-6">
+        <div className="">
           <h4 className="text-xl leading-6 font-semibold mb-3">Note:</h4>
           <p className="text-xl leading-8 text-[#475464]">
             Your documents have been uploaded. We will get back to you shortly
           </p>
         </div>
       )}
+
+      <div className="flex flex-row w-full justify-end">
+        {status && (
+          <div className="">
+            <p className="text-xl leading-8 text-[#475464]">{status}</p>
+          </div>
+        )}
+        <button
+          onClick={sendFiles}
+          disabled={!files.length && !uploaded}
+          className="flex mr-1 font-semibold text-[18px] disabled:bg-gray-500 hover:bg-[#601E1A]/90 duration-300 text-bg bg-[#601E1A] px-6 py-4 rounded-2xl flex-row "
+        >
+          Send Now
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width={24}
+            height={24}
+            fill="none"
+          >
+            <path
+              stroke="#E4E4E4"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2.5}
+              d="m18.086 14.822.95-8.432m0 0-8.43-.951m8.43.95L4.964 17.613"
+            />
+          </svg>
+        </button>
+      </div>
     </div>
   );
 };
