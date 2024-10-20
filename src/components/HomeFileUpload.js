@@ -91,9 +91,7 @@ const FileUpload = () => {
       </div>
       {files.length > 0 && !uploaded && (
         <div>
-          <h4 className="text-xl leading-6 mb-8 font-semibold">
-            Upload files:
-          </h4>
+          <h4 className="text-xl leading-6 font-semibold">Upload files:</h4>
           <ul className="list-disc pl-5">
             {files.map((file) => (
               <li key={file.name} className="text-xl leading-8 text-[#475464]">
