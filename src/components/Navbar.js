@@ -1,8 +1,10 @@
+"use client";
 import Image from "next/image";
 import Logo from "@/app/assets/images/Utopian Takeoff Logo.svg";
 import Link from "next/link";
 import { ChartPie, ChevronDown } from "lucide-react";
 import { Services } from "@/constants/Info";
+import { usePathname } from "next/navigation";
 const Trade = [
   {
     name: "Concrete Estimating",
@@ -85,11 +87,13 @@ const MenuItem = ({ name, icon, link }) => (
 );
 
 export default function NavBar() {
+  const path = usePathname();
+  console.log(path);
   return (
     <div className="flex flex-row w-full 2xl:w-[1440px] mx-auto justify-between items-center px-12 py-8 ">
       <Image src={Logo} width={52} height={52} />
       <div className="flex flex-row gap-24 items-center">
-        <Link className="hover:cursor-pointer" href={"/"}>
+        <Link className={` ${path === "/"} hover:cursor-pointer`} href={"/"}>
           Home
         </Link>
         <div className="group flex flex-col ">
@@ -124,19 +128,27 @@ export default function NavBar() {
             ))}
           </div>
         </div>
-        <Link className="hover:cursor-pointer" href={"/"}>
+        <Link
+          className={` ${path === "/sample"} hover:cursor-pointer`}
+          href={"/"}
+        >
           Sample
         </Link>
-        <Link className="hover:cursor-pointer" href={"/"}>
+        <Link
+          className={` ${path === "/about"} hover:cursor-pointer`}
+          href={"/"}
+        >
           About Us
         </Link>
       </div>
 
       <div className="flex flex-row justify-center items-center gap-4">
-        <button className="py-[14px] px-6 rounded-xl bg-primary text-bg ">
-          {" "}
-          Get Estimated{" "}
-        </button>
+        <Link
+          href={"/contact"}
+          className="py-[14px] px-6 rounded-xl bg-primary text-bg "
+        >
+          Get Estimated
+        </Link>
       </div>
     </div>
   );

@@ -12,6 +12,7 @@ import ConstructionTakeoffPage from "@/components/ConstructionTakeOff";
 import CleintSlider from "@/components/ClientSlider";
 import ReviewSection from "@/components/ReviewSection";
 import ServiceSlider from "@/components/ServicesSlider";
+import Link from "next/link";
 
 export default async function Home() {
   const services = [
@@ -587,18 +588,27 @@ async function OurWork() {
     {
       title: "Water Proofing",
       desc: "Here are the samples which you can download of our work on water proofing.",
+      pdf: "https://drive.google.com/file/d/1G-sh_x0yyFcq5Jtkk4ry_GC6N20TLso4/view?usp=drive_link",
+      xlsx: "https://docs.google.com/spreadsheets/d/190_D-MfArSAsS3s6cQUdRXNuvfo5Sa9i/edit?usp=drive_link&ouid=113272403915799871398&rtpof=true&sd=true",
     },
     {
       title: "Roofing",
       desc: "Here are the samples which you can download of our work on water proofing.",
+      xlsx: "https://docs.google.com/spreadsheets/d/1_2CQXGJvBk4GpUkJ34EObu8i4J-Cjfwb/edit?usp=drive_link&ouid=113272403915799871398&rtpof=true&sd=true",
+      pdf: "https://drive.google.com/file/d/1_nX3lcYZsLFHdZ8QCR1R50KMJd4t4QGA/view?usp=drive_link",
     },
     {
-      title: "Residential DC",
+      title: "Residential GC",
       desc: "Here are the samples which you can download of our work on water proofing.",
+      xlsx: "https://docs.google.com/spreadsheets/d/1NRAawu4gtAVKfxGlEWJYhvzlG5b7Saiw/edit?usp=drive_link&ouid=113272403915799871398&rtpof=true&sd=true",
+      pdf: "https://drive.google.com/file/d/1_Iozq4RpNQenGuN5Zlf5EeoAWms_YWFn/view?usp=drive_link",
     },
+
     {
       title: "Lumber/Carpentary",
       desc: "Here are the samples which you can download of our work on water proofing.",
+      xlsx: "https://docs.google.com/spreadsheets/d/1h7DR8_AR4hlDvJLEgvZ4YfeWKpRiaBzQ/edit?usp=drive_link&ouid=113272403915799871398&rtpof=true&sd=true",
+      pdf: "https://drive.google.com/file/d/1KsnI66WLu0TGlvpuU4v1FHnlRlGauqmy/view?usp=drive_link",
     },
   ];
 
@@ -631,22 +641,33 @@ async function OurWork() {
                 </p>
               </div>
               <div className="flex justify-end space-x-2">
-                <button className="flex items-center bg-gray hover:bg-gray-500 border border-[#E4E4E4] text-white py-1 px-3 rounded-lg">
+                <Link
+                  target="_blank"
+                  href={item.pdf}
+                  className="flex items-center bg-gray hover:bg-gray-500 border border-[#E4E4E4] text-white py-1 px-3 rounded-lg"
+                >
                   <Download size={16} className="mr-1" />
                   pdf
-                </button>
-                <button className="flex items-center bg-[#C05852] hover:bg-[#C05840] text-white py-1 px-3 rounded-lg">
+                </Link>
+                <Link
+                  target="_blank"
+                  href={item.xlsx}
+                  className="flex items-center bg-[#C05852] hover:bg-[#C05840] text-white py-1 px-3 rounded-lg"
+                >
                   <Download size={16} className="mr-1" />
                   xsl
-                </button>
+                </Link>
               </div>
             </div>
           ))}
         </div>
-        <div className="absolute w-full h-40 bg-gradient-to-t from-fg to-transparent bottom-0 " />
+        <div className="absolute pointer-events-none w-full h-40 bg-gradient-to-t from-fg to-transparent bottom-0 " />
       </div>
       <div className="text-center relative z-10 mt-20">
-        <button className="bg-transparent text-white text-2xl leading-[normal] font-semibold py-2 px-4 inline-flex items-center">
+        <Link
+          href="/sample"
+          className="bg-transparent text-white text-2xl leading-[normal] font-semibold py-2 px-4 inline-flex items-center"
+        >
           View All Samples
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -662,7 +683,7 @@ async function OurWork() {
               d="m24.79 18.951 1.259-11.16m0 0-11.16-1.258m11.16 1.258L7.42 22.644"
             />
           </svg>
-        </button>
+        </Link>
       </div>
     </div>
   );
