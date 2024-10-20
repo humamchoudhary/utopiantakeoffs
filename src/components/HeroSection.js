@@ -10,7 +10,7 @@ export default async function HeroSection() {
         Material Takeoff & Construction Estimating Services
       </p>
       <h1 className="font-bold text-8xl">BID MORE WIN MORE!</h1>
-      <div className="flex lfex-row gap-2 items-center justify-center mt-6">
+      <div className="flex flex-row gap-2 items-center justify-center mt-6">
         <Link
           className="border flex gap-[10px] items-center justify-center px-6 py-3 border-fg rounded-2xl"
           href="/contact"
