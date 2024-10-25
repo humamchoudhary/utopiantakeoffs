@@ -117,7 +117,7 @@ export default async function Sample() {
   ];
 
   return (
-    <div className="flex flex-col items-center mt-10 ">
+    <div className="flex flex-col items-center mt-10 px-5 ">
       <div className="flex flex-col gap-6 items-center justify-center mt-20">
         <div className="px-5 py-3 border-2 text-nowrap w-min border-[#972A20] bg-primaryhex/10 rounded-xl text-[#972A20] text-lg font-semibold ">
           Affordable Estimate 30% Off
@@ -264,13 +264,13 @@ export default async function Sample() {
         </h1>
       </div>
 
-      <div className="flex flex-col gap-10 w-full my-20  px-[220px]">
+      <div className="flex flex-col gap-10 w-[1440px] my-20 px-[220px] ">
         {faq.map((item, index) => {
           return <Faq item={item} key={index} />;
         })}
       </div>
 
-      <div className="px-12 w-full 2xl:w-[1440px] gap-20">
+      <div className=" w-full 2xl:w-[1440px] gap-20">
         <div className="relative w-full flex flex-col justify-center items-center bg-primary rounded-3xl py-[72px]">
           <div className="absolute right-0 bottom-0">
             <svg

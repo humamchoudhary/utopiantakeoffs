@@ -24,29 +24,15 @@ const Faq = ({ item }) => {
           />
         )}
       </div>
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width={1000}
-        height={2}
-        fill="none"
-      >
-        <path stroke="#E3E3E3" d="M0 1h1000" />
-      </svg>
+      <div className="w-full h-[2px] bg-[#E3E3E3]" />
       <p
         className={`text-2xl leading-10 text-[#5F6778] ${state ? "inline" : "hidden"} `}
       >
         {item.a}
       </p>
-
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width={1000}
-        height={2}
-        fill="none"
-        className={`${state ? "block" : "hidden"}`}
-      >
-        <path stroke="#E3E3E3" d="M0 1h1000" />
-      </svg>
+      <div
+        className={` ${state ? "inline" : "hidden"} w-full h-[2px] bg-[#E3E3E3]`}
+      />
     </div>
   );
 };

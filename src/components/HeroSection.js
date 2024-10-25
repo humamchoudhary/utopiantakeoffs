@@ -3,7 +3,7 @@ import Link from "next/link";
 export default async function HeroSection() {
   return (
     <div className="h-screen w-full 2xl:w-[1440px] bg-gradient-to-b  from-bg to-[#F8E5E3] rounded-b-[56px] flex flex-col items-center mt-10 ">
-      <div className="px-5 py-3 border-2 border-primary bg-primaryhex/10 rounded-xl ">
+      <div className="px-5 py-3 border-2 text-nowrap w-min border-[#972A20] bg-primaryhex/10 rounded-xl text-[#972A20] text-lg font-semibold ">
         Save 60% on Estimation
       </div>
       <p className="text-lg mt-6">
