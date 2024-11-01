@@ -2,14 +2,16 @@ import Link from "next/link";
 
 export default async function HeroSection() {
   return (
-    <div className="h-screen w-full 2xl:w-[1440px] bg-gradient-to-b  from-bg to-[#F8E5E3] rounded-b-[56px] flex flex-col items-center mt-10 ">
-      <div className="px-5 py-3 border-2 text-nowrap w-min border-[#972A20] bg-primaryhex/10 rounded-xl text-[#972A20] text-lg font-semibold ">
+    <div className="h-screen w-full 2xl:w-[1440px] bg-gradient-to-b  from-bg to-[#F8E5E3] rounded-b-[56px] flex flex-col items-center mt-12 md:mt-10 ">
+      <div className="px-5 py-3 border-2 text-nowrap w-min border-[#972A20] bg-primaryhex/10 rounded-xl text-[#972A20] text-lg font-semibold text-center">
         Save 60% on Estimation
       </div>
-      <p className="text-lg mt-6">
+      <p className=" text-[10px] md:text-lg mt-5 md:mt-6 text-center font-semibold text-[#5F6778] ">
         Material Takeoff & Construction Estimating Services
       </p>
-      <h1 className="font-bold text-8xl">BID MORE WIN MORE!</h1>
+      <h1 className="font-bold leading-[normal] md:text-8xl text-[32px] tracking-[-1.6px] md:tracking-[-4.8px] text-center">
+        BID MORE WIN MORE!
+      </h1>
       <div className="flex flex-row gap-2 items-center justify-center mt-6">
         <Link
           className="border flex gap-[10px] items-center justify-center px-6 py-3 border-fg rounded-2xl"

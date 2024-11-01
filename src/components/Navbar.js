@@ -2,7 +2,7 @@
 import Image from "next/image";
 import Logo from "@/app/assets/images/Utopian Takeoff Logo.svg";
 import Link from "next/link";
-import { ChartPie, ChevronDown } from "lucide-react";
+import { ChartPie, ChevronDown, Menu } from "lucide-react";
 import { Services } from "@/constants/Info";
 import { usePathname } from "next/navigation";
 const Trade = [
@@ -90,9 +90,9 @@ export default function NavBar() {
   const path = usePathname();
   console.log(path);
   return (
-    <div className="flex flex-row w-full 2xl:w-[1440px] mx-auto justify-between items-center px-12 py-8 ">
+    <div className="flex flex-row w-full 2xl:w-[1440px] mx-auto justify-between items-center px-5 pt-5 md:px-12 md:py-8 ">
       <Image src={Logo} width={52} height={52} />
-      <div className="flex flex-row gap-24 items-center">
+      <div className="hidden md:flex flex-row gap-24 items-center">
         <Link
           className={` ${path === "/" && "font-semibold"} hover:cursor-pointer`}
           href={"/"}
@@ -145,13 +145,16 @@ export default function NavBar() {
         </Link>
       </div>
 
-      <div className="flex flex-row justify-center items-center gap-4">
+      <div className="hidden md:flex flex-row justify-center items-center gap-4">
         <Link
           href={"/contact"}
           className="py-[14px] px-6 rounded-xl bg-primary text-bg "
         >
           Get Estimated
         </Link>
+      </div>
+      <div className="bg-[#601E1A2B]/10 p-3 rounded-lg">
+        <Menu />
       </div>
     </div>
   );

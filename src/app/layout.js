@@ -25,11 +25,15 @@ import emailjs from "@emailjs/browser";
 export default function RootLayout({ children }) {
   emailjs.init({ publicKey: "3m5zvAEoGBZRSR7sJ" });
   return (
-    <html lang="en">
-      <body className={`antialiased  ${sora.className}  `}>
+    <html lang="en" className="overflow-x-hidden">
+      <body
+        className={`antialiased  ${sora.className} w-screen md:w-screen overflow-x-hidden `}
+      >
         <Toaster position="bottom-center" />
         <Navbar />
-        <main className="bg-bg laptop:px-0 2xl:px-60">{children}</main>
+        <main className="bg-bg laptop:px-0 2xl:px-60 mx-2 md:mx-0">
+          {children}
+        </main>
         <Footer />
       </body>
     </html>

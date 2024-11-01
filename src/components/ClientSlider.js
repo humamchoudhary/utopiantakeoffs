@@ -7,9 +7,19 @@ const animation = { duration: 20000, easing: (t) => t };
 
 export default function CleintSlider({ clients }) {
   const [sliderRef] = useKeenSlider({
-    slides: {
-      perView: 5,
-      spacing: 48, // This corresponds to mx-8 in Tailwind
+    breakpoints: {
+      "(min-width: 1440px)": {
+        slides: {
+          perView: 5,
+          spacing: 48, // This corresponds to mx-8 in Tailwind
+        },
+      },
+      "(min-width: 640px)": {
+        slides: {
+          perView: 5,
+          spacing: 16, // This corresponds to mx-8 in Tailwind
+        },
+      },
     },
     loop: true,
     renderMode: "performance",
@@ -26,26 +36,27 @@ export default function CleintSlider({ clients }) {
   });
 
   return (
-    <section className="w-full 2xl:w-[1440px] py-16">
-      <div className="container mx-auto text-center">
-        <h2 className="text font-bold mb-2">We Worked With</h2>
-        <h3 className="text-[40px] font-bold mb-12">Meet Our Clients</h3>
-        <div className="overflow-hidden mx-auto w-[1200px] relative">
-          <div
-            ref={sliderRef}
-            className="flex items-center justify-center keen-slider"
-          >
+    <section className="w-[375px]  md:w-[1440px] py-16">
+      <div className="mx-auto text-center">
+        <h2 className="text-xs md:text-xl leading-[normal] text-[#5F6778] font-semibold mb-2">
+          We Worked With
+        </h2>
+        <h3 className=" text-[32px] md:text-[40px] font-bold mb-12">
+          Meet Our Clients
+        </h3>
+        <div className="overflow-hidden mx-auto w-[330px] md:w-[1200px] relative">
+          <div ref={sliderRef} className=" keen-slider">
             {clients.map((client, index) => (
               <div
                 key={index}
                 className="keen-slider__slide"
-                style={{ width: 200 }}
+                style={{ width: 200, minWidth: 200 }}
               >
                 {client.logo}
               </div>
             ))}
           </div>
-          <div className="fade"></div>
+          <div className="fade" />
         </div>
       </div>
     </section>

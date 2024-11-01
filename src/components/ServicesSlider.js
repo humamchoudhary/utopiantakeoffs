@@ -7,6 +7,14 @@ const animation = { duration: 20000, easing: (t) => t };
 
 export default function ServiceSlider({ services, rtl = false }) {
   const [sliderRef] = useKeenSlider({
+    breakpoints: {
+      "(max-width: 640px)": {
+        slides: {
+          perView: 1.1,
+          spacing: 48,
+        },
+      },
+    },
     slides: {
       perView: 4,
       spacing: 16,
@@ -29,9 +37,9 @@ export default function ServiceSlider({ services, rtl = false }) {
   return (
     <div
       ref={sliderRef}
-      className={` w-[1200px] flex flex-row justify-center items-center keen-slider absolute `}
+      className={`  md:w-[1200px] flex flex-row justify-center items-center keen-slider absolute `}
     >
-      {services.map((item, index) => (
+      {[...services, ...services].map((item, index) => (
         <div
           key={index}
           className="keen-slider__slide   flex items-center justify-center flex-shrink-0 h-32 w-72 px-11 py-8 rounded-2xl"
