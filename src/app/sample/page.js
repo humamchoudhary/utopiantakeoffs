@@ -118,24 +118,24 @@ export default async function Sample() {
 
   return (
     <div className="flex flex-col items-center mt-10 px-5 ">
-      <div className="flex flex-col gap-6 items-center justify-center mt-20">
-        <div className="px-5 py-3 border-2 text-nowrap w-min border-[#972A20] bg-primaryhex/10 rounded-xl text-[#972A20] text-lg font-semibold ">
+      <div className="flex flex-col gap-5 md:[gap-6 mt-20] items-center justify-center mt-12">
+        <div className="px-2 py-4 border-[0.723px] text-nowrap w-min border-[#972A20] bg-primaryhex/10 rounded-[8.681px] text-[#972A20] text-sm font-semibold md:[px-3 py-5 border-[1px] rounded-xl ]">
           Affordable Estimate 30% Off
         </div>
-        <h1 className="text-center text-7xl font-bold mt-6 leading-normal">
+        <h1 className="text-center w-[365px] mt-5 text-[32px] md:text-7xl md:mt-6 md:w-[1440px] font-bold  leading-normal">
           Quantity Takeoff Samples
         </h1>
-        <p className="text-center text-2xl text-[#5F6778] font-medium leading-10 mt-3 w-[1400px] mx-auto tracking-[-1.2px]">
+        <p className="text-center text-xs md:text-2xl text-[#5F6778] font-medium leading-6 md:leading-10 mt-3 justify-center md:w-[1400px] mx-auto md:tracking-[-1.2px]">
           All Quantity Takeoffs and Estimates are Provided with Mark Up Plans.
           We price out
         </p>
-        <p className="text-center text-2xl text-[#5F6778] font-medium leading-10  w-[1400px] mx-auto tracking-[-1.2px]">
+        <p className="text-center text-xs md:text-2xl text-[#5F6778] font-medium leading-6 md:leading-10 justify-center  md:w-[1400px] mx-auto md:tracking-[-1.2px]">
           estimates with vendor-quoted zip code-based separate material and
           labor unit pricing.
         </p>
-        <div className="flex flex-row gap-2 items-center justify-center mt-6">
+        <div className="flex flex-row gap-1 md:gap-2 items-center justify-center mt-5 md:mt-6">
           <Link
-            className="border flex gap-[10px] items-center justify-center px-6 py-3 border-fg rounded-2xl"
+            className="border flex gap-1 md:gap-[10px] items-center justify-center px-[10px] py-4 md:px-6 md:py-3 border-fg rounded-xl md:rounded-2xl"
             href="/contact"
           >
             <svg
@@ -155,7 +155,7 @@ export default async function Sample() {
           </Link>
 
           <Link
-            className="border flex gap-1 items-center justify-center px-6 py-3 border-primary bg-primary text-bg rounded-2xl"
+            className="border flex gap-1 items-center justify-center px-[10px] py-4 md:px-6 md:py-3 border-primary bg-primary text-bg rounded-xl md:rounded-2xl"
             href="/"
           >
             <svg
@@ -179,7 +179,7 @@ export default async function Sample() {
           </Link>
         </div>
       </div>
-      <div className="flex flex-col items-center mt-20">
+      <div className="flex flex-col items-center mt-14 md:mt-20">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width={1348}
@@ -204,30 +204,30 @@ export default async function Sample() {
         </svg>
       </div>
 
-      <div className="w-full 2xl:w-[1440px] rounded-[23px] flex flex-col items-center py-20 mt-20 px-24 bg-fg">
-        <p className="text-[#CAA4A2] text-xl font-semibold text-center">
+      <div className="w-full md:2xl:w-[1440px] rounded-2xl md:rounded-[23px] flex flex-col items-center px-4 py-10 md:py-20 mt-14 md:mt-20 md:px-24 bg-fg">
+        <p className="text-[#CAA4A2] text-xs font-semibold text-center">
           How we work
         </p>
-        <h3 className="text-[40px] text-[#E4E4E4] font-semibold text-center">
+        <h3 className="text-2xl md:text-[40px] text-[#E4E4E4] font-semibold text-center">
           Utopian Samples
         </h3>
-        <p className="text-[#B0B0B0] text-2xl leading-10 text-center mt-4 w-[873px] mb-20">
+        <p className="text-[#B0B0B0] text-xs md:text-2xl leading-5 md:leading-10 text-center mt-4 md:w-[873px] mb-9 md:mb-20">
           Contractors save time and estimating costs with our expert services,
           helping them bid more and win jobs successfully.
         </p>
         <div className="relative">
-          <div className="grid grid-cols-2 gap-6">
+          <div className="flex flex-col md:grid md:grid-cols-2 md:gap-6 gap-4">
             {info.map((item, index) => (
               <div
                 key={index}
-                className="flex p-7 flex-col bg-[#26272D] gap-4 border-[#4E4E4E] border rounded-[24px]"
+                className="flex p-[18px] md:p-7 flex-col bg-[#26272D] gap-4 border-[#4E4E4E] border rounded-[20px] md:rounded-[24px]"
               >
                 <div className="">
-                  <p className="text-semibold text-2xl text-[#E4E4E4] font-bold">
+                  <p className=" text-base md:text-2xl text-[#E4E4E4] font-bold">
                     {item.title}
                   </p>
 
-                  <p className=" leading-8 text-xl text-[#A8A8A8] font-semibold">
+                  <p className="leading-5 md:leading-8 text-sm md:text-xl text-[#A8A8A8] font-semibold">
                     {item.desc}
                   </p>
                 </div>
@@ -255,23 +255,23 @@ export default async function Sample() {
         </div>
       </div>
 
-      <div className="flex flex-col items-center ">
-        <p className="text-xl font-semibold text-primary mt-20 leading-normal">
+      <div className="flex flex-col items-center">
+        <p className="text-xs md:text-xl font-semibold text-primary mt-20 leading-normal">
           What People Need to Ask Us
         </p>
-        <h1 className="text-[40px] font-semibold leading-normal">
+        <h1 className=" md:w-100% text-2xl md:text-[40px] font-semibold leading-normal">
           Frequently Asked Questions
         </h1>
       </div>
 
-      <div className="flex flex-col gap-10 w-[1440px] my-20 px-[220px] ">
+      <div className="flex flex-col gap-6 md:gap-10 md:w-[1440px] my-14 md:my-20 md:px-[220px] ">
         {faq.map((item, index) => {
           return <Faq item={item} key={index} />;
         })}
       </div>
 
-      <div className=" w-full 2xl:w-[1440px] gap-20">
-        <div className="relative w-full flex flex-col justify-center items-center bg-primary rounded-3xl py-[72px]">
+      <div className=" w-full md:2xl:w-[1440px] gap-20">
+        <div className="relative w-full flex flex-col justify-center items-center bg-primary rounded-2xl md:rounded-3xl py-[72px]">
           <div className="absolute right-0 bottom-0">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -287,15 +287,15 @@ export default async function Sample() {
               />
             </svg>
           </div>
-          <div className="px-5 py-3 mb-5 border border-bg rounded-xl">
+          <div className="md:px-5 px-4 py-2 md:py-3 md:mb-5 mb-[10px] border border-bg rounded-lg md:rounded-xl">
             <p className="text-lg text-bg font-semibold leading-[normal]">
               Save 30% Now
             </p>
           </div>
-          <p className="text-[#E4E4E4] mx-[340px] w-[664px] font-semibold text-[32px] text-center">
+          <p className="text-[#E4E4E4] md:mx-[340px] md:w-[664px] font-semibold md:text-[32px] text-sm leading-5 text-center">
             Work With Us! We Are A Global Network Of Construction Cost Expert
           </p>
-          <div className="px-[32px] py-4 mt-7  bg-bg rounded-xl">
+          <div className="md:px-[32px] md:py-4 px-5 py-[10px] mt-6 md:mt-7  bg-bg rounded-lg md:rounded-xl">
             <p className="text-lg text-primary font-semibold leading-[normal]">
               Get Quotes Now
             </p>
