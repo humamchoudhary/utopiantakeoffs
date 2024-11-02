@@ -36,21 +36,22 @@ const ContactPage = () => {
           </radialGradient>
         </defs>
       </svg>{" "}
-      <div className="mt-[243px] flex flex-col items-center justify-center gap-6 w-min 2xl:w-[1440px] px-14 z-10">
-        <div className="px-5 py-3 text-primary text-lg font-semibold leading-[normal] border border-primary rounded-xl bg-[#FAF3F2] text-nowrap">
+      <div className="md:mt-[243px] mt-[176px] flex flex-col items-center justify-center gap-5 md:gap-6 w-min md:2xl:w-[1440px] px-5 md:px-14 z-10">
+        <div className="py-[8.68px] px-[14.47px] md:px-5 md:py-3 text-primary text-sm md:text-lg font-semibold leading-[normal] border border-primary rounded-[8.681px] md:rounded-xl bg-[#FAF3F2] text-nowrap">
           Affordable Estimate 30% Off
         </div>
         <div className="flex flex-col items-center">
-          <h1 className="text-7xl font-bold leading-[normal] text-fg text-nowrap">
-            Contact Our Friendly Team
+          <h1 className="text-[32px] md:text-7xl font-bold leading-[normal] text-fg text-nowrap">
+            Contact Our Friendly Team 
+
           </h1>
-          <p className="mt-3 text-center w-[800px]">
+          <p className="md:mt-3 mt-2 text-center w-[335px] md:w-[800px]">
             Our expert team is here to assist you with all your construction
             estimating needs. Reach out for inquiries, quotes, or support—let's
             work together!
           </p>
         </div>
-        <div className="px-6 py-3 rounded-xl bg-primary text-bg flex flex-row items-center justify-center gap-1">
+        <div className="px-4 py-3 mt:px-6 mt:py-3 rounded-xl bg-primary text-bg flex flex-row items-center justify-center gap-1">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width={22}
@@ -71,13 +72,13 @@ const ContactPage = () => {
           Book a call
         </div>
       </div>
-      <div className="flex flex-row w-full 2xl:w-[1440px] gap-10 mt-32 px-[110px] rounded-lg ">
-        <form className="flex flex-col w-1/2 gap-8">
+      <div className="flex flex-col md:flex-row w-full md:2xl:w-[1440px] gap-10 mt-32 px-5 md:px-[110px] rounded-lg ">
+        <form className="flex flex-col md:w-1/2 md:gap-8 gap-4">
           <div className="grid grid-cols-2 gap-4">
             <div className="">
               <label
                 htmlFor="firstName"
-                className="block text-sm font-semibold text-fg text-[16px] mb-[13px]"
+                className="block text-sm font-semibold text-fg md:text-[16px] mb-2 md:mb-[13px]"
               >
                 First Name
               </label>
@@ -85,7 +86,7 @@ const ContactPage = () => {
                 type="text"
                 id="firstName"
                 name="firstName"
-                className="px-4 py-[14px] block w-full rounded-lg border-[#C6C6C6] border shadow-sm "
+                className="md:px-4 px-3 py-[10px] md:py-[14px] block w-full rounded-lg border-[#C6C6C6] border shadow-sm "
                 placeholder="First Name"
               />
             </div>
@@ -93,7 +94,7 @@ const ContactPage = () => {
             <div className="">
               <label
                 htmlFor="lastname"
-                className="block text-sm font-semibold text-fg text-[16px] mb-[13px]"
+                className="block text-sm font-semibold text-fg md:text-[16px] mb-2 md:mb-[13px]"
               >
                 Last Name
               </label>
@@ -101,7 +102,7 @@ const ContactPage = () => {
                 type="text"
                 id="lastName"
                 name="lastName"
-                className="px-4 py-[14px] block w-full rounded-lg border-[#C6C6C6] border shadow-sm "
+                className="md:px-4 px-3 py-[10px] md:py-[14px] block w-full rounded-lg border-[#C6C6C6] border shadow-sm "
                 placeholder="Last Name"
               />
             </div>
@@ -109,7 +110,7 @@ const ContactPage = () => {
           <div className="">
             <label
               htmlFor="companyName"
-              className="block text-sm font-semibold text-fg text-[16px] mb-[13px]"
+              className="block text-sm font-semibold text-fg md:text-[16px] mb-2 md:mb-[13px]"
             >
               Company Name
             </label>
@@ -117,14 +118,14 @@ const ContactPage = () => {
               type="text"
               id="companyName"
               name="companyName"
-              className="px-4 py-[14px] block w-full rounded-lg border-[#C6C6C6] border shadow-sm "
+              className="md:px-4 px-3 py-[10px] md:py-[14px] block w-full rounded-lg border-[#C6C6C6] border shadow-sm "
               placeholder="Company Name"
             />
           </div>
           <div className="">
             <label
               htmlFor="companyEmail"
-              className="block text-sm font-semibold text-fg text-[16px] mb-[13px]"
+              className="block text-sm font-semibold text-fg md:text-[16px] mb-2 md:mb-[13px]"
             >
               Company Email
             </label>
@@ -132,7 +133,7 @@ const ContactPage = () => {
               type="email"
               id="companyEmail"
               name="companyEmail"
-              className="px-4 py-[14px] block w-full rounded-lg border-[#C6C6C6] border shadow-sm "
+              className="md:px-4 px-3 py-[10px] md:py-[14px] block w-full rounded-lg border-[#C6C6C6] border shadow-sm "
               placeholder="you@company.com"
             />
           </div>
@@ -141,7 +142,7 @@ const ContactPage = () => {
           <div className="">
             <label
               htmlFor="phoneNo"
-              className="block text-sm font-semibold text-fg text-[16px] mb-[13px]"
+              className="block text-sm font-semibold text-fg md:text-[16px] mb-2 md:mb-[13px]"
             >
               Phone Number
             </label>
@@ -149,14 +150,14 @@ const ContactPage = () => {
               type="tel"
               id="companyEmail"
               name="companyEmail"
-              className="px-4 py-[14px] block w-full rounded-lg border-[#C6C6C6] border shadow-sm "
+              className="px-3 py-[10px] md:px-4 md:py-[14px] block w-full rounded-lg border-[#C6C6C6] border shadow-sm "
               placeholder="XXX XXXXXXX"
             />
           </div>
           <div>
             <label
               htmlFor="projectDescription"
-              className="block text-sm font-semibold text-fg text-[16px] mb-[13px]"
+              className="block text-sm font-semibold text-fg md:text-[16px] mb-2 md:mb-[13px]"
             >
               Project Description
             </label>
@@ -164,14 +165,14 @@ const ContactPage = () => {
               id="projectDescription"
               name="projectDescription"
               rows="8"
-              className="px-4 py-[14px] block w-full rounded-lg border-[#C6C6C6] border shadow-sm "
+              className="px-3 py-[10px] md:px-4 md:py-[14px] block w-full rounded-lg border-[#C6C6C6] border shadow-sm "
               placeholder="Leave the project description here"
             ></textarea>
           </div>
           <div>
             <button
               type="submit"
-              className="w-full h-14 py-3 px-4 justify-center items-center gap-2 rounded-xl bg-primary text-bg text-lg font-semibold leading-[normal] "
+              className="w-full md:h-14 md:py-3 px-[12px 16px] py-3 md:px-4 justify-center items-center gap-2 rounded-xl bg-primary text-bg text-lg font-semibold leading-[normal] "
             >
               Submit
             </button>
@@ -182,19 +183,21 @@ const ContactPage = () => {
           width={2}
           height={940}
           fill="none"
+          class="hidden md:block"
+
         >
           <path stroke="#EBEBEB" strokeLinecap="round" d="M1 1v938.013" />
         </svg>
-        <div className="mt-8 gap-[40px] w-1/2">
+        <div className="md:mt-8 md:gap-[40px] md:w-1/2">
           <div className="space-y-14">
             <div>
-              <h2 className="text-[24px] font-bold leading-[24px] mb-[10px]">
+              <h2 className="md:text-[24px] text-base font-bold leading-[24px] mb-[4px] md:mb-[10px]">
                 Address
               </h2>
-              <p className="text-[20px] mb-6 text-[#475464]">
+              <p className="md:text-[20px] text-xs mb-4 md:mb-6 text-[#475464]">
                 Your trusted estimating partner with a global presence.
               </p>
-              <p className="flex flex-row items-center gap-[14px] text-[20px] font-semibold underline">
+              <p className="flex flex-row items-center gap-[6px] md:gap-[14px] text-xs md:text-[20px] font-semibold underline">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width={32}
@@ -223,13 +226,13 @@ const ContactPage = () => {
             </div>
 
             <div>
-              <h2 className=" text-[24px] font-semibold mb-[10px]">
+              <h2 className="text-base md:text-[24px] font-bold mb-1 md:mb-[10px]">
                 Contact Info
               </h2>
-              <p className="text-[20px] mb-6 text-[#475464]">
+              <p className="text-xs md:text-[20px] mb-4 md:mb-6 text-[#475464]">
                 Fast, reliable estimating services worldwide.
               </p>
-              <p className="flex flex-row items-center font-semibold gap-[14px] text-[20px] mb-[14px] underline">
+              <p className="flex flex-row items-center font-semibold gap-[6px] md:gap-[14px] text-xs md:text-[20px] mb-2 md:mb-[14px] underline">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width={32}
@@ -245,7 +248,7 @@ const ContactPage = () => {
                 </svg>
                 utopiantakeoffs10@gmail.com
               </p>
-              <p className="flex flex-row items-center font-semibold gap-[14px] text-[20px] underline">
+              <p className="flex flex-row items-center font-semibold gap-[6px] md:gap-[14px] text-xs md:text-[20px] underline">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width={32}
@@ -264,13 +267,13 @@ const ContactPage = () => {
             </div>
 
             <div>
-              <h2 className="text-[24px] font-semibold mb-[10px]">
+              <h2 className="text-base md:text-[24px] font-bold mb-1 md:mb-[10px]">
                 Working Hours
               </h2>
-              <p className="text-[20px] text-[#475464] mb-6">
+              <p className="text-xs md:text-[20px] text-[#475464] mb-4 md:mb-6">
                 Available Mon to Sat for your estimating needs.
               </p>
-              <p className="flex flex-row items-center gap-[14px] text-[20px] mb-[14px] font-semibold underline">
+              <p className="flex flex-row items-center gap-[6px] md:gap-[14px] text-xs md:text-[20px] mb-2 md:mb-[14px] font-semibold underline">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width={32}
@@ -301,7 +304,7 @@ const ContactPage = () => {
                 </svg>
                 Monday to Saturday
               </p>
-              <p className="flex flex-row items-center gap-[14px] text-[20px] mb-[14px] font-semibold underline">
+              <p className="flex flex-row items-center gap-[6px] md:gap-[14px] text-xs md:text-[20px] mb-[14px] font-bold underline">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width={32}
@@ -327,10 +330,10 @@ const ContactPage = () => {
             </div>
 
             <div>
-              <h2 className="text-[24px] font-semibold mb-6">
+              <h2 className="text-base md:text-[24px] font-bold mb-1 md:mb-6">
                 Get a Quick Quote
               </h2>
-              <p className="text-[20px] text-[#475464] leading-10 tracking-[-0.4px]">
+              <p className="text-xs md:text-[20px] text-[#475464] leading-6 md:leading-10 tracking-[0.24px] md:tracking-[-0.4px]">
                 Connect with us today by submitting your information in the
                 contact form to receive a quick quote, including an invoice and
                 turnaround time, in just 5 minutes. If you have any additional
@@ -342,10 +345,10 @@ const ContactPage = () => {
         </div>
       </div>
       <div>
-        <h2 className="flex flex-row justify-center  items-center font-bold mt-14 mb-16 text-[32px]">
+        <h2 className="flex flex-row justify-center items-center text-center font-bold mt-14 mb-6 md:mb-16 text-[32px] leading-[48px] tracking-[-1.28px]">
           Other Ways To Get In Touch
         </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 w-full 2xl:w-[1440px] lg:grid-cols-4 gap-6 max-w-7xl mx-4 ">
+        <div className="flex flex-col md:grid md:grid-cols-1 md:sm:grid-cols-2 w-auto md:2xl:w-[1440px] md:lg:grid-cols-4 gap-4 md:gap-6 md:max-w-7xl mx-5 md:mx-4 ">
           <div className="bg-bg border border-[#E7E7E9] p-6 rounded-xl">
             <div className="p-3 bg-bg rounded-xl border border-[#E7E7E9] w-min">
               <svg
