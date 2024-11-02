@@ -264,7 +264,7 @@ export default async function Sample() {
         </h1>
       </div>
 
-      <div className="flex flex-col gap-6 md:gap-10 md:w-[1440px] my-14 md:my-20 md:px-[220px] ">
+      <div className="flex flex-col gap-6 md:gap-10 md:w-[1440px] w-[311px] my-14 md:my-20 md:px-[220px] ">
         {faq.map((item, index) => {
           return <Faq item={item} key={index} />;
         })}
@@ -288,15 +288,15 @@ export default async function Sample() {
             </svg>
           </div>
           <div className="md:px-5 px-4 py-2 md:py-3 md:mb-5 mb-[10px] border border-bg rounded-lg md:rounded-xl">
-            <p className="text-lg text-bg font-semibold leading-[normal]">
+            <p className="md:text-lg text-sm text-bg font-semibold leading-[normal]">
               Save 30% Now
             </p>
           </div>
-          <p className="text-[#E4E4E4] md:mx-[340px] md:w-[664px] font-semibold md:text-[32px] text-sm leading-5 text-center">
+          <p className="text-[#E4E4E4] md:mx-[340px] md:w-[664px] font-semibold md:text-[32px] text-sm leading-5 md:leading-[normal] text-center">
             Work With Us! We Are A Global Network Of Construction Cost Expert
           </p>
           <div className="md:px-[32px] md:py-4 px-5 py-[10px] mt-6 md:mt-7  bg-bg rounded-lg md:rounded-xl">
-            <p className="text-lg text-primary font-semibold leading-[normal]">
+            <p className="md:text-lg text-xs text-primary font-semibold leading-[normal]">
               Get Quotes Now
             </p>
           </div>

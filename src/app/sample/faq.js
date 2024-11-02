@@ -7,26 +7,26 @@ const Faq = ({ item }) => {
   return (
     <div className="flex flex-col w-full gap-8 duration-200">
       <div className="flex flex-row justify-between">
-        <p className="text-2xl leading-[normal] font-semibold">{item.q}</p>
+        <p className="md:text-2xl text-base leading-[normal] font-semibold">{item.q}</p>
         {state ? (
           <MinusCircle
             onClick={() => {
               setSate(false);
             }}
-            className="w-8 h-8"
+            className="md:w-8 md:h-8 w-6 h-6"
           />
         ) : (
           <CirclePlus
             onClick={() => {
               setSate(true);
             }}
-            className="w-8 h-8"
+            className="md:w-8 md:h-8 w-6 h-6"
           />
         )}
       </div>
       <div className="w-full h-[2px] bg-[#E3E3E3]" />
       <p
-        className={`text-2xl leading-10 text-[#5F6778] ${state ? "inline" : "hidden"} `}
+        className={`md:text-2xl text-sm md:leading-10 leading-[28px] text-[#5F6778] ${state ? "inline" : "hidden"} `}
       >
         {item.a}
       </p>
