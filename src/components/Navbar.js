@@ -153,7 +153,7 @@ export default function NavBar() {
           Get Estimated
         </Link>
       </div>
-      <div className="bg-[#601E1A2B]/10 p-3 rounded-lg">
+      <div className="md:hidden bg-[#601E1A2B]/10 p-3 rounded-lg">
         <Menu />
       </div>
     </div>
