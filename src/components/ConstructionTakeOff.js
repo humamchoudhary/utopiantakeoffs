@@ -149,7 +149,7 @@ const ConstructionTakeoffPage = ({ services }) => {
           </button>
         </div>
       )}
-      <div className=" overflow-hidden self-start w-[360px] md:w-[1328px] relative">
+      <div className=" overflow-hidden self-start w-[335px] md:w-[1328px] relative">
         {loaded &&
           instanceRef.current.track.details.maxIdx === currentSlide && (
             <div className="z-10 left-0 top-0 absolute pointer-events-none h-full w-[100px] md:w-[583px] bg-gradient-to-l from-transparent to-bg" />

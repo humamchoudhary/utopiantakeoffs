@@ -7,20 +7,22 @@ const Faq = ({ item }) => {
   return (
     <div className="flex flex-col w-full gap-8 duration-200">
       <div className="flex flex-row justify-between">
-        <p className="md:text-2xl text-base leading-[normal] font-semibold">{item.q}</p>
+        <p className="md:text-2xl text-base leading-[normal] font-semibold">
+          {item.q}
+        </p>
         {state ? (
           <MinusCircle
             onClick={() => {
               setSate(false);
             }}
-            className="md:w-8 md:h-8 w-6 h-6"
+            className="md:w-8 md:h-8 w-6 h-6  ml-1 flex-shrink-0"
           />
         ) : (
           <CirclePlus
             onClick={() => {
               setSate(true);
             }}
-            className="md:w-8 md:h-8 w-6 h-6"
+            className="md:w-8 md:h-8 w-6 h-6 ml-1 flex-shrink-0"
           />
         )}
       </div>

@@ -117,25 +117,22 @@ export default async function Sample() {
   ];
 
   return (
-    <div className="flex flex-col items-center mt-10 px-5 ">
+    <div className="flex flex-col items-center ">
       <div className="flex flex-col gap-5 md:[gap-6 mt-20] items-center justify-center mt-12">
-        <div className="px-2 py-4 border-[0.723px] text-nowrap w-min border-[#972A20] bg-primaryhex/10 rounded-[8.681px] text-[#972A20] text-sm font-semibold md:[px-3 py-5 border-[1px] rounded-xl ]">
+        <div className="px-5 py-3 border-2 text-nowrap w-min border-[#972A20] bg-primaryhex/10 rounded-xl text-[#972A20] text-sm md:text-lg  font-semibold text-center bg-[#FAF3F2] ">
           Affordable Estimate 30% Off
         </div>
         <h1 className="text-center w-[365px] mt-5 text-[32px] md:text-7xl md:mt-6 md:w-[1440px] font-bold  leading-normal">
           Quantity Takeoff Samples
         </h1>
-        <p className="text-center text-xs md:text-2xl text-[#5F6778] font-medium leading-6 md:leading-10 mt-3 justify-center md:w-[1400px] mx-auto md:tracking-[-1.2px]">
+        <p className="text-center text-xs md:text-2xl text-[#5F6778] leading-6 md:leading-10 mt-3 justify-center md:w-[1400px]  md:tracking-[-1.2px] px-4 ">
           All Quantity Takeoffs and Estimates are Provided with Mark Up Plans.
-          We price out
-        </p>
-        <p className="text-center text-xs md:text-2xl text-[#5F6778] font-medium leading-6 md:leading-10 justify-center  md:w-[1400px] mx-auto md:tracking-[-1.2px]">
-          estimates with vendor-quoted zip code-based separate material and
-          labor unit pricing.
+          We price out estimates with vendor-quoted zip code-based separate
+          material and labor unit pricing.
         </p>
         <div className="flex flex-row gap-1 md:gap-2 items-center justify-center mt-5 md:mt-6">
           <Link
-            className="border flex gap-1 md:gap-[10px] items-center justify-center px-[10px] py-4 md:px-6 md:py-3 border-fg rounded-xl md:rounded-2xl"
+            className="border flex gap-1 md:gap-[10px] items-center justify-center py-[10px] px-4 md:px-6 md:py-3 border-fg rounded-xl md:rounded-2xl"
             href="/contact"
           >
             <svg
@@ -155,7 +152,7 @@ export default async function Sample() {
           </Link>
 
           <Link
-            className="border flex gap-1 items-center justify-center px-[10px] py-4 md:px-6 md:py-3 border-primary bg-primary text-bg rounded-xl md:rounded-2xl"
+            className="border flex gap-1 items-center justify-center py-[10px] px-4 md:px-6 md:py-3 border-primary bg-primary text-bg rounded-xl md:rounded-2xl"
             href="/"
           >
             <svg
@@ -179,32 +176,33 @@ export default async function Sample() {
           </Link>
         </div>
       </div>
-      <div className="flex flex-col items-center mt-14 md:mt-20">
+      <div className="flex flex-col items-center mt-14 mx-3 md:mx-11 md:mt-20">
         <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width={1348}
-          height={2}
+          width="335"
+          height="2"
+          viewBox="0 0 335 2"
           fill="none"
+          xmlns="http://www.w3.org/2000/svg"
         >
-          <path stroke="url(#a)" d="M-.007 1H1348.01" />
+          <path d="M0 1H335" stroke="url(#paint0_linear_798_3087)" />
           <defs>
             <linearGradient
-              id="a"
-              x1={-0.007}
-              x2={1348.01}
-              y1={1.5}
-              y2={1.5}
+              id="paint0_linear_798_3087"
+              x1="0"
+              y1="1.5"
+              x2="335"
+              y2="1.5"
               gradientUnits="userSpaceOnUse"
             >
-              <stop stopColor="#D0CCCC" stopOpacity={0} />
-              <stop offset={0.486} stopColor="#C4C4C4" />
-              <stop offset={1} stopColor="#6A6868" stopOpacity={0} />
+              <stop stop-color="#D0CCCC" stop-opacity="0" />
+              <stop offset="0.486366" stop-color="#C4C4C4" />
+              <stop offset="1" stop-color="#6A6868" stop-opacity="0" />
             </linearGradient>
           </defs>
         </svg>
       </div>
 
-      <div className="w-full md:2xl:w-[1440px] rounded-2xl md:rounded-[23px] flex flex-col items-center px-4 py-10 md:py-20 mt-14 md:mt-20 md:px-24 bg-fg">
+      <div className="w-full 2xl:w-[1440px] rounded-2xl md:rounded-[23px] flex flex-col items-center px-4 py-10 md:py-20 mt-14 md:mt-20 md:px-24 bg-fg">
         <p className="text-[#CAA4A2] text-xs font-semibold text-center">
           How we work
         </p>

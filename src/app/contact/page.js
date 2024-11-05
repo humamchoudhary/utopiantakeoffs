@@ -36,16 +36,15 @@ const ContactPage = () => {
           </radialGradient>
         </defs>
       </svg>{" "}
-      <div className="md:mt-[243px] mt-[176px] flex flex-col items-center justify-center gap-5 md:gap-6 w-min md:2xl:w-[1440px] px-5 md:px-14 z-10">
-        <div className="py-[8.68px] px-[14.47px] md:px-5 md:py-3 text-primary text-sm md:text-lg font-semibold leading-[normal] border border-primary rounded-[8.681px] md:rounded-xl bg-[#FAF3F2] text-nowrap">
+      <div className="md:mt-[243px] mt-[176px] flex flex-col items-center justify-center gap-5 md:gap-6   2xl:w-[1440px] px-5 md:px-14 z-10">
+        <div className="px-5 py-3 border-2 text-nowrap w-min border-[#972A20] bg-primaryhex/10 rounded-xl text-[#972A20] text-lg font-semibold text-center">
           Affordable Estimate 30% Off
         </div>
         <div className="flex flex-col items-center">
-          <h1 className="text-[32px] md:text-7xl font-bold leading-[normal] text-fg text-nowrap">
-            Contact Our Friendly Team 
-
+          <h1 className="text-[32px] text-center md:text-7xl font-bold text-fg  tracking-[-1.6px]">
+            Contact Our Friendly Team
           </h1>
-          <p className="md:mt-3 mt-2 text-center w-[335px] md:w-[800px]">
+          <p className="md:mt-3 mt-2 text-center text-[#5F6778] w-[335px] md:w-[800px]">
             Our expert team is here to assist you with all your construction
             estimating needs. Reach out for inquiries, quotes, or support—let's
             work together!
@@ -72,7 +71,7 @@ const ContactPage = () => {
           Book a call
         </div>
       </div>
-      <div className="flex flex-col md:flex-row w-full md:2xl:w-[1440px] gap-10 mt-32 px-5 md:px-[110px] rounded-lg ">
+      <div className="flex flex-col md:flex-row w-full md:2xl:w-[1440px] gap-10 mt-32 px-[14px] md:px-[110px] rounded-lg ">
         <form className="flex flex-col md:w-1/2 md:gap-8 gap-4">
           <div className="grid grid-cols-2 gap-4">
             <div className="">
@@ -184,7 +183,6 @@ const ContactPage = () => {
           height={940}
           fill="none"
           class="hidden md:block"
-
         >
           <path stroke="#EBEBEB" strokeLinecap="round" d="M1 1v938.013" />
         </svg>

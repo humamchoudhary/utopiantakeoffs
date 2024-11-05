@@ -123,6 +123,7 @@ export default async function Home() {
       <WorkWithUs />
       <GetQoute />
       <OurWork />
+
       <ReviewSection w_reviews={w_reviews} a_reviews={a_reviews} />
     </div>
   );
@@ -249,7 +250,7 @@ const EstimatingServices = () => {
       <h2 className="text-[#CAA4A2] text-[12px] md:text-xl font-semibold text-center">
         Here You Check
       </h2>
-      <h2 className="text-[#E4E4E4] text-2xl md:text-[40px] font-semibold text-center mb-[102px]">
+      <h2 className="text-[#E4E4E4] text-2xl md:text-[40px] font-semibold text-center mb-9 md:mb-[102px]">
         Our Estimating Services
       </h2>
       <div className="flex flex-col md:flex-row justify-center gap-12">
