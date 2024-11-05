@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
 import WrittenReviewTile from "./WrittenReviewTile";
@@ -114,8 +114,12 @@ const ReviewScoller = ({ data, rev, className }) => {
 const ReviewSection = ({ a_reviews, w_reviews }) => {
   const [loaded, setLoaded] = useState(false);
   const [currentSlide, setCurrentSlide] = useState(0);
-  const offset = window.innerWidth <= 600 ? 0 : 1;
-  console.log(window.innerWidth);
+  const [innerWidth, setInnerWidth] = useState();
+  useEffect(() => {
+    setInnerWidth(window.innerWidth);
+  });
+  const offset = innerWidth <= 600 ? 0 : 1;
+  console.log(innerWidth);
   const [sliderRef, instanceRef] = useKeenSlider({
     slides: {
       perView: 3.2,
@@ -186,7 +190,7 @@ const ReviewSection = ({ a_reviews, w_reviews }) => {
             className="keen-slider w-full h-[380px] md:h-[500px]"
           >
             {a_reviews
-              .slice(window.innerWidth <= 600 ? 1 : 0)
+              .slice(innerWidth <= 600 ? 1 : 0)
               .map((service, index) => (
                 <ReviewCard
                   key={index}
