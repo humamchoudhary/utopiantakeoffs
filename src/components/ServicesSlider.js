@@ -10,7 +10,7 @@ export default function ServiceSlider({ services, rtl = false }) {
     breakpoints: {
       "(max-width: 640px)": {
         slides: {
-          perView: 1.1,
+          perView: 1.3,
           spacing: 48,
         },
       },
@@ -37,12 +37,12 @@ export default function ServiceSlider({ services, rtl = false }) {
   return (
     <div
       ref={sliderRef}
-      className={`  md:w-[1200px] flex flex-row justify-center items-center keen-slider absolute `}
+      className={` w-full md:w-[1200px] keen-slider absolute `}
     >
-      {[...services, ...services].map((item, index) => (
+      {services.map((item, index) => (
         <div
           key={index}
-          className="keen-slider__slide   flex items-center justify-center flex-shrink-0 h-32 w-72 px-11 py-8 rounded-2xl"
+          className="keen-slider__slide   flex items-center justify-center flex-shrink-0 w-32 h-28 md:h-36 md:w-72 px-8 py-6 md:px-11 md:py-8 rounded-2xl"
           style={{
             backgroundColor: item.color,
             width: 200,

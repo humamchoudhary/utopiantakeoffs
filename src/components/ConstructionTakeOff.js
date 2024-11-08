@@ -2,7 +2,14 @@
 import React, { useEffect, useState } from "react";
 import "keen-slider/keen-slider.min.css";
 import { useKeenSlider } from "keen-slider/react";
-import { MoveRight, MoveLeft, MoveUpRight } from "lucide-react";
+import {
+  MoveRight,
+  MoveLeft,
+  MoveUpRight,
+  ArrowLeft,
+  ArrowRightLeft,
+  ArrowRight,
+} from "lucide-react";
 
 import Image from "next/image";
 const ServiceCard = ({ title, description, imagePath }) => (
@@ -81,7 +88,7 @@ const ConstructionTakeoffPage = ({ services }) => {
     },
   });
   return (
-    <div className="py-32 px-14 md:max-w-screen-2xl flex flex-col items-center justify-center">
+    <div className=" py-20 md:py-32 px-14 md:max-w-screen-2xl flex flex-col items-center justify-center">
       <div className="flex justify-between items-center mb-6">
         <div className="md:px-64 md:w-full w-[330px] text-center">
           <h1 className="text-xs md:text-xl font-semibold text-[#601E1A] text-center">
@@ -105,47 +112,25 @@ const ConstructionTakeoffPage = ({ services }) => {
             }}
             className={`rounded-full p-3  ${instanceRef.current.track.details.minIdx === currentSlide ? "border-[#E4E4E4]" : "border-fg"}  border-2`}
           >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width={32}
-              height={32}
-              fill="none"
-            >
-              <path
-                stroke={
-                  instanceRef.current.track.details.minIdx === currentSlide
-                    ? "#E4E4E4"
-                    : "#13151B"
-                }
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2.5}
-                d="m13.402 10.805-6 6m0 0 6 6m-6-6h18"
-              />
-            </svg>
+            <ArrowLeft
+              className={`${
+                instanceRef.current.track.details.minIdx === currentSlide
+                  ? "text-[#E4E4E4]"
+                  : "text-[#13151B]"
+              } w-5 h-5 md:w-8 md:h-8`}
+            />
           </button>
           <button
             onClick={(e) => e.stopPropagation() || instanceRef.current?.next()}
             className={` rounded-full p-3  ${instanceRef.current.track.details.maxIdx === currentSlide ? "border-[#E4E4E4]" : "border-fg"}  border-2`}
           >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width={32}
-              height={32}
-              fill="none"
-            >
-              <path
-                stroke={
-                  instanceRef.current.track.details.maxIdx === currentSlide
-                    ? "#E4E4E4"
-                    : "#13151B"
-                }
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2.5}
-                d="m19 22.402 6-6m0 0-6-6m6 6H7"
-              />
-            </svg>
+            <ArrowRight
+              className={`${
+                instanceRef.current.track.details.maxIdx === currentSlide
+                  ? "text-[#E4E4E4]"
+                  : "text-[#13151B]"
+              } w-5 h-5 md:w-8 md:h-8`}
+            />
           </button>
         </div>
       )}

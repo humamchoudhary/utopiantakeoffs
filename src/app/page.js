@@ -234,7 +234,7 @@ const EstimatingServices = () => {
     {
       title: "Professional Estimating Services",
       description:
-        "With 15 years in the industry, Unigan MetalBiz expert estimators deliver precise material estimates across all construction trades, ensuring timely and accurate results.",
+        "With 15 years in the industry, UtopianTakeoffs' expert estimators deliver precise material estimates across all construction trades, ensuring timely and accurate takeoffs.",
       color: "bg-pink-100",
     },
     {
@@ -260,13 +260,13 @@ const EstimatingServices = () => {
               key={index}
               className={`${service.color} rounded-3xl w-full relative px-4 py-4 md:px-7 md:py-8 lg:w-[654px]  flex-shrink-0`}
             >
-              <h3 className="text-xs md:text-2xl text-fg font-semibold mb-2">
+              <h3 className="text-[12px] md:text-2xl text-fg font-semibold mb-2">
                 {service.title}
               </h3>
               <p className="text-[#5F6778] text-xs md:text-[18px] mt-3 md:mt-4 mr-4 leading-5 md:leading-9">
                 {service.description}
               </p>
-              <p className="text-5xl md:text-6xl font-semibold absolute right-4 top-[8px] md:right-7 md:top-5  text-[#13151B] opacity-20">
+              <p className="text-[40px] md:text-7xl font-semibold absolute right-4 top-[8px] md:right-7 md:top-5  text-[#13151B] opacity-20">
                 {index + 1}
               </p>
             </div>
@@ -382,15 +382,6 @@ async function ServicesSection() {
     { name: "Drywall Takeoffs", color: "#A51818" },
     { name: "Sitework and Earthwork Takeoffs", color: "#A51818" },
   ];
-  const services2 = [
-    { name: "MEP Estimating Services", color: "#A51818" },
-    { name: "Concrete Estimating Services", color: "#431412" },
-    { name: "Painting Estimating Services", color: "#FFD2D1", text: "#13151B" },
-    { name: "Steel Estimating/ Detailing", color: "#124317" },
-    { name: "Masonry Takeoffs", color: "#1A6021" },
-    { name: "Drywall Takeoffs", color: "#A51818" },
-    { name: "Sitework and Earthwork Takeoffs", color: "#A51818" },
-  ];
   return (
     <div className="overflow-hidden w-full 2xl:w-[1440px]  py-20 ">
       <div>
@@ -418,8 +409,8 @@ async function ServicesSection() {
 
 async function WorkWithUs() {
   return (
-    <div className=" px-0 md:px-12 w-full 2xl:w-[1440px]">
-      <div className="relative w-full flex flex-col justify-center items-center bg-primary rounded-3xl py-11 md:py-[72px]">
+    <div className="px-0 md:px-12 w-full 2xl:w-[1440px]">
+      <div className="relative w-full flex flex-col justify-center items-center bg-primary rounded-3xl px-9 py-11 md:py-[72px]">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width={339}
@@ -466,7 +457,7 @@ async function WorkWithUs() {
 
 const GetQoute = () => {
   return (
-    <div className="mt-[120px]  md:px-[72px] w-full 2xl:w-[1440px] flex flex-col justify-center items-center">
+    <div className="mt-[80px] px-3 md:mt-[120px] md:px-[72px] w-full 2xl:w-[1440px] flex flex-col justify-center items-center">
       <div className="w-full flex flex-col gap-2">
         <p className="text-center font-semibold text-xs md:text-xl text-[#601E1A]">
           How To Begin With Us
@@ -511,11 +502,11 @@ const GetQoute = () => {
                 />
               </svg>
             </div>
-            <div className="flex flex-col justify-center gap-[9px]">
-              <p className="text-base md:text-2xl font-bold leading-[normal]">
+            <div className="flex flex-col justify-start gap-2 md:gap-[9px]">
+              <p className="text-base flex-shrink-0 md:text-2xl font-bold leading-[normal]">
                 Submit Your Drawing Plans
               </p>
-              <p className="text-sm md:text-xl text-[#475464] leading-6 md:leading-9">
+              <p className="text-sm flex-shrink-0 md:text-xl text-[#475464] leading-6 md:leading-9">
                 Submit your PDF drawings, and we'll provide a quote with
                 invoice, turnaround time, and delivery date.
               </p>
@@ -538,13 +529,13 @@ const GetQoute = () => {
                 />
               </svg>
             </div>
-            <div className="flex flex-col justify-center gap-[9px]">
-              <p className="text-2xl font-bold leading-[normal]">
-                Submit Your Drawing Plans
+            <div className="flex flex-col justify-start gap-[9px]">
+              <p className="text-base flex-shrink-0 md:text-2xl font-bold leading-[normal]">
+                Get A Quote
               </p>
-              <p className="text-sm md:text-xl text-[#475464] leading-6 md:leading-9">
-                Submit your PDF drawings, and we'll provide a quote with
-                invoice, turnaround time, and delivery date.
+              <p className="text-sm flex-shrink-0 md:text-xl text-[#475464] leading-6 md:leading-9">
+                After reviewing your plans, we'll send a quote. Upon acceptance,
+                you can pay via card or PayPal, and our team will begin work.{" "}
               </p>
             </div>
           </div>
@@ -565,11 +556,11 @@ const GetQoute = () => {
                 />
               </svg>
             </div>
-            <div className="flex flex-col justify-center gap-[9px]">
-              <p className="text-2xl font-bold leading-[normal]">
+            <div className="flex flex-col justify-start gap-[9px]">
+              <p className="text-base flex-shrink-0 md:text-2xl font-bold leading-[normal]">
                 Receive Estimate
               </p>
-              <p className="text-sm md:text-xl text-[#475464] leading-6 md:leading-9">
+              <p className="text-sm flex-shrink-0 md:text-xl text-[#475464] leading-6 md:leading-9">
                 You'll receive a detailed estimate with material, labor
                 quantities, and pricing in Excel, using our or your preferred
                 template.
@@ -626,7 +617,7 @@ async function OurWork() {
       <h3 className="text-2xl md:text-[40px] text-[#E4E4E4] font-semibold text-center">
         Our Project Samples
       </h3>
-      <p className="text-[#B0B0B0] text-xs md:text-2xl leading-[18px] md:leading-10 text-center mt-4 md:w-[873px] mb-20">
+      <p className="text-[#B0B0B0] text-xs font-medium  md:text-2xl leading-[18px] md:leading-10 text-center mt-4 md:w-[873px] mb-20">
         Explore a selection of estimates and takeoffs crafted by
         UtopianTakeoffs, showcasing our expertise and attention to detail.
       </p>

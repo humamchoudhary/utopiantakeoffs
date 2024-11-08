@@ -62,7 +62,7 @@ const FileUpload = () => {
     <div className="flex flex-col gap-8">
       <div
         {...getRootProps()}
-        className={`border-2 border-dashed duration-300 rounded-lg  px-28 py-14 flex items-center justify-center flex-col text-center cursor-pointer transition-colors
+        className={`border-2 border-dashed duration-300 rounded-lg px-7 py-12 md:px-28 md:py-14 flex items-center justify-center flex-col text-center cursor-pointer transition-colors
           ${isDragActive ? "border-primary bg-primaryhex/30" : "border-primaryhex/50 bg-[#F9E8E8] hover:border-primaryhex"}`}
       >
         <input {...getInputProps()} />
@@ -85,7 +85,7 @@ const FileUpload = () => {
             ? "Drop the files here..."
             : "Drag & drop files or Browse"}
         </p>
-        <p className="text-[#475464] text-sm  leading-[18px] text-nowrap">
+        <p className="text-[#475464] text-sm w-[290px] md:w-full leading-[18px] ">
           Supported formats for Plan will be PDF File, Word.
         </p>
       </div>

@@ -119,7 +119,7 @@ export default async function Sample() {
   return (
     <div className="flex flex-col items-center ">
       <div className="flex flex-col gap-5 md:[gap-6 mt-20] items-center justify-center mt-12">
-        <div className="px-5 py-3 border-2 text-nowrap w-min border-[#972A20] bg-primaryhex/10 rounded-xl text-[#972A20] text-sm md:text-lg  font-semibold text-center bg-[#FAF3F2] ">
+        <div className="md:px-5 md:py-3 py-2 px-4  border-2 text-nowrap w-min border-[#972A20] bg-primaryhex/10 rounded-xl text-[#972A20] text-sm md:text-lg font-semibold text-center">
           Affordable Estimate 30% Off
         </div>
         <h1 className="text-center w-[365px] mt-5 text-[32px] md:text-7xl md:mt-6 md:w-[1440px] font-bold  leading-normal">

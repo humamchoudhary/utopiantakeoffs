@@ -25,16 +25,18 @@ export default function CleintSlider({ clients }) {
     renderMode: "performance",
     drag: false,
     created(s) {
+      console.log(s.track.details.abs);
       s.moveToIdx(5, true, animation);
     },
     updated(s) {
+      console.log("update", s.track.details.abs);
       s.moveToIdx(s.track.details.abs + 5, true, animation);
     },
     animationEnded(s) {
+      console.log("end", s.track.details.abs);
       s.moveToIdx(s.track.details.abs + 5, true, animation);
     },
   });
-
   return (
     <section className="w-[375px]  md:w-[1440px] py-16">
       <div className="mx-auto text-center">

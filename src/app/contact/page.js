@@ -37,7 +37,7 @@ const ContactPage = () => {
         </defs>
       </svg>{" "}
       <div className="md:mt-[243px] mt-[176px] flex flex-col items-center justify-center gap-5 md:gap-6   2xl:w-[1440px] px-5 md:px-14 z-10">
-        <div className="px-5 py-3 border-2 text-nowrap w-min border-[#972A20] bg-primaryhex/10 rounded-xl text-[#972A20] text-lg font-semibold text-center">
+        <div className="md:px-5 md:py-3 py-2 px-4  border-2 text-nowrap w-min border-[#972A20] bg-primaryhex/10 rounded-xl text-[#972A20] text-sm md:text-lg font-semibold text-center">
           Affordable Estimate 30% Off
         </div>
         <div className="flex flex-col items-center">
