@@ -20,10 +20,6 @@ export const Frame = () => {
           privacy. This Privacy Policy explains how we collect, use, share, and
           protect your information when you use our services. By using our
           services, you agree to the terms outlined in this Privacy Policy.
-          Utopian Takeoffs LLC ("Company," "we," "our," or "us") values your
-          privacy. This Privacy Policy explains how we collect, use, share, and
-          protect your information when you use our services. By using our
-          services, you agree to the terms outlined in this Privacy Policy.
         </p>
       </div>
 
