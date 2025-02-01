@@ -1,5 +1,5 @@
 // import localFont from "next/font/local";
-import { Sora } from "next/font/google";
+import { Sora, Lato } from "next/font/google";
 import "./globals.css";
 // import styles from "./global.scss";
 import Navbar from "@/components/Navbar";
@@ -21,13 +21,17 @@ export const metadata = {
   description: "Utopians Takeoff website",
 };
 const sora = Sora({ subsets: ["latin"] });
+const lato = Lato({
+  subsets: ["latin"],
+  weight: ["100", "300", "400", "700", "900"],
+});
 import emailjs from "@emailjs/browser";
 export default function RootLayout({ children }) {
   emailjs.init({ publicKey: "3m5zvAEoGBZRSR7sJ" });
   return (
     <html lang="en" className="overflow-x-hidden">
       <body
-        className={`antialiased  ${sora.className} w-screen md:w-screen overflow-x-hidden `}
+        className={`antialiased  ${lato.className} w-screen md:w-screen overflow-x-hidden `}
       >
         <Toaster position="bottom-center" />
         <Navbar />
