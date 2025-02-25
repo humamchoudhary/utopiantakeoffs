@@ -12,8 +12,8 @@ module.exports = {
       },
       colors: {
         primaryhex: "#972A20",
-        bghex: "#FFF",
-        fghex: "#13151B",
+        bghex: "#0F142C",
+        fghex: "#FAFAFB",
 
         background: {
           50: "rgba(231, 232, 234, 1)",
