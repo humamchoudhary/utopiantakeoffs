@@ -23,7 +23,7 @@ const FooterColumn = ({ title, links = [] }) => (
 
 const Footer = () => {
   return (
-    <footer className=" 2xl:w-[1440px] rounded-[23px] flex flex-col p-5 md:py-9 md:px-12 mt-20 mb-6 mx-2  lg:mx-5 2xl:mx-auto bg-fg">
+    <footer className=" 2xl:w-[1440px] rounded-[23px] flex flex-col p-5 md:py-9 md:px-12 mt-20 mb-6 mx-2  lg:mx-5 2xl:mx-auto ">
       <div className="grid grid-cols-1 md:grid-cols-6 gap-14">
         <div className="col-span-1 md:col-span-2 mb-3 gap-7">
           <Image src={Logo} width={52} height={52} />

@@ -40,12 +40,9 @@ export default function CleintSlider({ clients }) {
   return (
     <section className="w-[375px]  md:w-[1440px] py-16">
       <div className="mx-auto text-center">
-        <h2 className="text-xs md:text-xl leading-[normal] text-[#5F6778] font-semibold mb-2">
-          We Worked With
+        <h2 className="text-xs md:text-2xl leading-[28.8px] text-[#AC554D] font-semibold mb-2">
+          OUR CLIENTS
         </h2>
-        <h3 className=" text-[32px] md:text-[40px] font-bold mb-12">
-          Meet Our Clients
-        </h3>
         <div className="overflow-hidden mx-auto w-[330px] md:w-[1200px] relative">
           <div ref={sliderRef} className=" keen-slider">
             {clients.map((client, index) => (

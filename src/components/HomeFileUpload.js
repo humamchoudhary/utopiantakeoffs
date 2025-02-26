@@ -63,7 +63,7 @@ const FileUpload = () => {
       <div
         {...getRootProps()}
         className={`border-2 border-dashed duration-300 rounded-lg px-7 py-12 md:px-28 md:py-14 flex items-center justify-center flex-col text-center cursor-pointer transition-colors
-          ${isDragActive ? "border-primary bg-primaryhex/30" : "border-primaryhex/50 bg-[#F9E8E8] hover:border-primaryhex"}`}
+          ${isDragActive ? "border-primary " : "border-primaryhex/50  hover:border-primaryhex"}`}
       >
         <input {...getInputProps()} />
         <svg
@@ -80,12 +80,12 @@ const FileUpload = () => {
             d="M19.5 1.834c5.408 0 9.792 4.384 9.792 9.792v1.959a7.833 7.833 0 0 1 7.833 7.833c0 2.9-1.575 5.5-3.917 6.854m-23.5-14.687v-1.959c0-2.204.729-4.238 1.958-5.875m-1.958 7.833a7.833 7.833 0 0 0-7.833 7.834c0 2.9 1.575 5.5 3.917 6.854m3.916-14.687c.848 0 1.664.134 2.429.383m7.363 3.533v17.625m0-17.625 5.875 5.875M19.5 17.501l-5.875 5.875"
           />
         </svg>
-        <p className="mt-2 text-base font-semibold leading-6 text-[#601E1A]">
+        <p className="mt-2 text-base font-semibold gap-3 leading-6 text-[#FAFAFB]">
           {isDragActive
             ? "Drop the files here..."
             : "Drag & drop files or Browse"}
         </p>
-        <p className="text-[#475464] text-sm w-[290px] md:w-full leading-[18px] ">
+        <p className="text-[#475464] text-lg font-medium w-[290px] md:w-full leading-[18px] ">
           Supported formats for Plan will be PDF File, Word.
         </p>
       </div>
@@ -130,7 +130,7 @@ const FileUpload = () => {
         <button
           onClick={sendFiles}
           disabled={!files.length && !uploaded}
-          className="flex mr-1 font-semibold text-[18px] disabled:bg-gray-500 hover:bg-[#601E1A]/90 duration-300 text-bg bg-[#601E1A] px-6 py-4 rounded-2xl flex-row "
+          className="flex mr-1 font-semibold text-[18px] disabled:bg-gray-500 hover:bg-[#601E1A]/90 duration-300 text-[#FFFF] bg-[#601E1A] px-6 py-4 rounded-full flex-row "
         >
           Send Now
           <svg

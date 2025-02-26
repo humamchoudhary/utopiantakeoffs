@@ -13,6 +13,7 @@ import CleintSlider from "@/components/ClientSlider";
 import ReviewSection from "@/components/ReviewSection";
 import ServiceSlider from "@/components/ServicesSlider";
 import Link from "next/link";
+import VideoSection from "@/components/VideoSection";
 
 export default async function Home() {
   const services = [
@@ -115,6 +116,7 @@ export default async function Home() {
   return (
     <div className="flex flex-col items-center">
       <HeroSection />
+      <VideoSection />
       <ClientShowcase />
       <EstimatingServices />
       <ConstructionTakeoffPage services={services} />
@@ -229,29 +231,26 @@ const EstimatingServices = () => {
       title: "Certified Estimators for Every Project",
       description:
         "Precise estimates for residential, commercial, and industrial projects, following guidelines by the American Estimators Organization and AACE.",
-      color: "bg-purple-100",
+      color: "bg-[#1F2129]",
     },
     {
       title: "Professional Estimating Services",
       description:
         "With 15 years in the industry, UtopianTakeoffs' expert estimators deliver precise material estimates across all construction trades, ensuring timely and accurate takeoffs.",
-      color: "bg-pink-100",
+      color: "bg-[#1F2129]",
     },
     {
       title: "Cutting-Edge Tools at Competitive Prices",
       description:
         "Using Planswift, Bluebeam, RS Means,& more, UtopianTakeoffs delivers quality estimates with zip-code-based pricing. Get affordable, accurate estimates all under one roof.",
-      color: "bg-green-100",
+      color: "bg-[#1F2129]",
     },
   ];
 
   return (
     <div className="bg-[#13151B]  w-full  2xl:w-[1440px] mx-2 2xl:mx-0 py-10 px-3 md:px-16 md:py-20 rounded-3xl">
-      <h2 className="text-[#CAA4A2] text-[12px] md:text-xl font-semibold text-center">
-        Here You Check
-      </h2>
-      <h2 className="text-[#E4E4E4] text-2xl md:text-[40px] font-semibold text-center mb-9 md:mb-[102px]">
-        Our Estimating Services
+      <h2 className="text-[#AC554D] text-2xl font-semibold text-center mb-9 md:mb-[102px]">
+        OUR ESTIMATING SERVICES
       </h2>
       <div className="flex flex-col md:flex-row justify-center gap-12">
         <div className="w-full lg:w-auto  space-y-4 flex-shrink-0">
@@ -263,10 +262,10 @@ const EstimatingServices = () => {
               <h3 className="text-[12px] md:text-2xl text-fg font-semibold mb-2">
                 {service.title}
               </h3>
-              <p className="text-[#5F6778] text-xs md:text-[18px] mt-3 md:mt-4 mr-4 leading-5 md:leading-9">
+              <p className="text-[#5E6272] text-xs md:text-[18px] mt-3 md:mt-4 mr-4 leading-5 md:leading-9">
                 {service.description}
               </p>
-              <p className="text-[40px] md:text-7xl font-semibold absolute right-4 top-[8px] md:right-7 md:top-5  text-[#13151B] opacity-20">
+              <p className="text-[40px] md:text-7xl font-semibold absolute right-4 top-[8px] md:right-7 md:top-5  text-[#5E6272] opacity-20">
                 {index + 1}
               </p>
             </div>
@@ -314,17 +313,11 @@ async function WhyUs() {
   ];
 
   return (
-    <div className="w-full 2xl:w-[1440px] rounded-[23px] flex flex-col items-center py-10 md:py-20 px-3 md:px-24 bg-fg">
-      <p className="text-[#CAA4A2] text-xs md:text-xl font-semibold text-center">
-        Why Many Clients
-      </p>
-      <h3 className="text-2xl md:text-[40px] text-[#E4E4E4] font-semibold text-center">
-        Choose UtopianTakeoffs?
-      </h3>
-      <p className="text-[#B0B0B0] text-xs md:text-2xl leading-[18px] md:leading-10 text-center mt-4 w-full md:w-[873px] mb-20">
-        Contractors save time and estimating costs with our expert services,
-        helping them bid more and win jobs successfully.
-      </p>
+    <div className="w-full 2xl:w-[1440px] rounded-[23px] flex flex-col items-center py-10 md:py-20 px-3 md:px-24 ">
+      
+      <h1 className="text-2xl md:text-2XL text-[#AC554D] font-semibold text-center mb-12">
+       WHY CHOOSE UTOPIAN TAKEOFFS?
+      </h1>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {info.map((item, index) => (
           <div
@@ -385,17 +378,10 @@ async function ServicesSection() {
   return (
     <div className="overflow-hidden w-full 2xl:w-[1440px]  py-20 ">
       <div>
-        <p className="text-primary text-xs md:text-xl font-semibold text-center">
-          What We Provide
-        </p>
+        <h1 className="text-2xl md:text-2xl text-[#AC554D] font-semibold text-center mb-12">
+          OUR SERVICES
+        </h1>
 
-        <h3 className="text-2xl md:text-[40px] text-fg font-semibold text-center">
-          Utopian Takeoffs
-        </h3>
-        <p className="text-[#475464] text-xs md:text-2xl leading-[18px] tracking-[-0.24px] md:leading-10 text-center mt-4 md:w-[873px] mx-auto mb-16 md:mb-20">
-          Our construction estimators have expertise in construction takeoffs in
-          all CSI divisions. Some of them are listed below:
-        </p>
       </div>
       <div className="overflow-hidden mx-auto relative">
         <ServiceSlider services={services1} rtl={true} />
@@ -437,16 +423,16 @@ async function WorkWithUs() {
             className="absolute right-0 w-[339px] h-[143px] md:w-[1119px]  md:h-[342px] bottom-0"
           />
         </svg>
-        <div className="px-4 py-2 md:px-5 md:py-3 mb-5 border border-bg rounded-xl">
-          <p className="text-lg text-bg font-semibold leading-[normal]">
-            Save 30% Now
+        <div className="px-4 py-2 md:px-5 md:py-3 mb-5 border  rounded-full bg-[#FAF3F21A]">
+          <p className="text-lg  font-semibold leading-[normal] text-[#FFFFFF]">
+          Save 60% of Your Estimating Expense
           </p>
         </div>
         <p className="text-[#E4E4E4] md:mx-[340px] md:w-[664px] font-semibold text-sm leading-[20px] md:leading-[normal] md:text-[32px] text-center">
           Work With Us! We Are A Global Network Of Construction Cost Expert
         </p>
-        <div className="px-5 py-[10px] md:px-[32px] md:py-4 mt-7  bg-bg rounded-xl">
-          <p className="text-lg text-primary font-semibold leading-[normal]">
+        <div className="px-5 py-[10px] md:px-[32px] md:py-4 mt-7  bg-[#FFFFFF] rounded-full">
+          <p className="text-lg text-primary font-semibold text-[#601E1A] leading-[normal]">
             Get Quotes Now
           </p>
         </div>
@@ -459,48 +445,25 @@ const GetQoute = () => {
   return (
     <div className="mt-[80px] px-3 md:mt-[120px] md:px-[72px] w-full 2xl:w-[1440px] flex flex-col justify-center items-center">
       <div className="w-full flex flex-col gap-2">
-        <p className="text-center font-semibold text-xs md:text-xl text-[#601E1A]">
-          How To Begin With Us
-        </p>
-        <h1 className="text-center font-semibold text-2xl md:text-[40px] text-[#13151B]">
+        <h1 className="text-center font-semibold text-2xl md:text-2xl text-[#AC554D]">
           Construction Estimate & Quantity Takeoff
         </h1>
-        <p className="text-center text-xs md:text-2xl leading-[18px] md:leading-10 text-[#475464]">
-          Get precise construction estimates and quantity takeoffs, tailored to
-          your project needs, delivered quickly and accurately by our expert
-          team.
-        </p>
+
       </div>
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width={253}
-        height={86}
-        fill="none"
-        className="mt-[37px] hidden md:block"
-      >
-        <path
-          fill="#601E1A"
-          d="M.095 83.702a1 1 0 1 0 1.81.852l-1.81-.852Zm248.097-15.621a1 1 0 0 0 1.26-.643l2.772-8.563a.999.999 0 1 0-1.902-.616l-2.465 7.611-7.611-2.464a1 1 0 1 0-.616 1.902l8.562 2.773ZM3.487 81.333a1 1 0 0 0-1.78-.912l1.78.912Zm1.718-7.187a1 1 0 0 0 1.711 1.036l-1.71-1.036Zm5.578-4.842a1 1 0 1 0-1.627-1.163l1.627 1.163Zm2.789-6.848a1 1 0 1 0 1.528 1.29l-1.528-1.29Zm6.291-3.89a1 1 0 0 0-1.412-1.416l1.412 1.416Zm3.914-6.285a1 1 0 1 0 1.283 1.535l-1.283-1.535Zm6.882-2.734a1 1 0 1 0-1.14-1.644l1.14 1.644Zm4.974-5.487a1 1 0 0 0 .987 1.739l-.987-1.74Zm7.262-1.46a1 1 0 1 0-.829-1.82l.829 1.82Zm5.865-4.52a1 1 0 1 0 .667 1.886l-.667-1.885Zm7.404-.18a1 1 0 0 0-.506-1.935l.506 1.935Zm6.54-3.471a1 1 0 1 0 .346 1.97l-.347-1.97Zm7.332 1.021a1 1 0 1 0-.191-1.99l.19 1.99Zm6.998-2.404a1 1 0 0 0 .039 2l-.04-2Zm7.089 2.126a1 1 0 0 0 .11-1.997l-.11 1.997Zm7.297-1.326a1 1 0 0 0-.26 1.983l.26-1.983Zm6.695 3.171a1 1 0 1 0 .414-1.956l-.414 1.956Zm7.386-.184a1 1 0 1 0-.573 1.916l.573-1.916Zm6.09 4.247a1 1 0 1 0 .75-1.854l-.75 1.854Zm7.285 1.214a1 1 0 1 0-.955 1.757l.955-1.757Zm4.929 5.538a1 1 0 1 0 1.217-1.587l-1.217 1.587Zm6.508 3.536a1 1 0 1 0-1.576 1.231l1.576-1.23Zm1.251 7.143a1 1 0 1 0 1.972-.333l-1.972.333Zm.515 7.19a1 1 0 1 0-1.719-1.022l1.719 1.021Zm-6.359 3.789a1 1 0 0 0 1.156 1.633l-1.156-1.633Zm-5.987 4.1a1 1 0 1 0 .045-2l-.045 2Zm-5.583-4.535a1 1 0 0 0-1.37 1.457l1.37-1.457Zm-5.618-4.598a1 1 0 0 0 1.803-.866l-1.803.866Zm-.444-7.318a1 1 0 1 0-1.944.47l1.944-.47Zm-3.063-6.659a1 1 0 0 0 1.994-.158l-1.994.158Zm1.931-7.077a1 1 0 1 0-1.996-.12l1.996.12Zm-1.076-7.255a1 1 0 1 0 1.961.392l-1.961-.392Zm3.793-6.273a1 1 0 1 0-1.885-.67l1.885.67Zm1.045-7.26a1 1 0 0 0 1.758.955l-1.758-.954Zm5.537-4.793a1 1 0 0 0-1.571-1.238l1.571 1.238Zm3.384-6.49a1 1 0 1 0 1.326 1.497l-1.326-1.497Zm6.86-2.585a1 1 0 1 0-1.041-1.708l1.041 1.708Zm5.404-4.926a1 1 0 0 0 .745 1.856l-.745-1.856Zm7.343-.232a1 1 0 1 0-.465-1.945l.465 1.945Zm6.577-3.16a1 1 0 1 0 .221 1.987l-.221-1.988Zm7.193 1.579a1 1 0 1 0-.027-2l.027 2Zm7.01-1.8a1 1 0 1 0-.141 1.995l.141-1.995Zm6.686 2.77a1 1 0 0 0 .309-1.976l-.309 1.976Zm7.228-.59a1 1 0 1 0-.474 1.943l.474-1.943Zm6.138 3.85a1 1 0 0 0 .632-1.897l-.632 1.897Zm7.214.587a1 1 0 1 0-.778 1.843l.778-1.843Zm5.47 4.762a1 1 0 0 0 .912-1.78l-.912 1.78Zm7.056 1.645a1 1 0 0 0-1.033 1.713l1.033-1.713Zm4.754 5.466a1 1 0 1 0 1.141-1.643l-1.141 1.643Zm6.792 2.541a1 1 0 1 0-1.237 1.572l1.237-1.572Zm4.065 5.989a1 1 0 1 0 1.322-1.501l-1.322 1.5Zm6.476 3.28a1 1 0 1 0-1.397 1.431l1.397-1.431Zm3.429 6.374a1 1 0 1 0 1.463-1.363l-1.463 1.363Zm6.13 3.885a1 1 0 1 0-1.524 1.295l1.524-1.295Zm2.848 6.672a1 1 0 0 0 1.579-1.228l-1.579 1.228Zm5.766 4.397a1 1 0 1 0-1.629 1.16l1.629-1.16Zm2.26 6.879a1 1 0 1 0 1.678-1.088l-1.678 1.088Zm5.343 4.874a1 1 0 1 0-1.73 1.002l1.73-1.002ZM1.905 84.554a105.982 105.982 0 0 1 1.582-3.221l-1.78-.912a108.046 108.046 0 0 0-1.612 3.281l1.81.852Zm5.011-9.372a92.636 92.636 0 0 1 3.867-5.878L9.156 68.14a94.64 94.64 0 0 0-3.95 6.005l1.71 1.036ZM15.1 63.747a82.68 82.68 0 0 1 4.763-5.181l-1.412-1.416a84.74 84.74 0 0 0-4.88 5.306l1.529 1.29Zm9.96-9.931a78.343 78.343 0 0 1 5.6-4.27l-1.14-1.643a80.327 80.327 0 0 0-5.743 4.378l1.283 1.535Zm11.56-8.017a79.048 79.048 0 0 1 6.275-3.199l-.829-1.82a81.011 81.011 0 0 0-6.433 3.28l.987 1.739Zm12.807-5.833a83.545 83.545 0 0 1 6.737-2.066l-.506-1.935a85.579 85.579 0 0 0-6.898 2.116l.667 1.885Zm13.623-3.568a89.816 89.816 0 0 1 6.986-.948l-.191-1.99c-2.37.227-4.754.548-7.142.968l.347 1.97Zm14.023-1.353a94.084 94.084 0 0 1 7.05.127l.11-1.997a96.042 96.042 0 0 0-7.2-.13l.04 2Zm14.086.784a91.19 91.19 0 0 1 6.956 1.188l.414-1.956a93.183 93.183 0 0 0-7.109-1.215l-.26 1.983Zm13.769 2.92a75.487 75.487 0 0 1 6.663 2.33l.75-1.853a77.331 77.331 0 0 0-6.84-2.393l-.573 1.916Zm12.993 5.302c2.19 1.192 4.162 2.46 5.884 3.781l1.217-1.587c-1.814-1.392-3.876-2.716-6.146-3.95l-.955 1.756Zm10.816 8.548c1.547 1.982 2.499 3.975 2.827 5.912l1.972-.333c-.396-2.343-1.526-4.637-3.223-6.81l-1.576 1.231Zm1.623 12.08c-.52.876-1.203 1.75-2.067 2.614l1.414 1.414c.968-.968 1.758-1.972 2.372-3.007l-1.719-1.02Zm-2.067 2.614a19.977 19.977 0 0 1-2.573 2.197l1.156 1.633a22.023 22.023 0 0 0 2.831-2.416l-1.414-1.414Zm-8.515 4.297c-2.014-.046-3.912-.922-5.628-2.535l-1.37 1.457c1.995 1.875 4.345 3.018 6.953 3.077l.045-2Zm-9.443-8c-.913-1.9-1.673-4.075-2.247-6.45l-1.944.468c.602 2.494 1.406 4.804 2.388 6.849l1.803-.866Zm-3.316-13.268a49.892 49.892 0 0 1-.063-6.919l-1.996-.12c-.147 2.456-.12 4.87.065 7.197l1.994-.158Zm.822-13.782a48.036 48.036 0 0 1 1.832-6.665l-1.885-.67a49.998 49.998 0 0 0-1.908 6.943l1.961.392Zm4.635-12.97a40.52 40.52 0 0 1 3.779-5.748l-1.571-1.238a42.603 42.603 0 0 0-3.966 6.032l1.758.954Zm8.489-10.74a38.703 38.703 0 0 1 5.534-4.083l-1.041-1.708a40.704 40.704 0 0 0-5.819 4.293l1.326 1.497Zm11.683-7.153a47.187 47.187 0 0 1 6.598-2.088l-.465-1.945a49.13 49.13 0 0 0-6.878 2.177l.745 1.856Zm13.396-3.26a63.541 63.541 0 0 1 3.511-.29l-.11-1.998a65.598 65.598 0 0 0-3.622.3l.221 1.987Zm3.511-.29a83.35 83.35 0 0 1 3.461-.12l-.027-2a85.296 85.296 0 0 0-3.544.122l.11 1.997Zm10.33.076c2.318.164 4.594.425 6.827.775l.309-1.976a82.96 82.96 0 0 0-6.995-.794l-.141 1.995Zm13.581 2.128c2.251.55 4.456 1.19 6.612 1.907l.632-1.897a86.084 86.084 0 0 0-6.77-1.953l-.474 1.943Zm13.048 4.337a93.056 93.056 0 0 1 6.248 2.919l.912-1.78a95.084 95.084 0 0 0-6.382-2.982l-.778 1.843Zm12.271 6.277a107.398 107.398 0 0 1 5.787 3.753l1.141-1.643a109.764 109.764 0 0 0-5.895-3.823l-1.033 1.713Zm11.342 7.866a125.055 125.055 0 0 1 5.302 4.417l1.322-1.501a127.777 127.777 0 0 0-5.387-4.488l-1.237 1.572Zm10.381 9.128a144.336 144.336 0 0 1 4.826 4.943l1.463-1.363a145.83 145.83 0 0 0-4.892-5.011l-1.397 1.431Zm9.432 10.123a159.143 159.143 0 0 1 4.372 5.377l1.579-1.228a162.597 162.597 0 0 0-4.427-5.444l-1.524 1.295Zm8.509 10.934a158.97 158.97 0 0 1 3.889 5.719l1.678-1.088a160.143 160.143 0 0 0-3.938-5.79l-1.629 1.16Zm7.502 11.595a91.424 91.424 0 0 1 1.558 2.8l.077.147.019.036.004.008.001.002.89-.454.891-.455-.001-.002-.001-.003a2.777 2.777 0 0 1-.027-.052l-.083-.157a92.138 92.138 0 0 0-1.598-2.872l-1.73 1.002Z"
-        />
-      </svg>
-      <div className="flex w-full flex-col md:flex-row mt-14 md:mt-0 gap-[40px]">
-        <div className="w-full flex flex-col gap-9">
+
+      <div className="flex w-full flex-col md:flex-row mt-14 gap-[40px]">
+        <div className="w-full flex flex-col ">
           <div className="flex flex-row gap-8">
             <div className="flex items-center flex-col">
-              <div className="bg-primary rounded-full min-w-[50px] min-h-[50px] px-4 md:px-[25px] py-2 md:py-3 text-xl md:text-[32px] text-bg leading-[normal] text-center justify-center flex items-center">
-                1
-              </div>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width={4}
-                height={92}
-                fill="none"
-              >
-                <path
-                  fill="#601E1A"
-                  d="M.5 90a1.5 1.5 0 0 0 3 0h-3Zm0-90v2.813h3V0h-3Zm0 8.438v5.624h3V8.439h-3Zm0 11.25v5.625h3v-5.625h-3Zm0 11.25v5.625h3v-5.626h-3Zm0 11.25v5.624h3v-5.624h-3Zm0 11.25v5.624h3v-5.624h-3Zm0 11.25v5.624h3v-5.624h-3Zm0 11.25v5.624h3v-5.624h-3Zm0 11.25V90h3v-2.813h-3Z"
-                />
-              </svg>
+            <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="1" y="1" width="40" height="40" rx="20" fill="#060812"/>
+            <rect x="1" y="1" width="40" height="40" rx="20" stroke="#531712" stroke-width="2"/>
+            <circle cx="21" cy="21" r="12" fill="#531712"/>
+            </svg>
+            <svg width="4" height="141" viewBox="0 0 4 141" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0.5 139V140.5H3.5V139H0.5ZM0.5 0V139H3.5V0H0.5Z" fill="#531712"/>
+            </svg>
+
             </div>
             <div className="flex flex-col justify-start gap-2 md:gap-[9px]">
               <p className="text-base flex-shrink-0 md:text-2xl font-bold leading-[normal]">
@@ -514,20 +477,15 @@ const GetQoute = () => {
           </div>
           <div className="flex flex-row gap-8">
             <div className="flex items-center flex-col">
-              <div className="bg-primary rounded-full min-w-[50px] min-h-[50px] px-4 md:px-[25px] py-2 md:py-3 text-xl md:text-[32px] text-bg leading-[normal] text-center justify-center flex items-center">
-                2
-              </div>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width={4}
-                height={92}
-                fill="none"
-              >
-                <path
-                  fill="#601E1A"
-                  d="M.5 90a1.5 1.5 0 0 0 3 0h-3Zm0-90v2.813h3V0h-3Zm0 8.438v5.624h3V8.439h-3Zm0 11.25v5.625h3v-5.625h-3Zm0 11.25v5.625h3v-5.626h-3Zm0 11.25v5.624h3v-5.624h-3Zm0 11.25v5.624h3v-5.624h-3Zm0 11.25v5.624h3v-5.624h-3Zm0 11.25v5.624h3v-5.624h-3Zm0 11.25V90h3v-2.813h-3Z"
-                />
-              </svg>
+
+            <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="1" y="1" width="40" height="40" rx="20" fill="#060812"/>
+            <rect x="1" y="1" width="40" height="40" rx="20" stroke="#531712" stroke-width="2"/>
+            <circle cx="21" cy="21" r="12" fill="#531712"/>
+            </svg>
+            <svg width="4" height="141" viewBox="0 0 4 141" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0.5 139V140.5H3.5V139H0.5ZM0.5 0V139H3.5V0H0.5Z" fill="#531712"/>
+            </svg>
             </div>
             <div className="flex flex-col justify-start gap-[9px]">
               <p className="text-base flex-shrink-0 md:text-2xl font-bold leading-[normal]">
@@ -541,20 +499,14 @@ const GetQoute = () => {
           </div>
           <div className="flex flex-row gap-8">
             <div className="flex items-center flex-col">
-              <div className="bg-primary rounded-full min-w-[50px] min-h-[50px] px-4 md:px-[25px] py-2 md:py-3 text-xl md:text-[32px] text-bg leading-[normal] text-center justify-center flex items-center">
-                3
-              </div>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width={4}
-                height={92}
-                fill="none"
-              >
-                <path
-                  fill="#601E1A"
-                  d="M.5 90a1.5 1.5 0 0 0 3 0h-3Zm0-90v2.813h3V0h-3Zm0 8.438v5.624h3V8.439h-3Zm0 11.25v5.625h3v-5.625h-3Zm0 11.25v5.625h3v-5.626h-3Zm0 11.25v5.624h3v-5.624h-3Zm0 11.25v5.624h3v-5.624h-3Zm0 11.25v5.624h3v-5.624h-3Zm0 11.25v5.624h3v-5.624h-3Zm0 11.25V90h3v-2.813h-3Z"
-                />
-              </svg>
+            <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="1" y="1" width="40" height="40" rx="20" fill="#060812"/>
+            <rect x="1" y="1" width="40" height="40" rx="20" stroke="#531712" stroke-width="2"/>
+            <circle cx="21" cy="21" r="12" fill="#531712"/>
+            </svg>
+            <svg width="4" height="141" viewBox="0 0 4 141" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0.5 139V140.5H3.5V139H0.5ZM0.5 0V139H3.5V0H0.5Z" fill="#531712"/>
+            </svg>
             </div>
             <div className="flex flex-col justify-start gap-[9px]">
               <p className="text-base flex-shrink-0 md:text-2xl font-bold leading-[normal]">
@@ -568,7 +520,7 @@ const GetQoute = () => {
             </div>
           </div>
         </div>
-        <div className="w-full h-[2px] md:w-[3px] md:h-[580px] bg-[#E8E8E8] " />
+        <div className="w-full h-[2px] md:w-[3px] md:h-[580px] bg-[#E8E8E80F] " />
         <div className="w-full">
           <p className="font-bold text-2xl mb-8 text-fg leading-[normal]">
             Upload Your Plane
@@ -610,17 +562,10 @@ async function OurWork() {
   ];
 
   return (
-    <div className="w-full 2xl:w-[1440px] rounded-[23px] flex flex-col items-center py-10  md:py-20 mt-20 md:mt-48 px-3 md:px-24 bg-fg">
-      <p className="text-[#CAA4A2] text-xs md:text-xl font-semibold text-center">
-        See Our Work in Action
-      </p>
-      <h3 className="text-2xl md:text-[40px] text-[#E4E4E4] font-semibold text-center">
-        Our Project Samples
-      </h3>
-      <p className="text-[#B0B0B0] text-xs font-medium  md:text-2xl leading-[18px] md:leading-10 text-center mt-4 md:w-[873px] mb-20">
-        Explore a selection of estimates and takeoffs crafted by
-        UtopianTakeoffs, showcasing our expertise and attention to detail.
-      </p>
+    <div className="w-full 2xl:w-[1440px] rounded-[23px] flex flex-col items-center py-10  md:py-20 mt-20 md:mt-48 px-3 md:px-24 ">
+       <h1 className="text-2xl md:text-2xl mb-20 text-[#AC554D] font-semibold text-center">
+        OUR PROJECT SAMPLES
+      </h1>
       <div className="relative">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {info.map((item, index) => (
@@ -629,11 +574,11 @@ async function OurWork() {
               className="flex p-6 flex-col bg-[#26272D] gap-4 border-[#4E4E4E] border rounded-[24px]"
             >
               <div className="">
-                <p className="text-semibold text-lg md:text-2xl text-[#E4E4E4] font-bold">
+                <p className="text-semibold text-[28px] md:text-2xl leading-[33.6px] text-[#FFFFFF] font-bold">
                   {item.title}
                 </p>
 
-                <p className="leading-5 md:leading-8 text-sm md:text-xl text-[#A8A8A8] font-semibold">
+                <p className="leading-5 md:leading-8 text-2xl md:text-xl text-[#A8A8A8] font-medium">
                   {item.desc}
                 </p>
               </div>
@@ -641,29 +586,29 @@ async function OurWork() {
                 <Link
                   target="_blank"
                   href={item.pdf}
-                  className="flex items-center bg-gray hover:bg-gray-500 border border-[#E4E4E4] text-white py-1 px-3 rounded-lg"
+                  className="flex items-center gap-1 bg-gray hover:bg-gray-500 border border-[#E4E4E4] text-white py-2 px-6 rounded-full"
                 >
-                  <Download size={16} className="mr-1" />
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="m9 12 3 3m0 0 3-3m-3 3V3M7.5 9H7a4 4 0 0 0-4 4v4a4 4 0 0 0 4 4h10a4 4 0 0 0 4-4v-4a4 4 0 0 0-4-4h-.5" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
                   pdf
                 </Link>
                 <Link
                   target="_blank"
                   href={item.xlsx}
-                  className="flex items-center bg-[#C05852] hover:bg-[#C05840] text-white py-1 px-3 rounded-lg"
+                  className="flex gap-1 items-center bg-[#531712] hover:bg-[#C05840] text-white py-2 px-6 rounded-full"
                 >
-                  <Download size={16} className="mr-1" />
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="m9 12 3 3m0 0 3-3m-3 3V3M7.5 9H7a4 4 0 0 0-4 4v4a4 4 0 0 0 4 4h10a4 4 0 0 0 4-4v-4a4 4 0 0 0-4-4h-.5" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
                   xsl
                 </Link>
               </div>
             </div>
           ))}
         </div>
-        <div className="absolute pointer-events-none w-full h-40 bg-gradient-to-t from-fg to-transparent bottom-0 " />
+        <div className="absolute pointer-events-none w-full h-40 bg-gradient-to-t from-[#0D0F19] to-transparent bottom-0 " />
       </div>
       <div className="text-center relative z-10 mt-20">
         <Link
           href="/sample"
-          className="bg-transparent text-white text-2xl leading-[normal] font-semibold py-2 px-4 inline-flex items-center"
+          className="bg-transparent border rounded-full text-[#FAFAFB] text-2xl leading-[normal] font-semibold py-4 px-6 gap-2 inline-flex items-center"
         >
           View All Samples
           <svg

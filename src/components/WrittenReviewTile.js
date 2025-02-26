@@ -2,15 +2,15 @@ import React from "react";
 
 const WrittenReviewTile = ({ name, stars, post, review, image }) => {
   return (
-    <div className="px-6 py-5 rounded-[20px] flex flex-col bg-[#FAF6F6] border border-[#EFE5E5] gap-4">
+    <div className="px-6 py-5 rounded-[20px] flex flex-col bg-[#1F212A]  gap-4">
       <div className="flex flex-row justify-between">
-        <div className="flex flex-row gap-1 items-center">
+        <div className="flex flex-row gap-2 items-center">
           <div className="w-12 h-12 rounded-full bg-fg"></div>
           <div className="flex flex-col">
-            <p className="text-xl font-semibold text-fg leading-[normal]">
+            <p className="text-xl font-bold text-[#FAFAFB] leading-6">
               {name}
             </p>
-            <p className="text-xs font-semibold text-primary leading-[normal]">
+            <p className="text-xs font-bold text-[#AC554D] leading-[normal]">
               {post}
             </p>
           </div>
@@ -32,7 +32,7 @@ const WrittenReviewTile = ({ name, stars, post, review, image }) => {
           </svg>
         </div>
       </div>
-      <p className="text-sm leading-[22px] text-fg">{review}</p>
+      <p className="text-base font-medium leading-[22px] text-[#D5D5DB]">{review}</p>
     </div>
   );
 };

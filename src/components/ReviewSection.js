@@ -155,25 +155,19 @@ const ReviewSection = ({ a_reviews, w_reviews }) => {
     <div className="w-full py-[80px] md:py-[120px] md:px-14 md:max-w-screen-2xl flex flex-col items-center justify-center">
       <div className="flex justify-between items-center mb-6 w-full">
         <div className="w-full px-4 md:px-64">
-          <h1 className="text-xs md:text-xl font-semibold text-[#601E1A] text-center">
-            Get To Know That
-          </h1>
-          <h1 className="text-xl md:text-4xl font-semibold text-fg text-center mt-2">
+          <h1 className="text-xl md:text-2xl font-semibold text-[#AC554D] text-center mt-2">
             What Our Clients Say
           </h1>
-          <p className="mb-8 md:mb-12 text-[#475464] mt-4 leading-[18px] md:leading-[normal] text-xs md:text-2xl text-center">
-            Discover how UtopianTakeoffs has helped clients achieve success with
-            accurate estimates and exceptional service.
-          </p>
+          
         </div>
       </div>
-      <div className="flex flex-row items-center overflow-hidden w-full md:w-[1328px] relative md:px-4">
+      <div className="flex  flex-row items-center overflow-hidden w-full md:w-[1328px] relative md:px-4">
         {loaded && instanceRef.current && (
           <button
             onClick={(e) => {
               e.stopPropagation() || instanceRef.current?.prev();
             }}
-            className={`rounded-full p-2 absolute md:p-3 left-5 md:right-auto md:relative z-50 ${
+            className={`rounded-full p-2  absolute md:p-3 left-5 md:right-auto md:relative z-50 ${
               instanceRef.current.track.details.minIdx === currentSlide
                 ? "bg-white"
                 : "bg-primary"
