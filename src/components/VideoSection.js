@@ -3,7 +3,7 @@ import React from 'react';
 
 const VideoSection = () => {
   return (
-    <div className="w-full bg-gray-900 py-16">
+    <div className="w-full py-16">
       <div className="max-w-7xl mx-[95px]">
         <div className="relative w-full border-2 border-blue-500 overflow-hidden">
           <div className="aspect-video w-full">

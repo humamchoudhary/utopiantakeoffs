@@ -39,10 +39,10 @@
   position: absolute;
   background: linear-gradient(
     90deg,
-    #fff,
-    transparent 30%,
-    transparent 90%,
-    #fff
+    #060812 0%,
+    rgba(6, 8, 18, 0.00) 10%,
+    rgba(6, 8, 18, 0.00) 90%,
+    #060812 100%
   );
   inset: 0;
   pointer-events: none;

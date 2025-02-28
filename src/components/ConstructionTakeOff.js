@@ -24,7 +24,7 @@ const ServiceCard = ({ title, description, imagePath }) => (
       </p>
       <div className="flex justify-end mt-4">
         <button className="flex items-center gap-2 group/btn">
-          <p className="text-[#AC554D] font-semibold text-xl group-hover/btn:underline">
+          <p className="text-[#AC554D] font-semibold text-xl ">
             Read More
           </p>
           <svg width="15" height="13" viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg">

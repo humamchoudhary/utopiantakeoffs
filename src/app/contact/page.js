@@ -7,105 +7,29 @@ const ContactPage = () => {
 
   return (
     <main className="min-h-screen relative flex flex-col items-center ">
-      <div className="w-60 h-screen bg-primaryhex/10 absolute my-auto mx-auto mt-16 blur-[200px]" />
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width={572}
-        height={572}
-        fill="none"
-        className="absolute top-[260px] left-[434px] right-[434px] z-0"
-      >
-        <path
-          fill="url(#a)"
-          fillRule="evenodd"
-          d="M546.26 0h-5.72v25.74h-51.48V0h-5.72v25.74h-51.48V0h-5.72v25.74h-51.48V0h-5.72v25.74h-51.48V0h-5.72v25.74h-51.48V0h-5.72v25.74h-51.48V0h-5.72v25.74h-51.48V0h-5.72v25.74H88.66V0h-5.72v25.74H31.46V0h-5.72v25.74H0v5.72h25.74v51.48H0v5.72h25.74v51.48H0v5.72h25.74v51.48H0v5.72h25.74v51.48H0v5.72h25.74v51.48H0v5.72h25.74v51.48H0v5.72h25.74v51.48H0v5.72h25.74v51.48H0v5.72h25.74v51.48H0v5.72h25.74V572h5.72v-25.74h51.48V572h5.72v-25.74h51.48V572h5.72v-25.74h51.48V572h5.72v-25.74h51.48V572h5.72v-25.74h51.48V572h5.72v-25.74h51.48V572h5.72v-25.74h51.48V572h5.72v-25.74h51.48V572h5.72v-25.74h51.48V572h5.72v-25.74H572v-5.72h-25.74v-51.48H572v-5.72h-25.74v-51.48H572v-5.72h-25.74v-51.48H572v-5.72h-25.74v-51.48H572v-5.72h-25.74v-51.48H572v-5.72h-25.74v-51.48H572v-5.72h-25.74v-51.48H572v-5.72h-25.74V88.66H572v-5.72h-25.74V31.46H572v-5.72h-25.74V0Zm-57.2 82.94h51.48V31.46h-51.48v51.48Zm0 57.2h51.48V88.66h-51.48v51.48Zm0 57.2h51.48v-51.48h-51.48v51.48Zm0 57.2h51.48v-51.48h-51.48v51.48Zm0 57.2h51.48v-51.48h-51.48v51.48Zm0 57.2h51.48v-51.48h-51.48v51.48Zm0 57.2h51.48v-51.48h-51.48v51.48Zm0 57.2h51.48v-51.48h-51.48v51.48Zm0 57.2h51.48v-51.48h-51.48v51.48ZM82.94 489.06H31.46v51.48h51.48v-51.48Zm0-57.2H31.46v51.48h51.48v-51.48Zm0-57.2H31.46v51.48h51.48v-51.48Zm0-57.2H31.46v51.48h51.48v-51.48Zm0-57.2H31.46v51.48h51.48v-51.48Zm0-57.2H31.46v51.48h51.48v-51.48Zm0-57.2H31.46v51.48h51.48v-51.48Zm0-57.2H31.46v51.48h51.48V88.66Zm0-57.2H31.46v51.48h51.48V31.46Zm348.92 51.48h51.48V31.46h-51.48v51.48Zm0 57.2h51.48V88.66h-51.48v51.48Zm0 57.2h51.48v-51.48h-51.48v51.48Zm0 57.2h51.48v-51.48h-51.48v51.48Zm0 57.2h51.48v-51.48h-51.48v51.48Zm0 57.2h51.48v-51.48h-51.48v51.48Zm0 57.2h51.48v-51.48h-51.48v51.48Zm0 57.2h51.48v-51.48h-51.48v51.48Zm-291.72-51.48H88.66v51.48h51.48v-51.48Zm0-57.2H88.66v51.48h51.48v-51.48Zm0-57.2H88.66v51.48h51.48v-51.48Zm0-57.2H88.66v51.48h51.48v-51.48Zm0-57.2H88.66v51.48h51.48v-51.48Zm0-57.2H88.66v51.48h51.48v-51.48Zm0-57.2H88.66v51.48h51.48V88.66Zm234.52 51.48h51.48V88.66h-51.48v51.48Zm0 57.2h51.48v-51.48h-51.48v51.48Zm0 57.2h51.48v-51.48h-51.48v51.48Zm0 57.2h51.48v-51.48h-51.48v51.48Zm0 57.2h51.48v-51.48h-51.48v51.48Zm0 57.2h51.48v-51.48h-51.48v51.48Zm-177.32-51.48h-51.48v51.48h51.48v-51.48Zm0-57.2h-51.48v51.48h51.48v-51.48Zm0-57.2h-51.48v51.48h51.48v-51.48Zm0-57.2h-51.48v51.48h51.48v-51.48Zm0-57.2h-51.48v51.48h51.48v-51.48Zm120.12 51.48h51.48v-51.48h-51.48v51.48Zm0 57.2h51.48v-51.48h-51.48v51.48Zm0 57.2h51.48v-51.48h-51.48v51.48Zm0 57.2h51.48v-51.48h-51.48v51.48Zm-62.92-51.48h-51.48v51.48h51.48v-51.48Zm0-57.2h-51.48v51.48h51.48v-51.48Zm0-57.2h-51.48v51.48h51.48v-51.48Zm5.72 51.48h51.48v-51.48h-51.48v51.48Zm0 57.2h51.48v-51.48h-51.48v51.48Zm51.48 5.72h-51.48v51.48h51.48v-51.48Zm-51.48-120.12h51.48v-51.48h-51.48v51.48Zm-57.2 0h51.48v-51.48h-51.48v51.48Zm51.48 177.32h-51.48v51.48h51.48v-51.48Zm57.2 0h-51.48v51.48h51.48v-51.48Zm57.2 0h-51.48v51.48h51.48v-51.48Zm-51.48-234.52h51.48V88.66h-51.48v51.48Zm-57.2 0h51.48V88.66h-51.48v51.48Zm-57.2 0h51.48V88.66h-51.48v51.48Zm-57.2 0h51.48V88.66h-51.48v51.48Zm51.48 291.72h-51.48v51.48h51.48v-51.48Zm57.2 0h-51.48v51.48h51.48v-51.48Zm57.2 0h-51.48v51.48h51.48v-51.48Zm57.2 0h-51.48v51.48h51.48v-51.48Zm57.2 0h-51.48v51.48h51.48v-51.48ZM374.66 82.94h51.48V31.46h-51.48v51.48Zm-57.2 0h51.48V31.46h-51.48v51.48Zm-57.2 0h51.48V31.46h-51.48v51.48Zm-57.2 0h51.48V31.46h-51.48v51.48Zm-57.2 0h51.48V31.46h-51.48v51.48Zm-57.2 0h51.48V31.46H88.66v51.48Zm51.48 406.12H88.66v51.48h51.48v-51.48Zm57.2 0h-51.48v51.48h51.48v-51.48Zm57.2 0h-51.48v51.48h51.48v-51.48Zm57.2 0h-51.48v51.48h51.48v-51.48Zm57.2 0h-51.48v51.48h51.48v-51.48Zm57.2 0h-51.48v51.48h51.48v-51.48Zm57.2 0h-51.48v51.48h51.48v-51.48Z"
-          clipRule="evenodd"
-          opacity={0.1}
-        />
-        <defs>
-          <radialGradient
-            id="a"
-            cx={0}
-            cy={0}
-            r={1}
-            gradientTransform="rotate(90 0 286) scale(286)"
-            gradientUnits="userSpaceOnUse"
-          >
-            <stop stopColor="#F99" />
-            <stop offset={0.72} stopColor="#fff" />
-          </radialGradient>
-        </defs>
-      </svg>{" "}
-      <div className="md:mt-[243px] mt-[176px] flex flex-col items-center justify-center gap-5 md:gap-6   2xl:w-[1440px] px-5 md:px-14 z-10">
-        <div className="md:px-5 md:py-3 py-2 px-4  border-2 text-nowrap w-min border-[#972A20] bg-primaryhex/10 rounded-xl text-[#972A20] text-sm md:text-lg font-semibold text-center">
-          Affordable Estimate 30% Off
+      <div className="w-60 h-screen bg-primaryhex/10 absolute my-auto mx-auto blur-[200px]" />
+
+      <div className="md:mt-[120px] mt-[176px] flex flex-col items-center justify-center gap-5 md:gap-6   2xl:w-[1440px] px-5 md:px-14 z-10">
+        <div className="md:px-5 md:py-3 py-2 px-4  border text-nowrap w-min border-[#972A20] bg-[#531712] rounded-full text-[#FAFAFB] text-sm md:text-lg font-semibold text-center">
+        Save 60% of Your Estimating Expense
         </div>
         <div className="flex flex-col items-center">
           <h1 className="text-[32px] text-center md:text-7xl font-bold text-fg  tracking-[-1.6px]">
             Contact Our Friendly Team
           </h1>
-          <p className="md:mt-3 mt-2 text-center text-[#5F6778] w-[335px] md:w-[800px]">
+          <p className="md:mt-3 mt-2 text-center font-semibold text-xl text-[#5F6778] w-[335px] md:w-[800px]">
             Our expert team is here to assist you with all your construction
             estimating needs. Reach out for inquiries, quotes, or support—let's
             work together!
           </p>
         </div>
-        <div className="px-4 py-3 mt:px-6 mt:py-3 rounded-xl bg-primary text-bg flex flex-row items-center justify-center gap-1">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width={22}
-            height={22}
-            fill="none"
-          >
-            <path
-              stroke="#fff"
-              strokeWidth={1.5}
-              d="M1.833 7.333A3.667 3.667 0 0 1 5.5 3.667h6.417a3.667 3.667 0 0 1 3.667 3.666v7.334a3.667 3.667 0 0 1-3.667 3.666H5.5a3.667 3.667 0 0 1-3.667-3.666V7.333Z"
-            />
-            <path
-              stroke="#fff"
-              strokeWidth={1.5}
-              d="m15.584 8.556 1.412-1.507c1.137-1.213 3.17-.408 3.17 1.254v5.394c0 1.662-2.033 2.467-3.17 1.254l-1.412-1.507V8.556ZM11.917 9.167a1.833 1.833 0 1 1-3.667 0 1.833 1.833 0 0 1 3.667 0Z"
-            />
-          </svg>
+        <div className="px-4 py-3 font-bold text-xl mt:px-6 mt:py-3 rounded-full bg-[#FAFAFB] text-[#0F142C] flex flex-row items-center justify-center gap-[6px]">
+        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none"><path d="M2.5 8a4 4 0 0 1 4-4h7a4 4 0 0 1 4 4v8a4 4 0 0 1-4 4h-7a4 4 0 0 1-4-4zm15 1.333 1.54-1.643c1.241-1.323 3.46-.446 3.46 1.368v5.884c0 1.814-2.219 2.691-3.46 1.368l-1.54-1.643z" stroke="#0F142C" stroke-width="1.5"/><path d="M13.5 10a2 2 0 1 1-4 0 2 2 0 0 1 4 0Z" stroke="#0F142C" stroke-width="1.5"/></svg>
           Book a call
         </div>
       </div>
       <div className="flex flex-col md:flex-row w-full md:2xl:w-[1440px] gap-10 mt-32 px-[14px] md:px-[110px] rounded-lg ">
-        <form className="flex flex-col md:w-1/2 md:gap-8 gap-4">
-          <div className="grid grid-cols-2 gap-4">
-            <div className="">
-              <label
-                htmlFor="firstName"
-                className="block text-sm font-semibold text-fg md:text-[16px] mb-2 md:mb-[13px]"
-              >
-                First Name
-              </label>
-              <input
-                type="text"
-                id="firstName"
-                name="firstName"
-                className="md:px-4 px-3 py-[10px] md:py-[14px] block w-full rounded-lg border-[#C6C6C6] border shadow-sm "
-                placeholder="First Name"
-              />
-            </div>
-
-            <div className="">
-              <label
-                htmlFor="lastname"
-                className="block text-sm font-semibold text-fg md:text-[16px] mb-2 md:mb-[13px]"
-              >
-                Last Name
-              </label>
-              <input
-                type="text"
-                id="lastName"
-                name="lastName"
-                className="md:px-4 px-3 py-[10px] md:py-[14px] block w-full rounded-lg border-[#C6C6C6] border shadow-sm "
-                placeholder="Last Name"
-              />
-            </div>
-          </div>
+        <form className="flex flex-col md:w-1/2 md:gap-8  gap-4">
           <div className="">
             <label
               htmlFor="companyName"
@@ -117,8 +41,8 @@ const ContactPage = () => {
               type="text"
               id="companyName"
               name="companyName"
-              className="md:px-4 px-3 py-[10px] md:py-[14px] block w-full rounded-lg border-[#C6C6C6] border shadow-sm "
-              placeholder="Company Name"
+              className="md:px-4 px-3 py-[10px] font-medium text-lg md:py-[14px] text-[#5E6272] block w-full bg-[#1F2129] rounded-xl border-[#2F323C] border shadow-sm "
+              placeholder="Your Company Name"
             />
           </div>
           <div className="">
@@ -132,7 +56,7 @@ const ContactPage = () => {
               type="email"
               id="companyEmail"
               name="companyEmail"
-              className="md:px-4 px-3 py-[10px] md:py-[14px] block w-full rounded-lg border-[#C6C6C6] border shadow-sm "
+              className="md:px-4 px-3 py-[10px] md:py-[14px] block  w-full rounded-xl font-medium text-lg text-[#5E6272] bg-[#1F2129] border-[#2F323C] border shadow-sm "
               placeholder="you@company.com"
             />
           </div>
@@ -149,7 +73,7 @@ const ContactPage = () => {
               type="tel"
               id="companyEmail"
               name="companyEmail"
-              className="px-3 py-[10px] md:px-4 md:py-[14px] block w-full rounded-lg border-[#C6C6C6] border shadow-sm "
+              className="px-3 py-[10px] md:px-4 md:py-[14px] block w-full rounded-xl font-medium text-lg text-[#5E6272] bg-[#1F2129] border-[#2F323C]  border shadow-sm "
               placeholder="XXX XXXXXXX"
             />
           </div>
@@ -164,14 +88,14 @@ const ContactPage = () => {
               id="projectDescription"
               name="projectDescription"
               rows="8"
-              className="px-3 py-[10px] md:px-4 md:py-[14px] block w-full rounded-lg border-[#C6C6C6] border shadow-sm "
+              className="px-3 py-[10px] md:px-4 md:py-[14px] block w-full rounded-xl font-medium text-lg text-[#5E6272] bg-[#1F2129] border-[#2F323C]  border shadow-sm "
               placeholder="Leave the project description here"
             ></textarea>
           </div>
           <div>
             <button
               type="submit"
-              className="w-full md:h-14 md:py-3 px-[12px 16px] py-3 md:px-4 justify-center items-center gap-2 rounded-xl bg-primary text-bg text-lg font-semibold leading-[normal] "
+              className="w-full md:h-14 md:py-3 px-[12px 16px] py-3 md:px-4 justify-center items-center gap-2 rounded-xl bg-[#601E1A]  text-[#FAFAFB] text-lg font-semibold leading-[normal] "
             >
               Submit
             </button>
@@ -203,17 +127,17 @@ const ContactPage = () => {
                   fill="none"
                 >
                   <path
-                    stroke="#28303F"
+                    stroke="#AC554D"
                     strokeWidth={2.5}
                     d="M16.666 11a2.667 2.667 0 1 1-5.333 0 2.667 2.667 0 0 1 5.333 0Z"
                   />
                   <path
-                    stroke="#28303F"
+                    stroke="#AC554D"
                     strokeWidth={2.5}
                     d="M23.333 10.81c0 3.046-2.264 6.853-4.743 9.394C16.959 21.876 15.234 23 14 23c-1.235 0-2.959-1.124-4.59-2.796-2.48-2.541-4.744-6.348-4.744-9.394 0-5.05 4.18-9.143 9.334-9.143s9.333 4.093 9.333 9.143Z"
                   />
                   <path
-                    stroke="#28303F"
+                    stroke="#AC554D"
                     strokeLinecap="round"
                     strokeWidth={2.5}
                     d="M18.206 20.586c4.553.568 7.794 2.032 7.794 3.747 0 2.21-5.373 4-12 4s-12-1.79-12-4c0-1.715 3.241-3.18 7.794-3.747"
@@ -238,7 +162,7 @@ const ContactPage = () => {
                   fill="none"
                 >
                   <path
-                    stroke="#28303F"
+                    stroke="#AC554D"
                     strokeLinecap="round"
                     strokeWidth={2.5}
                     d="M2.667 16V9.333A5.333 5.333 0 0 1 8 4h16a5.333 5.333 0 0 1 5.333 5.333v13.334A5.333 5.333 0 0 1 24 28H10.666M8 10.667l5.041 3.36a5.333 5.333 0 0 0 5.917 0L24 10.668M2.666 20h8m-8 4h8"
@@ -279,26 +203,26 @@ const ContactPage = () => {
                   fill="none"
                 >
                   <path
-                    stroke="#28303F"
+                    stroke="#AC554D"
                     strokeWidth={2.5}
                     d="M4 8.667a4 4 0 0 1 4-4h16a4 4 0 0 1 4 4v16.666a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4V8.667Z"
                   />
                   <path
-                    stroke="#28303F"
+                    stroke="#AC554D"
                     strokeLinecap="round"
                     strokeWidth={2.5}
                     d="M4 12h24"
                   />
                   <path
-                    stroke="#28303F"
+                    stroke="#AC554D"
                     strokeLinecap="round"
                     strokeLinejoin="round"
                     strokeWidth={2.5}
                     d="M10.666 2.667v4M21.334 2.667v4"
                   />
-                  <circle cx={16} cy={20} r={1.333} fill="#28303F" />
-                  <circle cx={21.333} cy={20} r={1.333} fill="#28303F" />
-                  <circle cx={10.667} cy={20} r={1.333} fill="#28303F" />
+                  <circle cx={16} cy={20} r={1.333} fill="#AC554D" />
+                  <circle cx={21.333} cy={20} r={1.333} fill="#AC554D" />
+                  <circle cx={10.667} cy={20} r={1.333} fill="#AC554D" />
                 </svg>
                 Monday to Saturday
               </p>
@@ -310,13 +234,13 @@ const ContactPage = () => {
                   fill="none"
                 >
                   <path
-                    stroke="#28303F"
+                    stroke="#AC554D"
                     strokeLinecap="round"
                     strokeWidth={2.5}
                     d="M29.333 16V6.667a4 4 0 0 0-4-4H6.667a4 4 0 0 0-4 4v18.666a4 4 0 0 0 4 4H12"
                   />
                   <path
-                    stroke="#28303F"
+                    stroke="#AC554D"
                     strokeLinecap="round"
                     strokeLinejoin="round"
                     strokeWidth={2.5}
@@ -343,12 +267,12 @@ const ContactPage = () => {
         </div>
       </div>
       <div>
-        <h2 className="flex flex-row justify-center items-center text-center font-bold mt-14 mb-6 md:mb-16 text-[32px] leading-[48px] tracking-[-1.28px]">
+        <h2 className="flex flex-row justify-center items-center text-center font-semibold mt-16 mb-6 md:mb-16 text-2xl text-[#AC554D] leading-[48px] tracking-[-1.28px]">
           Other Ways To Get In Touch
         </h2>
         <div className="flex flex-col md:grid md:grid-cols-1 md:sm:grid-cols-2 w-auto md:2xl:w-[1440px] md:lg:grid-cols-4 gap-4 md:gap-6 md:max-w-7xl mx-5 md:mx-4 ">
-          <div className="bg-bg border border-[#E7E7E9] p-6 rounded-xl">
-            <div className="p-3 bg-bg rounded-xl border border-[#E7E7E9] w-min">
+          <div className="bg-[#1F2129] border border-[#2F323C] p-6 rounded-xl">
+            <div className="p-3 bg-[#2F3138] rounded-xl border border-[#2F323C] w-min">
               <svg
                 className=""
                 xmlns="http://www.w3.org/2000/svg"
@@ -357,7 +281,7 @@ const ContactPage = () => {
                 fill="none"
               >
                 <path
-                  stroke="#13151B"
+                  stroke="#FAFAFB"
                   strokeLinecap="round"
                   strokeLinejoin="round"
                   strokeWidth={2.5}
@@ -365,17 +289,17 @@ const ContactPage = () => {
                 />
               </svg>
             </div>
-            <h2 className="mt-6 font-semibold ">Call</h2>
-            <p className="text-base text-[#475464] mt-3">
+            <h2 className="mt-6 text-2xl font-semibold ">Call</h2>
+            <p className="text-lg  font-medium leading-7 text-[#5E6272] mt-3">
               You can directly call us at{" "}
             </p>
-            <p className="text-base font-semibold ">+1 (347) 480-1903</p>
-            <p className="text-base text-[#475464]">
+            <p className="text-lg font-semibold ">+1 (347) 480-1903</p>
+            <p className="text-lg font-medium text-[#5E6272]">
               to discuss your project specifications.
             </p>
           </div>
-          <div className=" bg-bg border border-[#E7E7E9] p-6 rounded-xl">
-            <div className="p-3 bg-bg rounded-xl border border-[#E7E7E9] w-min">
+          <div className=" bg-[#1F2129] border border-[#2F323C] p-6 rounded-2xl">
+            <div className="p-3 bg-[#2F3138] rounded-xl   w-min">
               <svg
                 className=""
                 xmlns="http://www.w3.org/2000/svg"
@@ -384,7 +308,7 @@ const ContactPage = () => {
                 fill="none"
               >
                 <path
-                  stroke="#13151B"
+                  stroke="#FAFAFB"
                   strokeLinecap="round"
                   strokeLinejoin="round"
                   strokeWidth={2.5}
@@ -392,8 +316,8 @@ const ContactPage = () => {
                 />
               </svg>
             </div>{" "}
-            <h2 className="mt-6 font-semibold">Email</h2>
-            <p className="text-base text-[#475464] mt-3">
+            <h2 className="mt-6 text-2xl font-semibold">Email</h2>
+            <p className="text-lg font-medium text-[#475464] mt-3">
               You can directly send your plan to us on the given email:{" "}
             </p>
             <p className="text-base font-semibold">

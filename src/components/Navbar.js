@@ -90,7 +90,7 @@ export default function NavBar() {
   const path = usePathname();
   console.log(path);
   return (
-    <div className="flex flex-row w-full 2xl:w-[1440px] mx-auto justify-between items-center px-5 pt-5 md:px-12 md:py-8 ">
+    <div className="flex flex-row w-full 2xl:w-[1440px] mx-auto justify-between items-center  px-5 pt-5 md:px-12 md:py-8 ">
       <Image src={Logo} width={52} height={52} />
       <div className="hidden md:flex flex-row gap-24 items-center">
         <Link
@@ -102,7 +102,7 @@ export default function NavBar() {
         <div className="group flex flex-col ">
           <p className="hover:cursor-pointer flex flex-row">
             Service
-            <ChevronDown />
+            
           </p>
           <div className="group-hover:flex hover:flex hidden w-min flex-col gap-4 absolute -translate-x-12 shadow-md mt-6 p-6 bg-bg rounded-[16px] border-[#D5D5D5] border ">
             {Services.map((item, index) => (
@@ -118,7 +118,7 @@ export default function NavBar() {
         <div className="group flex flex-col  ">
           <p className="hover:cursor-pointer text-nowarp flex flex-row ">
             Trades{"  "}
-            <ChevronDown />
+            
           </p>
           <div className="group-hover:grid hover:grid hidden grid-cols-2 gap-x-4 gap-y-5 absolute -translate-x-12 shadow-md mt-6 p-6 bg-bg rounded-[16px] border-[#D5D5D5] border ">
             {Trade.map((item, index) => (
@@ -148,7 +148,7 @@ export default function NavBar() {
       <div className="hidden md:flex flex-row justify-center items-center gap-4">
         <Link
           href={"/contact"}
-          className="py-[14px] px-6 rounded-xl bg-primary text-bg "
+          className="py-[14px] px-6 rounded-full font-bold text-xl bg-[#FAFAFB] text-bg "
         >
           Get Estimated
         </Link>
