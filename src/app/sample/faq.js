@@ -28,7 +28,7 @@ const Faq = ({ item }) => {
       </div>
       <div className="w-full h-[2px] bg-[#E3E3E3]" />
       <p
-        className={`md:text-2xl text-sm md:leading-10 leading-[28px] text-[#5F6778] ${state ? "inline" : "hidden"} `}
+        className={`md:text-2xl text-sm md:leading-10 leading-[28px] text-[#5E6272] ${state ? "inline" : "hidden"} `}
       >
         {item.a}
       </p>

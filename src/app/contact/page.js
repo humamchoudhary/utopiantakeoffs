@@ -116,7 +116,7 @@ const ContactPage = () => {
               <h2 className="md:text-[24px] text-base font-bold leading-[24px] mb-[4px] md:mb-[10px]">
                 Address
               </h2>
-              <p className="md:text-[20px] text-xs mb-4 md:mb-6 text-[#475464]">
+              <p className="md:text-[22px] text-xs mb-4 md:mb-6 text-[#5E6272]">
                 Your trusted estimating partner with a global presence.
               </p>
               <p className="flex flex-row items-center gap-[6px] md:gap-[14px] text-xs md:text-[20px] font-semibold underline">
@@ -151,7 +151,7 @@ const ContactPage = () => {
               <h2 className="text-base md:text-[24px] font-bold mb-1 md:mb-[10px]">
                 Contact Info
               </h2>
-              <p className="text-xs md:text-[20px] mb-4 md:mb-6 text-[#475464]">
+              <p className="text-xs md:text-[22px] mb-4 md:mb-6 text-[#5E6272]">
                 Fast, reliable estimating services worldwide.
               </p>
               <p className="flex flex-row items-center font-semibold gap-[6px] md:gap-[14px] text-xs md:text-[20px] mb-2 md:mb-[14px] underline">
@@ -192,7 +192,7 @@ const ContactPage = () => {
               <h2 className="text-base md:text-[24px] font-bold mb-1 md:mb-[10px]">
                 Working Hours
               </h2>
-              <p className="text-xs md:text-[20px] text-[#475464] mb-4 md:mb-6">
+              <p className="text-xs md:text-[22px] text-[#5E6272] mb-4 md:mb-6">
                 Available Mon to Sat for your estimating needs.
               </p>
               <p className="flex flex-row items-center gap-[6px] md:gap-[14px] text-xs md:text-[20px] mb-2 md:mb-[14px] font-semibold underline">
@@ -255,7 +255,7 @@ const ContactPage = () => {
               <h2 className="text-base md:text-[24px] font-bold mb-1 md:mb-6">
                 Get a Quick Quote
               </h2>
-              <p className="text-xs md:text-[20px] text-[#475464] leading-6 md:leading-10 tracking-[0.24px] md:tracking-[-0.4px]">
+              <p className="text-xs md:text-[22px] font-medium` text-[#5E6272] leading-6 md:leading-10 tracking-[0.24px] md:tracking-[-0.4px]">
                 Connect with us today by submitting your information in the
                 contact form to receive a quick quote, including an invoice and
                 turnaround time, in just 5 minutes. If you have any additional
@@ -317,15 +317,15 @@ const ContactPage = () => {
               </svg>
             </div>{" "}
             <h2 className="mt-6 text-2xl font-semibold">Email</h2>
-            <p className="text-lg font-medium text-[#475464] mt-3">
+            <p className="text-lg font-medium text-[#5E6272] mt-3">
               You can directly send your plan to us on the given email:{" "}
             </p>
             <p className="text-base font-semibold">
               utopiantakeoffs10@gmail.com
             </p>
           </div>
-          <div className="bg-bg border border-[#E7E7E9] p-6 rounded-xl">
-            <div className="p-3 bg-bg rounded-xl border border-[#E7E7E9] w-min">
+          <div className="bg-[#1F2129]  p-6 rounded-xl">
+            <div className="p-3 bg-[#2F3138] rounded-xl w-min">
               <svg
                 className=""
                 xmlns="http://www.w3.org/2000/svg"
@@ -334,22 +334,22 @@ const ContactPage = () => {
                 fill="none"
               >
                 <path
-                  stroke="#28303F"
+                  stroke="#FAFAFB"
                   strokeLinejoin="round"
                   strokeWidth={2.5}
                   d="M23.497 10.897c3.634 1.632 6.17 5.318 6.17 9.603V25c0 1.657-1.327 3-2.963 3h-8.89c-3.87 0-7.162-2.504-8.382-6m14.065-11.103C22.56 6.941 19.046 4 14.852 4H13.37C7.643 4 3 8.701 3 14.5V19c0 1.657 1.327 3 2.963 3h3.469m14.065-11.103c.16.675.244 1.379.244 2.103 0 4.97-3.98 9-8.89 9h-5.42"
                 />
               </svg>
             </div>
-            <h2 className="mt-6 font-semibold ">Live Chat</h2>
-            <p className="text-base text-[#475464] mt-3">
+            <h2 className="mt-6 font-semibold text-2xl">Live Chat</h2>
+            <p className="text-lg text-[#5E6272] mt-3">
               24/7 live chat support for instant assistance during critical
               times.{" "}
             </p>
           </div>
 
-          <div className="border border-[#E7E7E9] p-6 rounded-xl bg-bg">
-            <div className="p-3 bg-bg rounded-xl border border-[#E7E7E9] w-min">
+          <div className="p-6 rounded-xl bg-[#1F2129]">
+            <div className="p-3 bg-[#2F3138] rounded-xl  w-min">
               {" "}
               <svg
                 className=""
@@ -362,28 +362,28 @@ const ContactPage = () => {
                   cx={16}
                   cy={14.667}
                   r={4}
-                  stroke="#13151B"
+                  stroke="#FAFAFB"
                   strokeWidth={2.5}
                 />
                 <path
-                  stroke="#13151B"
+                  stroke="#FAFAFB"
                   strokeWidth={2.5}
                   d="M25.334 14.666c0 5.891-6 12-9.334 12-3.333 0-9.333-6.109-9.333-12 0-5.89 4.179-9.333 9.333-9.333 5.155 0 9.334 3.442 9.334 9.333Z"
                 />
                 <path
-                  stroke="#13151B"
+                  stroke="#FAFAFB"
                   strokeLinecap="round"
                   strokeWidth={2.5}
                   d="M27.938 8c.893 1.75 1.395 3.817 1.395 6.167 0 1.508-.297 3.027-.811 4.5m-25.044 0c-.514-1.473-.812-2.992-.812-4.5 0-2.35.503-4.417 1.396-6.167"
                 />
               </svg>
             </div>
-            <h2 className="mt-6 font-semibold ">Visit Us</h2>
-            <p className="text-base text-[#475464] mt-3">
+            <h2 className="mt-6 font-semibold text-2xl">Visit Us</h2>
+            <p className="text-lg text-[#5E6272] mt-3">
               You can directly call us at 
             </p>
-            <p className="text-base font-semibold ">+1 (347) 480-1903</p>
-            <p className="text-base text-[#475464]">
+            <p className="text-lg font-semibold ">+1 (347) 480-1903</p>
+            <p className="text-lg text-[#5E6272]">
               {" "}
                to discuss your project specifications.
             </p>

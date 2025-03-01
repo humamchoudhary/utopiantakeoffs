@@ -119,20 +119,20 @@ export default async function Sample() {
   return (
     <div className="flex flex-col items-center ">
       <div className="flex flex-col gap-5 md:[gap-6 mt-20] items-center justify-center mt-12">
-        <div className="md:px-5 md:py-3 py-2 px-4  border-2 text-nowrap w-min border-[#972A20] bg-primaryhex/10 rounded-xl text-[#972A20] text-sm md:text-lg font-semibold text-center">
-          Affordable Estimate 30% Off
+        <div className="md:px-5 md:py-3 py-2 px-4  border-2 text-nowrap w-min border-[#89261D] bg-[#531712] rounded-full text-[#FAFAFB] text-sm md:text-lg font-semibold text-center">
+        Save 60% of Your Estimating Expense
         </div>
         <h1 className="text-center w-[365px] mt-5 text-[32px] md:text-7xl md:mt-6 md:w-[1440px] font-bold  leading-normal">
           Quantity Takeoff Samples
         </h1>
-        <p className="text-center text-xs md:text-2xl text-[#5F6778] leading-6 md:leading-10 mt-3 justify-center md:w-[1400px]  md:tracking-[-1.2px] px-4 ">
+        <p className="text-center text-xs md:text-2xl text-[#5F6778] leading-6 md:leading-10 mt-3 justify-center md:w-[981px]  md:tracking-[-1.2px] px-4 ">
           All Quantity Takeoffs and Estimates are Provided with Mark Up Plans.
           We price out estimates with vendor-quoted zip code-based separate
           material and labor unit pricing.
         </p>
-        <div className="flex flex-row gap-1 md:gap-2 items-center justify-center mt-5 md:mt-6">
+        <div className="flex flex-row gap-1 md:gap-3 items-center justify-center mt-5 md:mt-6">
           <Link
-            className="border flex gap-1 md:gap-[10px] items-center justify-center py-[10px] px-4 md:px-6 md:py-3 border-fg rounded-xl md:rounded-2xl"
+            className="border flex gap-1 md:gap-[10px] items-center justify-center py-[10px] px-4 md:px-6 md:py-3 border-fg text-xl font-bold rounded-xl md:rounded-full"
             href="/contact"
           >
             <svg
@@ -142,7 +142,7 @@ export default async function Sample() {
               fill="none"
             >
               <path
-                stroke="#13151B"
+                stroke="#FAFAFB"
                 strokeLinejoin="round"
                 strokeWidth={1.5}
                 d="M19.25 17.417v-1.51c0-.749-.456-1.423-1.152-1.701l-1.865-.746a1.833 1.833 0 0 0-2.32.882l-.163.325s-2.292-.459-4.125-2.292C7.792 10.542 7.333 8.25 7.333 8.25l.325-.162a1.833 1.833 0 0 0 .882-2.32l-.746-1.866A1.833 1.833 0 0 0 6.092 2.75H4.583c-1.012 0-1.833.82-1.833 1.833 0 8.1 6.566 14.667 14.667 14.667 1.012 0 1.833-.82 1.833-1.833Z"
@@ -152,7 +152,7 @@ export default async function Sample() {
           </Link>
 
           <Link
-            className="border flex gap-1 items-center justify-center py-[10px] px-4 md:px-6 md:py-3 border-primary bg-primary text-bg rounded-xl md:rounded-2xl"
+            className=" flex gap-[10px] items-center justify-center py-[10px] px-4 md:px-6 md:py-3  bg-[#FAFAFB] text-[#0F142C] text-xl font-bold rounded-xl md:rounded-full"
             href="/"
           >
             <svg
@@ -162,12 +162,12 @@ export default async function Sample() {
               fill="none"
             >
               <path
-                stroke="#fff"
+                stroke="#0F142C"
                 strokeWidth={1.5}
                 d="M1.833 7.333A3.667 3.667 0 0 1 5.5 3.667h6.417a3.667 3.667 0 0 1 3.666 3.666v7.334a3.667 3.667 0 0 1-3.666 3.666H5.5a3.667 3.667 0 0 1-3.667-3.666V7.333Z"
               />
               <path
-                stroke="#fff"
+                stroke="#0F142C"
                 strokeWidth={1.5}
                 d="m15.583 8.556 1.413-1.507c1.137-1.213 3.17-.408 3.17 1.254v5.394c0 1.662-2.034 2.467-3.17 1.254l-1.413-1.507V8.556ZM11.917 9.167a1.833 1.833 0 1 1-3.667 0 1.833 1.833 0 0 1 3.667 0Z"
               />
@@ -177,55 +177,28 @@ export default async function Sample() {
         </div>
       </div>
       <div className="flex flex-col items-center mt-14 mx-3 md:mx-11 md:mt-20">
-        <svg
-          width="335"
-          height="2"
-          viewBox="0 0 335 2"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path d="M0 1H335" stroke="url(#paint0_linear_798_3087)" />
-          <defs>
-            <linearGradient
-              id="paint0_linear_798_3087"
-              x1="0"
-              y1="1.5"
-              x2="335"
-              y2="1.5"
-              gradientUnits="userSpaceOnUse"
-            >
-              <stop stop-color="#D0CCCC" stop-opacity="0" />
-              <stop offset="0.486366" stop-color="#C4C4C4" />
-              <stop offset="1" stop-color="#6A6868" stop-opacity="0" />
-            </linearGradient>
-          </defs>
-        </svg>
+      <svg xmlns="http://www.w3.org/2000/svg" width="1348" height="2" viewBox="0 0 1348 2" fill="none"><path d="M-.007 1H1348.01" stroke="url(#a)"/><defs><linearGradient id="a" x1="-.007" y1="1.5" x2="1348.01" y2="1.5" gradientUnits="userSpaceOnUse"><stop stop-color="#D0CCCC" stop-opacity="0"/><stop offset=".486" stop-color="#C4C4C4" stop-opacity=".12"/><stop offset="1" stop-color="#6A6868" stop-opacity="0"/></linearGradient></defs></svg>
       </div>
 
-      <div className="w-full 2xl:w-[1440px] rounded-2xl md:rounded-[23px] flex flex-col items-center px-4 py-10 md:py-20 mt-14 md:mt-20 md:px-24 bg-fg">
-        <p className="text-[#CAA4A2] text-xs font-semibold text-center">
-          How we work
-        </p>
-        <h3 className="text-2xl md:text-[40px] text-[#E4E4E4] font-semibold text-center">
+      <div className="w-full gap-20 2xl:w-[1440px] flex flex-col items-center px-4 py-10 md:py-20 mt-14 md:mt-20 md:px-24 ">
+
+        <h3 className="text-2xl md:text-2xl  text-[#AC554D] font-semibold text-center">
           Utopian Samples
         </h3>
-        <p className="text-[#B0B0B0] text-xs md:text-2xl leading-5 md:leading-10 text-center mt-4 md:w-[873px] mb-9 md:mb-20">
-          Contractors save time and estimating costs with our expert services,
-          helping them bid more and win jobs successfully.
-        </p>
+
         <div className="relative">
           <div className="flex flex-col md:grid md:grid-cols-2 md:gap-6 gap-4">
             {info.map((item, index) => (
               <div
                 key={index}
-                className="flex p-[18px] md:p-7 flex-col bg-[#26272D] gap-4 border-[#4E4E4E] border rounded-[20px] md:rounded-[24px]"
+                className="flex p-[18px] md:p-7 flex-col bg-[#1F212A] gap-4 border-[#4E4E4E] border rounded-[20px] md:rounded-[24px]"
               >
                 <div className="">
-                  <p className=" text-base md:text-2xl text-[#E4E4E4] font-bold">
+                  <p className=" text-base md:text-[28px] text-[#fff] font-semibold">
                     {item.title}
                   </p>
 
-                  <p className="leading-5 md:leading-8 text-sm md:text-xl text-[#A8A8A8] font-semibold">
+                  <p className="leading-5 mt-2 md:leading-8 text-sm md:text-2xl text-[#A8A8A8] font-medium">
                     {item.desc}
                   </p>
                 </div>
@@ -233,18 +206,18 @@ export default async function Sample() {
                   <Link
                     target="_blank"
                     href={item.pdf}
-                    className="flex items-center bg-gray hover:bg-gray-500 border border-[#E4E4E4] text-white py-1 px-3 rounded-lg"
+                    className="flex items-center text-xl font-semibold bg-[#1F212A] hover:bg-gray-500 border border-[#fff] text-white py-[10px] px-6 rounded-full"
                   >
-                    <Download size={16} className="mr-1" />
-                    pdf
+                    <Download size={20} className="mr-1" />
+                    .pdf
                   </Link>
                   <Link
                     target="_blank"
                     href={item.xlsx}
-                    className="flex items-center bg-[#C05852] hover:bg-[#C05840] text-white py-1 px-3 rounded-lg"
+                    className="flex items-center text-xl font-semibold bg-[#531712] text-white py-[10px] px-6 rounded-full"
                   >
-                    <Download size={16} className="mr-1" />
-                    xsl
+                    <Download size={20} className="mr-1" />
+                    .xsl
                   </Link>
                 </div>
               </div>
@@ -253,11 +226,8 @@ export default async function Sample() {
         </div>
       </div>
 
-      <div className="flex flex-col items-center">
-        <p className="text-xs md:text-xl font-semibold text-primary mt-20 leading-normal">
-          What People Need to Ask Us
-        </p>
-        <h1 className=" md:w-100% text-2xl md:text-[40px] font-semibold leading-normal">
+      <div className="flex flex-col mt-[120px] items-center">
+        <h1 className=" md:w-100% text-2xl md:text-2xl  text-[#AC554D] font-semibold leading-normal">
           Frequently Asked Questions
         </h1>
       </div>
@@ -269,37 +239,50 @@ export default async function Sample() {
       </div>
 
       <div className=" w-full md:2xl:w-[1440px] gap-20">
-        <div className="relative w-full flex flex-col justify-center items-center bg-primary rounded-2xl md:rounded-3xl py-[72px]">
-          <div className="absolute right-0 bottom-0">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="1119"
-              height="342"
-              viewBox="0 0 1119 342"
-              fill="none"
-            >
-              <path
-                d="M302.559 146.38C24.0127 143.246 0 342 0 342H1139V0C1139 0 1062.96 191.592 851.649 232.775C640.337 273.958 581.106 149.513 302.559 146.38Z"
-                fill="white"
-                fill-opacity="0.04"
-              />
-            </svg>
-          </div>
-          <div className="md:px-5 px-4 py-2 md:py-3 md:mb-5 mb-[10px] border border-bg rounded-lg md:rounded-xl">
-            <p className="md:text-lg text-sm text-bg font-semibold leading-[normal]">
-              Save 30% Now
-            </p>
-          </div>
-          <p className="text-[#E4E4E4] md:mx-[340px] md:w-[664px] font-semibold md:text-[32px] text-sm leading-5 md:leading-[normal] text-center">
-            Work With Us! We Are A Global Network Of Construction Cost Expert
+      <div className="px-0 md:px-12 w-full 2xl:w-[1440px]">
+      <div className="relative w-full flex flex-col justify-center items-center bg-primary rounded-3xl px-9 py-11 md:py-[72px]">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width={339}
+          height={143}
+          fill="none"
+          className="absolute right-0 md:hidden block w-[339px] h-[143px] md:w-[1119px]  md:h-[342px] bottom-0"
+        >
+          <path
+            fill="#fff"
+            fillOpacity={0.04}
+            d="M90.05 61.206C7.148 59.895 0 143 0 143h339V0s-22.632 80.11-85.524 97.33c-62.893 17.22-80.522-34.814-163.425-36.124Z"
+          />
+        </svg>{" "}
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          className="absolute right-0 hidden md:block w-[339px] h-[143px] md:w-[1119px]  md:h-[342px] bottom-0"
+          viewBox="0 0 1119 342"
+          fill="none"
+        >
+          <path
+            d="M302.559 146.38C24.0127 143.246 0 342 0 342H1139V0C1139 0 1062.96 191.592 851.649 232.775C640.337 273.958 581.106 149.513 302.559 146.38Z"
+            fill="white"
+            fill-opacity="0.04"
+            className="absolute right-0 w-[339px] h-[143px] md:w-[1119px]  md:h-[342px] bottom-0"
+          />
+        </svg>
+        <div className="px-4 py-2 md:px-5 md:py-3 mb-5 border  rounded-full bg-[#FAF3F21A]">
+          <p className="text-lg  font-semibold leading-[normal] text-[#FFFFFF]">
+          Save 60% of Your Estimating Expense
           </p>
-          <div className="md:px-[32px] md:py-4 px-5 py-[10px] mt-6 md:mt-7  bg-bg rounded-lg md:rounded-xl">
-            <p className="md:text-lg text-xs text-primary font-semibold leading-[normal]">
-              Get Quotes Now
-            </p>
-          </div>
+        </div>
+        <p className="text-[#E4E4E4] md:mx-[340px] md:w-[664px] font-semibold text-sm leading-[20px] md:leading-[normal] md:text-[32px] text-center">
+          Work With Us! We Are A Global Network Of Construction Cost Expert
+        </p>
+        <div className="px-5 py-[10px] md:px-[32px] md:py-4 mt-7  bg-[#FFFFFF] rounded-full">
+          <p className="text-lg text-primary font-semibold text-[#601E1A] leading-[normal]">
+            Get Quotes Now
+          </p>
         </div>
       </div>
+    </div>
+    </div>
     </div>
   );
 }
