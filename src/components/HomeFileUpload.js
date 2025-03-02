@@ -85,7 +85,7 @@ const FileUpload = () => {
             ? "Drop the files here..."
             : "Drag & drop files or Browse"}
         </p>
-        <p className="text-[#475464] text-lg font-medium w-[290px] md:w-full leading-[18px] ">
+        <p className="text-[#475464] mt-3 text-lg font-medium w-[409px] leading-[18px] ">
           Supported formats for Plan will be PDF File, Word.
         </p>
       </div>

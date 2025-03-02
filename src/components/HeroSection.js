@@ -38,7 +38,7 @@ export default async function HeroSection() {
 
       <div className="flex flex-row gap-4 justify-center items-center mt-6 md:mt-0">
           <Link
-            className="text-white text-sm md:text-base border-2 flex gap-2 items-center justify-center px-4 py-3 md:px-6 border-white rounded-full"
+            className="text-white text-sm md:text-xl font-bold border-2 flex gap-2 items-center justify-center px-4 py-3 md:px-6 border-white rounded-full"
             href="/contact"
           >
             <Phone className="w-5 h-5" />
@@ -46,7 +46,7 @@ export default async function HeroSection() {
           </Link>
 
           <Link
-            className="text-sm md:text-base border-2 flex gap-2 items-center justify-center px-4 py-3 md:px-6 bg-white text-black rounded-full"
+            className="text-sm md:text-xl font-bold border-2 flex gap-2 items-center justify-center px-4 py-3 md:px-6 bg-white text-black rounded-full"
             href="/"
           >
             Book a Call

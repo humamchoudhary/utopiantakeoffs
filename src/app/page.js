@@ -248,30 +248,30 @@ const EstimatingServices = () => {
   ];
 
   return (
-    <div className="bg-[#13151B]  w-full  2xl:w-[1440px] mx-2 2xl:mx-0 py-10 px-3 md:px-16 md:py-20 rounded-3xl">
-      <h2 className="text-[#AC554D] text-2xl font-semibold text-center mb-9 md:mb-[102px]">
-        OUR ESTIMATING SERVICES
-      </h2>
-      <div className="flex flex-col md:flex-row justify-center gap-12">
-        <div className="w-full lg:w-auto  space-y-4 flex-shrink-0">
-          {services.map((service, index) => (
-            <div
-              key={index}
-              className={`${service.color} rounded-3xl w-full relative px-4 py-4 md:px-7 md:py-8 lg:w-[654px]  flex-shrink-0`}
-            >
-              <h3 className="text-[12px] md:text-2xl text-fg font-semibold mb-2">
-                {service.title}
-              </h3>
-              <p className="text-[#5E6272] text-xs md:text-[18px] mt-3 md:mt-4 mr-4 leading-5 md:leading-9">
-                {service.description}
-              </p>
-              <p className="text-[40px] md:text-7xl font-semibold absolute right-4 top-[8px] md:right-7 md:top-5  text-[#5E6272] opacity-20">
-                {index + 1}
-              </p>
-            </div>
+<div className="bg-[#13151B] w-full 2xl:w-[1440px] mx-2 2xl:mx-0 py-10 px-3 md:px-16 md:py-20 rounded-3xl">
+  <h2 className="text-[#AC554D] text-2xl font-semibold text-center mb-9 md:mb-[102px]">
+    OUR ESTIMATING SERVICES
+  </h2>
+  <div className="flex flex-col md:flex-row justify-center gap-12">
+    <div className="w-full lg:w-auto space-y-4 flex-shrink-0">
+      {services.map((service, index) => (
+        <div
+          key={index}
+          className={`${service.color} rounded-3xl w-full relative px-4 py-4 md:px-7 md:py-8 lg:w-[654px] flex-shrink-0 transition-all duration-300 hover:ring-2 hover:ring-[#972A20]`}
+        >
+          <h3 className="text-[12px] md:text-2xl text-fg font-semibold mb-2">
+            {service.title}
+          </h3>
+          <p className="text-[#5E6272] text-xs md:text-[18px] mt-3 md:mt-4 mr-4 leading-5 md:leading-9">
+            {service.description}
+          </p>
+          <p className="text-[40px] md:text-7xl font-semibold absolute right-4 top-[8px] md:right-7 md:top-5 text-[#5E6272] opacity-20">
+            {index + 1}
+          </p>
+        </div>
           ))}
         </div>
-        <div className=" flex-shrink-0 min-w-[335px] h-[400px] md:h-auto md:w-[600px] aspect-auto rounded-3xl overflow-hidden  relative">
+        <div className=" flex-shrink-0 min-w-[335px] h-[400px] md:h-auto md:w-[600px] aspect-auto border-2 border-[#972A20] rounded-3xl overflow-hidden  relative">
           <Image
             src={WomanImage}
             alt="Estimating services illustration"
@@ -315,16 +315,16 @@ async function WhyUs() {
   return (
     <div className="w-full 2xl:w-[1440px] rounded-[23px] flex flex-col items-center py-10 md:py-20 px-3 md:px-24 ">
       
-      <h1 className="text-2xl md:text-2XL text-[#AC554D] font-semibold text-center mb-12">
+      <h1 className="text-2xl md:text-2xl text-[#AC554D] font-semibold text-center mb-12">
        WHY CHOOSE UTOPIAN TAKEOFFS?
       </h1>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {info.map((item, index) => (
           <div
             key={index}
-            className="flex p-5 md:p-6 flex-col bg-[#26272D] gap-4 border-[#4E4E4E] border rounded-[24px]"
+            className="flex p-5 md:p-6 flex-col bg-[#1F212A] gap-4 rounded-[24px]"
           >
-            <div className="bg-[#70332F] border border-[#9B5854] p-3 md:p-5 w-min h-min rounded-full">
+            <div className="bg-[#972A20] border border-[#9B5854] p-3 md:p-5 w-min h-min rounded-full">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="36"
@@ -351,7 +351,7 @@ async function WhyUs() {
               </svg>
             </div>
             <div className="">
-              <p className="text-semibold text-xl md:text-2xl text-[#E4E4E4] font-bold">
+              <p className="text-semibold text-xl md:text-2xl text-[#fff] font-bold">
                 {item.title}
               </p>
               <p className=" md:leading-8 leading-[24px] text-base md:text-xl text-[#A8A8A8] font-semibold">
