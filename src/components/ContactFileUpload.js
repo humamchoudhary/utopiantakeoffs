@@ -32,25 +32,25 @@ const ContactFileUpload = ({ files, setFiles }) => {
 
   return (
     <div className="w-full">
-      <h2 className="block text-sm font-semibold text-fg text-[16px] mb-[13px]">
+      <h2 className="block text-sm font-semibold text-fg md:text-[16px] mb-[13px]">
         Attach Your Plan
       </h2>
       <div
         {...getRootProps()}
         className={`
           flex items-center justify-between
-px-4 py-[14px]  w-full rounded-lg border-[#C6C6C6] border shadow-sm 
+px-4 py-[14px]  w-full  bg-[#1F2129] rounded-xl border-[#2F323C] shadow-sm 
         `}
       >
         <input {...getInputProps()} />
-        <span className="text-gray-500">
+        <span className="font-medium text-gray-400 text-lg">
           {isDragActive
             ? "Drop the files here"
             : files && files.length
               ? files.map((file) => file.name)
               : ".pdf, .txt, .docs"}
         </span>
-        <Paperclip className="h-5 w-5 text-gray-400" />
+        <Paperclip className="h-5 w-5 text-[#5E6272]" />
       </div>
     </div>
   );

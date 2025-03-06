@@ -91,7 +91,7 @@ export default function NavBar() {
   console.log(path);
   return (
     <div className="flex flex-row w-full 2xl:w-[1440px] mx-auto justify-between items-center  px-5 pt-5 md:px-12 md:py-8 ">
-      <Image src={Logo} width={52} height={52} />
+      <Image src={Logo} width={70} height={70} />
       <div className="hidden md:flex flex-row gap-24 items-center">
         <Link
           className={` ${path === "/" && "font-semibold"} hover:cursor-pointer`}
@@ -99,11 +99,8 @@ export default function NavBar() {
         >
           Home
         </Link>
-        <div className="group flex flex-col ">
-          <p className="hover:cursor-pointer flex flex-row">
-            Service
-            
-          </p>
+        {/* <div className="group flex flex-col ">
+          <p className="hover:cursor-pointer flex flex-row">Service</p>
           <div className="group-hover:flex hover:flex hidden w-min flex-col gap-4 absolute -translate-x-12 shadow-md mt-6 p-6 bg-bg rounded-[16px] border-[#D5D5D5] border ">
             {Services.map((item, index) => (
               <MenuItem
@@ -114,8 +111,8 @@ export default function NavBar() {
               />
             ))}
           </div>
-        </div>
-        <div className="group flex flex-col  ">
+        </div> */}
+        {/* <div className="group flex flex-col  ">
           <p className="hover:cursor-pointer text-nowarp flex flex-row ">
             Trades{"  "}
             
@@ -130,19 +127,19 @@ export default function NavBar() {
               />
             ))}
           </div>
-        </div>
+        </div> */}
         <Link
           className={` ${path === "/sample" && "font-semibold"} hover:cursor-pointer`}
           href={"/sample"}
         >
           Sample
         </Link>
-        <Link
-          className={` ${path === "/about" && "font-semibold"} hover:cursor-pointer`}
-          href={"/"}
-        >
-          About Us
-        </Link>
+        {/* <Link
+                    className={` ${path === "/about" && "font-semibold"} hover:cursor-pointer`}
+                    href={"/"}
+                >
+                    About Us
+                </Link> */}
       </div>
 
       <div className="hidden md:flex flex-row justify-center items-center gap-4">

@@ -248,27 +248,27 @@ const EstimatingServices = () => {
   ];
 
   return (
-<div className="bg-[#13151B] w-full 2xl:w-[1440px] mx-2 2xl:mx-0 py-10 px-3 md:px-16 md:py-20 rounded-3xl">
-  <h2 className="text-[#AC554D] text-2xl font-semibold text-center mb-9 md:mb-[102px]">
-    OUR ESTIMATING SERVICES
-  </h2>
-  <div className="flex flex-col md:flex-row justify-center gap-12">
-    <div className="w-full lg:w-auto space-y-4 flex-shrink-0">
-      {services.map((service, index) => (
-        <div
-          key={index}
-          className={`${service.color} rounded-3xl w-full relative px-4 py-4 md:px-7 md:py-8 lg:w-[654px] flex-shrink-0 transition-all duration-300 hover:ring-2 hover:ring-[#972A20]`}
-        >
-          <h3 className="text-[12px] md:text-2xl text-fg font-semibold mb-2">
-            {service.title}
-          </h3>
-          <p className="text-[#5E6272] text-xs md:text-[18px] mt-3 md:mt-4 mr-4 leading-5 md:leading-9">
-            {service.description}
-          </p>
-          <p className="text-[40px] md:text-7xl font-semibold absolute right-4 top-[8px] md:right-7 md:top-5 text-[#5E6272] opacity-20">
-            {index + 1}
-          </p>
-        </div>
+    <div className="bg-[#13151B] w-full 2xl:w-[1440px] mx-2 2xl:mx-0 py-10 px-3 md:px-16 md:py-20 rounded-3xl">
+      <h2 className="text-[#AC554D] text-2xl font-semibold text-center mb-9 md:mb-[102px]">
+        OUR ESTIMATING SERVICES
+      </h2>
+      <div className="flex flex-col md:flex-row justify-center gap-12">
+        <div className="w-full lg:w-auto space-y-4 flex-shrink-0">
+          {services.map((service, index) => (
+            <div
+              key={index}
+              className={`${service.color} rounded-3xl w-full relative px-4 py-4 md:px-7 md:py-8 lg:w-[654px] flex-shrink-0 transition-all duration-300 hover:ring-2 hover:ring-[#972A20]`}
+            >
+              <h3 className="text-[12px] md:text-2xl text-fg font-semibold mb-2">
+                {service.title}
+              </h3>
+              <p className="text-[#5E6272] text-xs md:text-[18px] mt-3 md:mt-4 mr-4 leading-5 md:leading-9">
+                {service.description}
+              </p>
+              <p className="text-[40px] md:text-7xl font-semibold absolute right-4 top-[8px] md:right-7 md:top-5 text-[#5E6272] opacity-20">
+                {index + 1}
+              </p>
+            </div>
           ))}
         </div>
         <div className=" flex-shrink-0 min-w-[335px] h-[400px] md:h-auto md:w-[600px] aspect-auto border-2 border-[#972A20] rounded-3xl overflow-hidden  relative">
@@ -314,9 +314,8 @@ async function WhyUs() {
 
   return (
     <div className="w-full 2xl:w-[1440px] rounded-[23px] flex flex-col items-center py-10 md:py-20 px-3 md:px-24 ">
-      
       <h1 className="text-2xl md:text-2xl text-[#AC554D] font-semibold text-center mb-12">
-       WHY CHOOSE UTOPIAN TAKEOFFS?
+        WHY CHOOSE UTOPIAN TAKEOFFS?
       </h1>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {info.map((item, index) => (
@@ -381,7 +380,6 @@ async function ServicesSection() {
         <h1 className="text-2xl md:text-2xl text-[#AC554D] font-semibold text-center mb-12">
           OUR SERVICES
         </h1>
-
       </div>
       <div className="overflow-hidden mx-auto relative">
         <ServiceSlider services={services1} rtl={true} />
@@ -425,7 +423,7 @@ async function WorkWithUs() {
         </svg>
         <div className="px-4 py-2 md:px-5 md:py-3 mb-5 border  rounded-full bg-[#FAF3F21A]">
           <p className="text-lg  font-semibold leading-[normal] text-[#FFFFFF]">
-          Save 60% of Your Estimating Expense
+            Save 60% of Your Estimating Expense
           </p>
         </div>
         <p className="text-[#E4E4E4] md:mx-[340px] md:w-[664px] font-semibold text-sm leading-[20px] md:leading-[normal] md:text-[32px] text-center">
@@ -448,22 +446,50 @@ const GetQoute = () => {
         <h1 className="text-center font-semibold text-2xl md:text-2xl text-[#AC554D]">
           Construction Estimate & Quantity Takeoff
         </h1>
-
       </div>
 
       <div className="flex w-full flex-col md:flex-row mt-14 gap-[40px]">
         <div className="w-full flex flex-col ">
           <div className="flex flex-row gap-8">
             <div className="flex items-center flex-col">
-            <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect x="1" y="1" width="40" height="40" rx="20" fill="#060812"/>
-            <rect x="1" y="1" width="40" height="40" rx="20" stroke="#531712" stroke-width="2"/>
-            <circle cx="21" cy="21" r="12" fill="#531712"/>
-            </svg>
-            <svg width="4" height="141" viewBox="0 0 4 141" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M0.5 139V140.5H3.5V139H0.5ZM0.5 0V139H3.5V0H0.5Z" fill="#531712"/>
-            </svg>
-
+              <svg
+                width="42"
+                height="42"
+                viewBox="0 0 42 42"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect
+                  x="1"
+                  y="1"
+                  width="40"
+                  height="40"
+                  rx="20"
+                  fill="#060812"
+                />
+                <rect
+                  x="1"
+                  y="1"
+                  width="40"
+                  height="40"
+                  rx="20"
+                  stroke="#531712"
+                  stroke-width="2"
+                />
+                <circle cx="21" cy="21" r="12" fill="#531712" />
+              </svg>
+              <svg
+                width="4"
+                height="141"
+                viewBox="0 0 4 141"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M0.5 139V140.5H3.5V139H0.5ZM0.5 0V139H3.5V0H0.5Z"
+                  fill="#531712"
+                />
+              </svg>
             </div>
             <div className="flex flex-col justify-start gap-2 md:gap-[9px]">
               <p className="text-base flex-shrink-0 md:text-2xl font-bold leading-[normal]">
@@ -477,15 +503,44 @@ const GetQoute = () => {
           </div>
           <div className="flex flex-row gap-8">
             <div className="flex items-center flex-col">
-
-            <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect x="1" y="1" width="40" height="40" rx="20" fill="#060812"/>
-            <rect x="1" y="1" width="40" height="40" rx="20" stroke="#531712" stroke-width="2"/>
-            <circle cx="21" cy="21" r="12" fill="#531712"/>
-            </svg>
-            <svg width="4" height="141" viewBox="0 0 4 141" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M0.5 139V140.5H3.5V139H0.5ZM0.5 0V139H3.5V0H0.5Z" fill="#531712"/>
-            </svg>
+              <svg
+                width="42"
+                height="42"
+                viewBox="0 0 42 42"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect
+                  x="1"
+                  y="1"
+                  width="40"
+                  height="40"
+                  rx="20"
+                  fill="#060812"
+                />
+                <rect
+                  x="1"
+                  y="1"
+                  width="40"
+                  height="40"
+                  rx="20"
+                  stroke="#531712"
+                  stroke-width="2"
+                />
+                <circle cx="21" cy="21" r="12" fill="#531712" />
+              </svg>
+              <svg
+                width="4"
+                height="141"
+                viewBox="0 0 4 141"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M0.5 139V140.5H3.5V139H0.5ZM0.5 0V139H3.5V0H0.5Z"
+                  fill="#531712"
+                />
+              </svg>
             </div>
             <div className="flex flex-col justify-start gap-[9px]">
               <p className="text-base flex-shrink-0 md:text-2xl font-bold leading-[normal]">
@@ -499,14 +554,44 @@ const GetQoute = () => {
           </div>
           <div className="flex flex-row gap-8">
             <div className="flex items-center flex-col">
-            <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect x="1" y="1" width="40" height="40" rx="20" fill="#060812"/>
-            <rect x="1" y="1" width="40" height="40" rx="20" stroke="#531712" stroke-width="2"/>
-            <circle cx="21" cy="21" r="12" fill="#531712"/>
-            </svg>
-            <svg width="4" height="141" viewBox="0 0 4 141" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M0.5 139V140.5H3.5V139H0.5ZM0.5 0V139H3.5V0H0.5Z" fill="#531712"/>
-            </svg>
+              <svg
+                width="42"
+                height="42"
+                viewBox="0 0 42 42"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect
+                  x="1"
+                  y="1"
+                  width="40"
+                  height="40"
+                  rx="20"
+                  fill="#060812"
+                />
+                <rect
+                  x="1"
+                  y="1"
+                  width="40"
+                  height="40"
+                  rx="20"
+                  stroke="#531712"
+                  stroke-width="2"
+                />
+                <circle cx="21" cy="21" r="12" fill="#531712" />
+              </svg>
+              <svg
+                width="4"
+                height="141"
+                viewBox="0 0 4 141"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M0.5 139V140.5H3.5V139H0.5ZM0.5 0V139H3.5V0H0.5Z"
+                  fill="#531712"
+                />
+              </svg>
             </div>
             <div className="flex flex-col justify-start gap-[9px]">
               <p className="text-base flex-shrink-0 md:text-2xl font-bold leading-[normal]">
@@ -563,7 +648,7 @@ async function OurWork() {
 
   return (
     <div className="w-full 2xl:w-[1440px] rounded-[23px] flex flex-col items-center py-10  md:py-20 mt-20 md:mt-48 px-3 md:px-24 ">
-       <h1 className="text-2xl md:text-2xl mb-20 text-[#AC554D] font-semibold text-center">
+      <h1 className="text-2xl md:text-2xl mb-20 text-[#AC554D] font-semibold text-center">
         OUR PROJECT SAMPLES
       </h1>
       <div className="relative">
@@ -588,7 +673,21 @@ async function OurWork() {
                   href={item.pdf}
                   className="flex items-center gap-1 bg-gray hover:bg-gray-500 border border-[#E4E4E4] text-white py-2 px-6 rounded-full"
                 >
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="m9 12 3 3m0 0 3-3m-3 3V3M7.5 9H7a4 4 0 0 0-4 4v4a4 4 0 0 0 4 4h10a4 4 0 0 0 4-4v-4a4 4 0 0 0-4-4h-.5" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="m9 12 3 3m0 0 3-3m-3 3V3M7.5 9H7a4 4 0 0 0-4 4v4a4 4 0 0 0 4 4h10a4 4 0 0 0 4-4v-4a4 4 0 0 0-4-4h-.5"
+                      stroke="#fff"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
                   pdf
                 </Link>
                 <Link
@@ -596,7 +695,21 @@ async function OurWork() {
                   href={item.xlsx}
                   className="flex gap-1 items-center bg-[#531712] hover:bg-[#C05840] text-white py-2 px-6 rounded-full"
                 >
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="m9 12 3 3m0 0 3-3m-3 3V3M7.5 9H7a4 4 0 0 0-4 4v4a4 4 0 0 0 4 4h10a4 4 0 0 0 4-4v-4a4 4 0 0 0-4-4h-.5" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="m9 12 3 3m0 0 3-3m-3 3V3M7.5 9H7a4 4 0 0 0-4 4v4a4 4 0 0 0 4 4h10a4 4 0 0 0 4-4v-4a4 4 0 0 0-4-4h-.5"
+                      stroke="#fff"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
                   xsl
                 </Link>
               </div>

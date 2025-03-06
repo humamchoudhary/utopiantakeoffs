@@ -7,11 +7,11 @@ const ContactPage = () => {
 
   return (
     <main className="min-h-screen relative flex flex-col items-center ">
-      <div className="w-60 h-screen bg-primaryhex/10 absolute my-auto mx-auto blur-[200px]" />
+      <div className="w-60 h-screen bg-primaryhex/10 absolute my-auto mx-auto blur-[200px] z-0" />
 
       <div className="md:mt-[120px] mt-[176px] flex flex-col items-center justify-center gap-5 md:gap-6   2xl:w-[1440px] px-5 md:px-14 z-10">
         <div className="md:px-5 md:py-3 py-2 px-4  border text-nowrap w-min border-[#972A20] bg-[#531712] rounded-full text-[#FAFAFB] text-sm md:text-lg font-semibold text-center">
-        Save 60% of Your Estimating Expense
+          Save 60% of Your Estimating Expense
         </div>
         <div className="flex flex-col items-center">
           <h1 className="text-[32px] text-center md:text-7xl font-bold text-fg  tracking-[-1.6px]">
@@ -24,7 +24,24 @@ const ContactPage = () => {
           </p>
         </div>
         <div className="px-4 py-3 font-bold text-xl mt:px-6 mt:py-3 rounded-full bg-[#FAFAFB] text-[#0F142C] flex flex-row items-center justify-center gap-[6px]">
-        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none"><path d="M2.5 8a4 4 0 0 1 4-4h7a4 4 0 0 1 4 4v8a4 4 0 0 1-4 4h-7a4 4 0 0 1-4-4zm15 1.333 1.54-1.643c1.241-1.323 3.46-.446 3.46 1.368v5.884c0 1.814-2.219 2.691-3.46 1.368l-1.54-1.643z" stroke="#0F142C" stroke-width="1.5"/><path d="M13.5 10a2 2 0 1 1-4 0 2 2 0 0 1 4 0Z" stroke="#0F142C" stroke-width="1.5"/></svg>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="25"
+            height="24"
+            viewBox="0 0 25 24"
+            fill="none"
+          >
+            <path
+              d="M2.5 8a4 4 0 0 1 4-4h7a4 4 0 0 1 4 4v8a4 4 0 0 1-4 4h-7a4 4 0 0 1-4-4zm15 1.333 1.54-1.643c1.241-1.323 3.46-.446 3.46 1.368v5.884c0 1.814-2.219 2.691-3.46 1.368l-1.54-1.643z"
+              stroke="#0F142C"
+              stroke-width="1.5"
+            />
+            <path
+              d="M13.5 10a2 2 0 1 1-4 0 2 2 0 0 1 4 0Z"
+              stroke="#0F142C"
+              stroke-width="1.5"
+            />
+          </svg>
           Book a call
         </div>
       </div>
