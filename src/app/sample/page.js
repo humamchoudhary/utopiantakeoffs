@@ -118,9 +118,9 @@ export default async function Sample() {
 
   return (
     <div className="flex flex-col items-center ">
-      <div className="flex flex-col gap-5 md:[gap-6 mt-20] items-center justify-center mt-12">
+      <div className="flex flex-col gap-5 md:[gap-6 mt-32] items-center justify-center mt-32">
         <div className="md:px-5 md:py-3 py-2 px-4  border-2 text-nowrap w-min border-[#89261D] bg-[#531712] rounded-full text-[#FAFAFB] text-sm md:text-lg font-semibold text-center">
-        Save 60% of Your Estimating Expense
+          Save 60% of Your Estimating Expense
         </div>
         <h1 className="text-center w-[365px] mt-5 text-[32px] md:text-7xl md:mt-6 md:w-[1440px] font-bold  leading-normal">
           Quantity Takeoff Samples
@@ -177,11 +177,32 @@ export default async function Sample() {
         </div>
       </div>
       <div className="flex flex-col items-center mt-14 mx-3 md:mx-11 md:mt-20">
-      <svg xmlns="http://www.w3.org/2000/svg" width="1348" height="2" viewBox="0 0 1348 2" fill="none"><path d="M-.007 1H1348.01" stroke="url(#a)"/><defs><linearGradient id="a" x1="-.007" y1="1.5" x2="1348.01" y2="1.5" gradientUnits="userSpaceOnUse"><stop stop-color="#D0CCCC" stop-opacity="0"/><stop offset=".486" stop-color="#C4C4C4" stop-opacity=".12"/><stop offset="1" stop-color="#6A6868" stop-opacity="0"/></linearGradient></defs></svg>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="1348"
+          height="2"
+          viewBox="0 0 1348 2"
+          fill="none"
+        >
+          <path d="M-.007 1H1348.01" stroke="url(#a)" />
+          <defs>
+            <linearGradient
+              id="a"
+              x1="-.007"
+              y1="1.5"
+              x2="1348.01"
+              y2="1.5"
+              gradientUnits="userSpaceOnUse"
+            >
+              <stop stop-color="#D0CCCC" stop-opacity="0" />
+              <stop offset=".486" stop-color="#C4C4C4" stop-opacity=".12" />
+              <stop offset="1" stop-color="#6A6868" stop-opacity="0" />
+            </linearGradient>
+          </defs>
+        </svg>
       </div>
 
       <div className="w-full gap-20 2xl:w-[1440px] flex flex-col items-center px-4 py-10 md:py-20 mt-14 md:mt-20 md:px-24 ">
-
         <h3 className="text-2xl md:text-2xl  text-[#AC554D] font-semibold text-center">
           Utopian Samples
         </h3>
@@ -239,50 +260,50 @@ export default async function Sample() {
       </div>
 
       <div className=" w-full md:2xl:w-[1440px] gap-20">
-      <div className="px-0 md:px-12 w-full 2xl:w-[1440px]">
-      <div className="relative w-full flex flex-col justify-center items-center bg-primary rounded-3xl px-9 py-11 md:py-[72px]">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width={339}
-          height={143}
-          fill="none"
-          className="absolute right-0 md:hidden block w-[339px] h-[143px] md:w-[1119px]  md:h-[342px] bottom-0"
-        >
-          <path
-            fill="#fff"
-            fillOpacity={0.04}
-            d="M90.05 61.206C7.148 59.895 0 143 0 143h339V0s-22.632 80.11-85.524 97.33c-62.893 17.22-80.522-34.814-163.425-36.124Z"
-          />
-        </svg>{" "}
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          className="absolute right-0 hidden md:block w-[339px] h-[143px] md:w-[1119px]  md:h-[342px] bottom-0"
-          viewBox="0 0 1119 342"
-          fill="none"
-        >
-          <path
-            d="M302.559 146.38C24.0127 143.246 0 342 0 342H1139V0C1139 0 1062.96 191.592 851.649 232.775C640.337 273.958 581.106 149.513 302.559 146.38Z"
-            fill="white"
-            fill-opacity="0.04"
-            className="absolute right-0 w-[339px] h-[143px] md:w-[1119px]  md:h-[342px] bottom-0"
-          />
-        </svg>
-        <div className="px-4 py-2 md:px-5 md:py-3 mb-5 border  rounded-full bg-[#FAF3F21A]">
-          <p className="text-lg  font-semibold leading-[normal] text-[#FFFFFF]">
-          Save 60% of Your Estimating Expense
-          </p>
-        </div>
-        <p className="text-[#E4E4E4] md:mx-[340px] md:w-[664px] font-semibold text-sm leading-[20px] md:leading-[normal] md:text-[32px] text-center">
-          Work With Us! We Are A Global Network Of Construction Cost Expert
-        </p>
-        <div className="px-5 py-[10px] md:px-[32px] md:py-4 mt-7  bg-[#FFFFFF] rounded-full">
-          <p className="text-lg text-primary font-semibold text-[#601E1A] leading-[normal]">
-            Get Quotes Now
-          </p>
+        <div className="px-0 md:px-12 w-full 2xl:w-[1440px]">
+          <div className="relative w-full flex flex-col justify-center items-center bg-primary rounded-3xl px-9 py-11 md:py-[72px]">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width={339}
+              height={143}
+              fill="none"
+              className="absolute right-0 md:hidden block w-[339px] h-[143px] md:w-[1119px]  md:h-[342px] bottom-0"
+            >
+              <path
+                fill="#fff"
+                fillOpacity={0.04}
+                d="M90.05 61.206C7.148 59.895 0 143 0 143h339V0s-22.632 80.11-85.524 97.33c-62.893 17.22-80.522-34.814-163.425-36.124Z"
+              />
+            </svg>{" "}
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="absolute right-0 hidden md:block w-[339px] h-[143px] md:w-[1119px]  md:h-[342px] bottom-0"
+              viewBox="0 0 1119 342"
+              fill="none"
+            >
+              <path
+                d="M302.559 146.38C24.0127 143.246 0 342 0 342H1139V0C1139 0 1062.96 191.592 851.649 232.775C640.337 273.958 581.106 149.513 302.559 146.38Z"
+                fill="white"
+                fill-opacity="0.04"
+                className="absolute right-0 w-[339px] h-[143px] md:w-[1119px]  md:h-[342px] bottom-0"
+              />
+            </svg>
+            <div className="px-4 py-2 md:px-5 md:py-3 mb-5 border  rounded-full bg-[#FAF3F21A]">
+              <p className="text-lg  font-semibold leading-[normal] text-[#FFFFFF]">
+                Save 60% of Your Estimating Expense
+              </p>
+            </div>
+            <p className="text-[#E4E4E4] md:mx-[340px] md:w-[664px] font-semibold text-sm leading-[20px] md:leading-[normal] md:text-[32px] text-center">
+              Work With Us! We Are A Global Network Of Construction Cost Expert
+            </p>
+            <div className="px-5 py-[10px] md:px-[32px] md:py-4 mt-7  bg-[#FFFFFF] rounded-full">
+              <p className="text-lg text-primary font-semibold text-[#601E1A] leading-[normal]">
+                Get Quotes Now
+              </p>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-    </div>
     </div>
   );
 }

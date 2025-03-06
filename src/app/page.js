@@ -44,7 +44,6 @@ export default async function Home() {
   ];
 
   const a_reviews = [
-    {},
     {
       name: "Emily Rogers",
       image: "/api/placeholder/50/50",
@@ -74,7 +73,6 @@ export default async function Home() {
       name: "Sarah Patel",
       image: "/api/placeholder/50/50",
     },
-    {},
   ];
   const w_reviews = [
     {
@@ -248,7 +246,10 @@ const EstimatingServices = () => {
   ];
 
   return (
-    <div className="bg-[#13151B] w-full 2xl:w-[1440px] mx-2 2xl:mx-0 py-10 px-3 md:px-16 md:py-20 rounded-3xl">
+    <div
+      id="trades"
+      className="bg-[#13151B] w-full 2xl:w-[1440px] mx-2 2xl:mx-0 py-10 px-3 md:px-16 md:py-20 rounded-3xl z-10"
+    >
       <h2 className="text-[#AC554D] text-2xl font-semibold text-center mb-9 md:mb-[102px]">
         OUR ESTIMATING SERVICES
       </h2>
@@ -375,7 +376,10 @@ async function ServicesSection() {
     { name: "Sitework and Earthwork Takeoffs", color: "#A51818" },
   ];
   return (
-    <div className="overflow-hidden w-full 2xl:w-[1440px]  py-20 ">
+    <div
+      id="services"
+      className="overflow-hidden w-full 2xl:w-[1440px]  py-20 "
+    >
       <div>
         <h1 className="text-2xl md:text-2xl text-[#AC554D] font-semibold text-center mb-12">
           OUR SERVICES

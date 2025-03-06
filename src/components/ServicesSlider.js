@@ -52,7 +52,7 @@ export default function ServiceSlider({ services, rtl = false }) {
         >
           <p
             className="text-xl text-bg text-center font-semibold"
-            style={{ color: item.text && item.text }}
+            style={{ color: item.text ? item.text : "#FFF" }}
           >
             {item.name}
           </p>

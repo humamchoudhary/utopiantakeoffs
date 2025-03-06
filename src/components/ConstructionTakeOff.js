@@ -24,13 +24,22 @@ const ServiceCard = ({ title, description, imagePath }) => (
       </p>
       <div className="flex justify-end mt-4">
         <button className="flex items-center gap-2 group/btn">
-          <p className="text-[#AC554D] font-semibold text-xl ">
-            Read More
-          </p>
-          <svg width="15" height="13" viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M12.9531 9.31003L13.5263 1.78937M13.5263 1.78937L6.00561 1.21617M13.5263 1.78937L1.38548 12.2106" stroke="#AC554D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
-
+          <p className="text-[#AC554D] font-semibold text-xl ">Read More</p>
+          <svg
+            width="15"
+            height="13"
+            viewBox="0 0 15 13"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M12.9531 9.31003L13.5263 1.78937M13.5263 1.78937L6.00561 1.21617M13.5263 1.78937L1.38548 12.2106"
+              stroke="#AC554D"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
         </button>
       </div>
     </div>
@@ -78,7 +87,7 @@ const ConstructionTakeoffPage = () => {
   ];
 
   return (
-    <div className="bg-black py-20 px-4 md:px-14 md:max-w-screen-2xl mx-auto">
+    <div className="bg-black py-20 px-4 md:px-14 md:max-w-screen-2xl mx-auto z-0 -translate-y-5 rounded-md">
       <div className="mb-12">
         <h1 className="text-center text-[#AC554D] text-sm md:text-2xl font-semibold uppercase tracking-wider">
           Construction Estimator, Material Takeoffs

@@ -5,6 +5,7 @@ import Link from "next/link";
 import { ChartPie, ChevronDown, Menu } from "lucide-react";
 import { Services } from "@/constants/Info";
 import { usePathname } from "next/navigation";
+import { useState, useEffect } from "react";
 const Trade = [
   {
     name: "Concrete Estimating",
@@ -89,17 +90,44 @@ const MenuItem = ({ name, icon, link }) => (
 export default function NavBar() {
   const path = usePathname();
   console.log(path);
+
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <div className="flex flex-row w-full 2xl:w-[1440px] mx-auto justify-between items-center  px-5 pt-5 md:px-12 md:py-8 ">
-      <Image src={Logo} width={70} height={70} />
-      <div className="hidden md:flex flex-row gap-24 items-center">
-        <Link
-          className={` ${path === "/" && "font-semibold"} hover:cursor-pointer`}
-          href={"/"}
-        >
-          Home
-        </Link>
-        {/* <div className="group flex flex-col ">
+    <div
+      className={`fixed w-screen   ${
+        isScrolled ? "bg-bg/95 backdrop-blur-xl shadow-md" : "bg-transparent"
+      } z-50`}
+    >
+      <div className="flex flex-row w-full 2xl:w-[1440px] mx-auto justify-between items-center  px-5 pt-5 md:px-12 md:py-4 ">
+        <Image src={Logo} width={60} height={60} />
+        <div className="hidden md:flex flex-row gap-24 items-center">
+          <Link
+            className={` ${path === "/" && "font-semibold"} hover:cursor-pointer`}
+            href={"/"}
+          >
+            Home
+          </Link>
+          <Link href={"#trades"} className="hover:cursor-pointer flex flex-row">
+            Trades
+          </Link>
+
+          <Link
+            href={"#services"}
+            className="hover:cursor-pointer flex flex-row"
+          >
+            Service
+          </Link>
+
+          {/* <div className="group flex flex-col ">
           <p className="hover:cursor-pointer flex flex-row">Service</p>
           <div className="group-hover:flex hover:flex hidden w-min flex-col gap-4 absolute -translate-x-12 shadow-md mt-6 p-6 bg-bg rounded-[16px] border-[#D5D5D5] border ">
             {Services.map((item, index) => (
@@ -112,7 +140,7 @@ export default function NavBar() {
             ))}
           </div>
         </div> */}
-        {/* <div className="group flex flex-col  ">
+          {/* <div className="group flex flex-col  ">
           <p className="hover:cursor-pointer text-nowarp flex flex-row ">
             Trades{"  "}
             
@@ -128,30 +156,31 @@ export default function NavBar() {
             ))}
           </div>
         </div> */}
-        <Link
-          className={` ${path === "/sample" && "font-semibold"} hover:cursor-pointer`}
-          href={"/sample"}
-        >
-          Sample
-        </Link>
-        {/* <Link
+          <Link
+            className={` ${path === "/sample" && "font-semibold"} hover:cursor-pointer`}
+            href={"/sample"}
+          >
+            Sample
+          </Link>
+          {/* <Link
                     className={` ${path === "/about" && "font-semibold"} hover:cursor-pointer`}
                     href={"/"}
                 >
                     About Us
                 </Link> */}
-      </div>
+        </div>
 
-      <div className="hidden md:flex flex-row justify-center items-center gap-4">
-        <Link
-          href={"/contact"}
-          className="py-[14px] px-6 rounded-full font-bold text-xl bg-[#FAFAFB] text-bg "
-        >
-          Get Estimated
-        </Link>
-      </div>
-      <div className="md:hidden bg-[#601E1A2B]/10 p-3 rounded-lg">
-        <Menu />
+        <div className="hidden md:flex flex-row justify-center items-center gap-4">
+          <Link
+            href={"/contact"}
+            className="py-[14px] px-6 rounded-full font-bold text-xl bg-[#FAFAFB] text-bg "
+          >
+            Get Estimated
+          </Link>
+        </div>
+        <div className="md:hidden bg-[#601E1A2B]/10 p-3 rounded-lg">
+          <Menu />
+        </div>
       </div>
     </div>
   );

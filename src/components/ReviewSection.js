@@ -126,7 +126,7 @@ const ReviewSection = ({ a_reviews, w_reviews }) => {
   useEffect(() => {
     setInnerWidth(window.innerWidth);
   });
-  const offset = innerWidth <= 600 ? 0 : 1;
+  const offset = innerWidth <= 600 ? 0 : 0;
   console.log(innerWidth);
   const [sliderRef, instanceRef] = useKeenSlider({
     slides: {
@@ -158,7 +158,6 @@ const ReviewSection = ({ a_reviews, w_reviews }) => {
           <h1 className="text-xl md:text-2xl font-semibold text-[#AC554D] text-center mt-2">
             What Our Clients Say
           </h1>
-          
         </div>
       </div>
       <div className="flex  flex-row items-center overflow-hidden w-full md:w-[1328px] relative md:px-4">
@@ -192,7 +191,7 @@ const ReviewSection = ({ a_reviews, w_reviews }) => {
             className="keen-slider w-full h-[380px] md:h-[500px]"
           >
             {a_reviews
-              .slice(innerWidth <= 600 ? 1 : 0)
+              .slice(innerWidth <= 600 ? 0 : 0)
               .map((service, index) => (
                 <ReviewCard
                   key={index}

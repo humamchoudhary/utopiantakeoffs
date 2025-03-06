@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default async function HeroSection() {
   return (
-    <div className="h-screen w-full 2xl:w-[1440px] rounded-b-[56px] flex flex-col items-center mt-12 md:mt-10 ">
+    <div className="h-screen w-full 2xl:w-[1440px] rounded-b-[56px] flex flex-col items-center mt-12 md:mt-32 ">
       <div className="absolute z-0 inset-0 w-full h-full pointer-events-none">
         <svg
           width="100%"
