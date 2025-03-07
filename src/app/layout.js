@@ -27,16 +27,18 @@ const lato = Lato({
 });
 import emailjs from "@emailjs/browser";
 import BlobGenerator from "@/components/BlobGenerator";
+import BlurBackground from "@/components/GlowGlobs";
 export default function RootLayout({ children }) {
   emailjs.init({ publicKey: "3m5zvAEoGBZRSR7sJ" });
   return (
     <html lang="en" className="overflow-x-hidden">
       <body
-        className={`antialiased  ${lato.className} w-screen md:w-screen overflow-x-hidden `}
+        className={`relative antialiased  ${lato.className} w-screen md:w-screen overflow-x-hidden `}
       >
+        <BlurBackground />
         <Toaster position="bottom-center" />
         <Navbar />
-        <main className="bg-bg laptop:px-0 2xl:px-60 mx-2 md:mx-0">
+        <main className=" bg-bg laptop:px-0 2xl:px-60 mx-2 md:mx-0">
           {children}
         </main>
         <Footer />

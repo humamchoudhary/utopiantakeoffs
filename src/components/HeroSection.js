@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default async function HeroSection() {
   return (
-    <div className="h-screen w-full 2xl:w-[1440px] rounded-b-[56px] flex flex-col items-center mt-12 md:mt-32 ">
+    <div className="relative h-screen w-full 2xl:w-[1440px] rounded-b-[56px] flex flex-col items-center mt-12 md:mt-32 ">
       <div className="absolute z-0 inset-0 w-full h-full pointer-events-none">
         <svg
           width="100%"
@@ -77,7 +77,7 @@ export default async function HeroSection() {
 
           <Link
             className="text-sm md:text-xl font-bold border-2 flex gap-2 items-center justify-center px-4 py-3 md:px-6 bg-white text-black rounded-full"
-            href="/"
+            href="https://calendly.com/humamchoudhary/30min"
           >
             Book a Call
           </Link>

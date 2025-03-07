@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import ContactFileUpload from "@/components/ContactFileUpload";
+import Link from "next/link";
 const ContactPage = () => {
   const [files, setFiles] = useState([]);
 
@@ -23,7 +24,10 @@ const ContactPage = () => {
             work together!
           </p>
         </div>
-        <div className="px-4 py-3 font-bold text-xl mt:px-6 mt:py-3 rounded-full bg-[#FAFAFB] text-[#0F142C] flex flex-row items-center justify-center gap-[6px]">
+        <Link
+          href={"https://calendly.com/humamchoudhary/30min"}
+          className="px-4 py-3 font-bold text-xl mt:px-6 mt:py-3 rounded-full bg-[#FAFAFB] text-[#0F142C] flex flex-row items-center justify-center gap-[6px]"
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="25"
@@ -43,7 +47,7 @@ const ContactPage = () => {
             />
           </svg>
           Book a call
-        </div>
+        </Link>
       </div>
       <div className="flex flex-col md:flex-row w-full md:2xl:w-[1440px] gap-10 mt-32 px-[14px] md:px-[110px] rounded-lg ">
         <form className="flex flex-col md:w-1/2 md:gap-8  gap-4">

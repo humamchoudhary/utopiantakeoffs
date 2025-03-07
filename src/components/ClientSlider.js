@@ -43,7 +43,7 @@ export default function CleintSlider({ clients }) {
         <h2 className="text-xs md:text-2xl leading-[28.8px] text-[#AC554D] font-semibold mb-2">
           OUR CLIENTS
         </h2>
-        <div className="overflow-hidden mx-auto w-[330px] md:w-[1200px] relative">
+        <div className=" blur-edges overflow-hidden mx-auto w-[330px] md:w-[1200px] relative">
           <div ref={sliderRef} className=" keen-slider">
             {clients.map((client, index) => (
               <div
@@ -55,7 +55,6 @@ export default function CleintSlider({ clients }) {
               </div>
             ))}
           </div>
-          <div className="fade" />
         </div>
       </div>
     </section>

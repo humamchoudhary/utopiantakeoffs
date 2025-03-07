@@ -378,18 +378,17 @@ async function ServicesSection() {
   return (
     <div
       id="services"
-      className="overflow-hidden w-full 2xl:w-[1440px]  py-20 "
+      className="overflow-x-hidden w-full 2xl:w-[1440px]  py-20 "
     >
       <div>
         <h1 className="text-2xl md:text-2xl text-[#AC554D] font-semibold text-center mb-12">
           OUR SERVICES
         </h1>
       </div>
-      <div className="overflow-hidden mx-auto relative">
+      <div className="blur-edges overflow-hidden mx-auto relative">
         <ServiceSlider services={services1} rtl={true} />
         <div className="h-[27px]" />
         <ServiceSlider services={services1} rtl={false} />
-        <div className="fade" />
       </div>
     </div>
   );
