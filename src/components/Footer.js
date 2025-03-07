@@ -112,8 +112,8 @@ const Footer = () => {
             { href: "/help", text: "Help Centre" },
             { href: "/contact", text: "Contact us" },
             {
-              href: "mailto:support@Utakeoffs.com",
-              text: "support@Utakeoffs.com",
+              href: "mailto:utopiantakeoffs10@gmail.com",
+              text: "utopiantakeoffs10@gmail.com",
             },
           ]}
         />

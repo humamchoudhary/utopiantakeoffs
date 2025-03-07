@@ -305,7 +305,7 @@ async function WhyUs() {
     },
     {
       title: "92% Bid Success",
-      desc: "EOver 92% success rate based on past contractor bids.",
+      desc: "Over 92% success rate based on past contractor bids.",
     },
     {
       title: "Skilled Team",
