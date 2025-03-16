@@ -1,11 +1,8 @@
 "use client";
 import React from "react";
-import Image1 from "@/app/assets/images/1.jpeg";
-import Image2 from "@/app/assets/images/2.jpeg";
-import Image3 from "@/app/assets/images/3.jpeg";
 import Image from "next/image";
-
-const ServiceCard = ({ title, description, imagePath }) => (
+import Link from 'next/link'
+const ServiceCard = ({ title, description, imagePath,link }) => (
   <div className="flex flex-col items-stretch bg-[#13151B] rounded-3xl overflow-hidden h-full transition-all duration-300 hover:ring-2 hover:ring-[#972A20] group">
     <div className="relative h-80">
       <Image
@@ -23,7 +20,7 @@ const ServiceCard = ({ title, description, imagePath }) => (
         {description}
       </p>
       <div className="flex justify-end mt-4">
-        <button className="flex items-center gap-2 group/btn">
+        <Link href={link?link:"/"} className="flex items-center gap-2 group/btn">
           <p className="text-[#AC554D] font-semibold text-xl ">Read More</p>
           <svg
             width="15"
@@ -40,51 +37,13 @@ const ServiceCard = ({ title, description, imagePath }) => (
               stroke-linejoin="round"
             />
           </svg>
-        </button>
+        </Link>
       </div>
     </div>
   </div>
 );
 
-const ConstructionTakeoffPage = () => {
-  const services = [
-    {
-      title: "Bid Estimates",
-      description:
-        "We provide accurate bid estimates for contractors and subcontractors, using location-specific material.",
-      imagePath: Image1,
-    },
-    {
-      title: "Design Estimates",
-      description:
-        "We provide design estimates for architects & designers. Our estimates include all stages.",
-      imagePath: Image2,
-    },
-    {
-      title: "Construction Estimator",
-      description:
-        "We provide accurate cost estimates for contractors and subcontractors using location-specific material.",
-      imagePath: Image3,
-    },
-    {
-      title: "Construction Estimator",
-      description:
-        "We provide accurate cost estimates for contractors and subcontractors using location-specific material.",
-      imagePath: Image1,
-    },
-    {
-      title: "Design Estimates",
-      description:
-        "We provide design estimates for architects & designers. Our estimates include all stages.",
-      imagePath: Image2,
-    },
-    {
-      title: "Construction Estimator",
-      description:
-        "We provide accurate cost estimates for contractors and subcontractors using location-specific material.",
-      imagePath: Image3,
-    },
-  ];
+const ConstructionTakeoffPage = ({services}) => {
 
   return (
     <div className="bg-black py-20 px-4 md:px-14 md:max-w-screen-2xl mx-auto z-0 -translate-y-5 rounded-md">

@@ -2,12 +2,12 @@ import { ChartPie, ChartSpline, ShieldCheck } from "lucide-react";
 export const Services = [
   {
     name: "Cost Estimation",
-    link: "/",
+    link: "/cost-estimation",
     icon: <ChartPie color="#972A20" size={20} />,
   },
   {
     name: "Material Takeoffs",
-    link: "/",
+    link: "/material-takeoffs",
     icon: (
       <svg
         width="20"

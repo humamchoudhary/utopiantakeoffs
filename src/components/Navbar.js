@@ -78,10 +78,10 @@ const Trade = [
 const MenuItem = ({ name, icon, link }) => (
   <Link
     href={link}
-    className="flex flex-row gap-2 p-2 items-center justify-start hover:bg-[#EFE9E8] group/menuitem duration-150 rounded-md  w-full"
+    className="flex flex-row gap-2 p-2 items-center justify-start hover:bg-background-500 group/menuitem duration-150 rounded-md  w-full"
   >
-    <div className="p-2 bg-[#E7DDDD] rounded-md">{icon}</div>
-    <p className="group-hover/menuitem:font-semibold font-normal text-nowrap">
+    <div className="p-2 bg-background-500 rounded-md">{icon}</div>
+    <p className=" font-normal text-nowrap">
       {name}
     </p>
   </Link>
@@ -119,27 +119,27 @@ export default function NavBar() {
           <Link href={"#trades"} className="hover:cursor-pointer flex flex-row">
             Trades
           </Link>
-
-          <Link
+      {
+          /* <Link
             href={"#services"}
             className="hover:cursor-pointer flex flex-row"
           >
             Service
-          </Link>
+          </Link> */}
 
-          {/* <div className="group flex flex-col ">
+           <div className="group flex flex-col ">
           <p className="hover:cursor-pointer flex flex-row">Service</p>
-          <div className="group-hover:flex hover:flex hidden w-min flex-col gap-4 absolute -translate-x-12 shadow-md mt-6 p-6 bg-bg rounded-[16px] border-[#D5D5D5] border ">
+          <div className="group-hover:flex duration-300 transition-all hover:flex hidden w-min flex-col gap-4 absolute -translate-x-12 shadow-md mt-6 p-6 bg-bg rounded-[16px] border-primary border ">
             {Services.map((item, index) => (
               <MenuItem
                 key={index}
                 name={item.name}
-                link={item.link}
+                link={`/service${item.link}`}
                 icon={item.icon}
               />
             ))}
           </div>
-        </div> */}
+        </div> 
           {/* <div className="group flex flex-col  ">
           <p className="hover:cursor-pointer text-nowarp flex flex-row ">
             Trades{"  "}
