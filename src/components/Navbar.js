@@ -134,7 +134,7 @@ export default function NavBar() {
               <MenuItem
                 key={index}
                 name={item.name}
-                link={`/service${item.link}`}
+                link={`${item.link}`}
                 icon={item.icon}
               />
             ))}

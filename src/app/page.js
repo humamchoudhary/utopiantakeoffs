@@ -14,27 +14,28 @@ import ReviewSection from "@/components/ReviewSection";
 import ServiceSlider from "@/components/ServicesSlider";
 import Link from "next/link";
 import VideoSection from "@/components/VideoSection";
-
-
-import { getAllData } from '../lib/notion';
+import { Services } from "@/constants/Info";
+import { getAllData } from "../lib/notion";
 
 export default async function Home() {
-    // const data = await getAllData()
-  const services = [
+  // const data = await getAllData()
+  const services__remove = [
     {
       title: "Cost Estimates",
       description:
         "Accurate, fast, and affordable building cost estimates to keep your projects on budget and on schedule.",
       // imagePath: Image1,
-        imagePath:'https://images.unsplash.com/photo-1707157281599-d155d1da5b4c?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb'
-      ,  link:'/service/cost-estimation',
+      imagePath:
+        "https://images.unsplash.com/photo-1707157281599-d155d1da5b4c?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb",
+      link: "/service/cost-estimation",
     },
     {
       title: "Material Takeoffs",
       description:
         "Reliable and detailed material takeoff services to streamline your construction estimates and budgeting.",
-        imagePath:'https://images.unsplash.com/photo-1518096495978-56aa98bcd990?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb'
-      ,  link:'/service/material-takeoffs',
+      imagePath:
+        "https://images.unsplash.com/photo-1518096495978-56aa98bcd990?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb",
+      link: "/service/material-takeoffs",
     },
     {
       title: "Construction Estimator",
@@ -124,7 +125,7 @@ export default async function Home() {
       <VideoSection />
       <ClientShowcase />
       <EstimatingServices />
-      <ConstructionTakeoffPage services={services} />
+      <ConstructionTakeoffPage services={Services} />
       <WhyUs />
       <ServicesSection />
       <WorkWithUs />
@@ -558,7 +559,8 @@ const GetQoute = () => {
               </p>
               <p className="text-sm flex-shrink-0 md:text-xl text-[#475464] leading-6 md:leading-9">
                 After reviewing your plans, we'll send a quote. Upon acceptance,
-                you can pay via card or PayPal, and our team will begin work.{" "}
+                you can pay via card or PayPal, and our team will begin
+                work.{" "}
               </p>
             </div>
           </div>
