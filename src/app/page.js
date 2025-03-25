@@ -96,7 +96,7 @@ export default async function Home() {
       post: "Carter Construction LLC",
       stars: 5,
       review:
-        "Utopian Takeoffs has been an absolute game-changer for my business. As a general contractor, I rely on precise estimates to bid competitively. Their earthwork and furnishing estimating services are top-notch, and their attention to detail is impressive. Highly recommended!",
+        "Utopian Takeoffs provides precise estimates that help me bid competitively.",
     },
     {
       name: "Jessica Reynolds",

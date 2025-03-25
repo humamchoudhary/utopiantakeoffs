@@ -162,13 +162,15 @@ export default function NavBar() {
           >
             Sample
           </Link>
-          {/* <Link
+          <Link
                     className={` ${path === "/about" && "font-semibold"} hover:cursor-pointer`}
-                    href={"/"}
+                    href={"/about"}
                 >
                     About Us
-                </Link> */}
+                </Link> 
+            
         </div>
+     
 
         <div className="hidden md:flex flex-row justify-center items-center gap-4">
           <Link
