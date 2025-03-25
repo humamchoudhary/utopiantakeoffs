@@ -53,71 +53,115 @@ export default async function Home() {
 
   const a_reviews = [
     {
-      name: "Emily Rogers",
+      name: "Michael Carter",
       image: "/api/placeholder/50/50",
     },
     {
-      name: "Micheal Davis",
+      name: "Jessica Reynolds",
       image: "/api/placeholder/50/50",
     },
     {
-      name: "Sarah Patel",
+      name: "Daniel Whitmore",
       image: "/api/placeholder/50/50",
     },
     {
-      name: "Sarah Patel",
+      name: "Sarah Mitchell",
       image: "/api/placeholder/50/50",
     },
 
     {
-      name: "Sarah Patel",
+      name: "Christopher Shane",
       image: "/api/placeholder/50/50",
     },
     {
-      name: "Sarah Patel",
+      name: " Emily Foster",
       image: "/api/placeholder/50/50",
     },
     {
-      name: "Sarah Patel",
+      name: "David Langford",
+      image: "/api/placeholder/50/50",
+    },
+    {
+      name: "Mark Richardson",
+      image: "/api/placeholder/50/50",
+    },
+    {
+      name: " Olivia Bennett",
       image: "/api/placeholder/50/50",
     },
   ];
   const w_reviews = [
     {
-      name: "Sarah Patel",
-      post: "Architecture",
+      name: "Michael Carter",
+      post: "Carter Construction LLC",
       stars: 5,
       review:
-        "We’ve worked with them on multiple projects, and the consistency of their work is outstanding.",
+        "Utopian Takeoffs has been an absolute game-changer for my business. As a general contractor, I rely on precise estimates to bid competitively. Their earthwork and furnishing estimating services are top-notch, and their attention to detail is impressive. Highly recommended!",
     },
     {
-      name: "John Thompson",
-      post: "General Contractor",
+      name: "Jessica Reynolds",
+      post: "Interior Concepts & Design",
       stars: 4.8,
       review:
-        "We’ve worked with them on multiple projects, and the consistency of their work is outstanding.",
+      "Their furnishing estimates are detailed and saved me a lot of time."
     },
     {
-      name: "Sarah Patel",
-      post: "Architecture",
-      stars: 5,
+      name: "Daniel Whitmore",
+      post: "Whitmore Civil Works",
+      stars: 4.9,
       review:
-        "We’ve worked with them on multiple projects, and the consistency of their work is outstanding.",
+        "Quick turnaround and accurate estimates helped me secure a contract.",
     },
     {
-      name: "Sarah Patel",
-      post: "Architecture",
-      stars: 5,
+      name: "Sarah Mitchell",
+      post: "Skyline Builders Inc",
+      stars: 4.6,
       review:
-        "We’ve worked with them on multiple projects, and the consistency of their work is outstanding.",
+        "Their realistic pricing has helped me win multiple projects.",
     },
     {
-      name: "Sarah Patel",
-      post: "Architecture",
+      name: "Christopher Shane",
+      post: "GreenScape Landscaping",
       stars: 5,
       review:
-        "We’ve worked with them on multiple projects, and the consistency of their work is outstanding.",
+        "Their team is responsive, and the estimates are always reliable.",
     },
+    {
+      name: " Robert Hayes",
+      post: "Titan Civil Engineering",
+      stars: 5,
+      review:
+        "Handled my industrial earthwork estimate with extreme accuracy.",
+    },
+    {
+      name: "Emily Foster",
+      post: "Foster & Co. Developments",
+      stars: 5,
+      review:
+        "Their software-driven approach ensures precision in every estimate.",
+    },
+    {
+      name: "David Langford",
+      post: "Langford Interiors",
+      stars: 5,
+      review:
+        "Their furnishing takeoffs are clear and make procurement easy.",
+    },
+    {
+      name: "Mark Richardson",
+      post: "Richardson Property Services",
+      stars: 5,
+      review:
+        "Accurate material lists helped me stay within budget on my last project.",
+    },
+    {
+      name: "Olivia Bennett",
+      post: "Bennett Construction & Design",
+      stars: 5,
+      review:
+        "Reliable estimates allow me to focus on execution with confidence.",
+    },
+
   ];
   return (
     <div className="flex flex-col items-center">
