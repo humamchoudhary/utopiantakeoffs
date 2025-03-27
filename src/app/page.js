@@ -16,6 +16,7 @@ import Link from "next/link";
 import VideoSection from "@/components/VideoSection";
 import { Services } from "@/constants/Info";
 import { getAllData } from "../lib/notion";
+import BlurBackground from "@/components/GlowGlobs";
 
 export default async function Home() {
   // const data = await getAllData()
@@ -103,7 +104,7 @@ export default async function Home() {
       post: "Interior Concepts & Design",
       stars: 4.8,
       review:
-      "Their furnishing estimates are detailed and saved me a lot of time."
+        "Their furnishing estimates are detailed and saved me a lot of time.",
     },
     {
       name: "Daniel Whitmore",
@@ -116,8 +117,7 @@ export default async function Home() {
       name: "Sarah Mitchell",
       post: "Skyline Builders Inc",
       stars: 4.6,
-      review:
-        "Their realistic pricing has helped me win multiple projects.",
+      review: "Their realistic pricing has helped me win multiple projects.",
     },
     {
       name: "Christopher Shane",
@@ -130,8 +130,7 @@ export default async function Home() {
       name: " Robert Hayes",
       post: "Titan Civil Engineering",
       stars: 5,
-      review:
-        "Handled my industrial earthwork estimate with extreme accuracy.",
+      review: "Handled my industrial earthwork estimate with extreme accuracy.",
     },
     {
       name: "Emily Foster",
@@ -144,8 +143,7 @@ export default async function Home() {
       name: "David Langford",
       post: "Langford Interiors",
       stars: 5,
-      review:
-        "Their furnishing takeoffs are clear and make procurement easy.",
+      review: "Their furnishing takeoffs are clear and make procurement easy.",
     },
     {
       name: "Mark Richardson",
@@ -161,12 +159,12 @@ export default async function Home() {
       review:
         "Reliable estimates allow me to focus on execution with confidence.",
     },
-
   ];
   return (
     <div className="flex flex-col items-center">
+      <BlurBackground blurCount={8} />
       <HeroSection />
-      <VideoSection />
+      {/* <VideoSection /> */}
       <ClientShowcase />
       <EstimatingServices />
       <ConstructionTakeoffPage services={Services} />
@@ -175,7 +173,6 @@ export default async function Home() {
       <WorkWithUs />
       <GetQoute />
       <OurWork />
-
       <ReviewSection w_reviews={w_reviews} a_reviews={a_reviews} />
     </div>
   );
@@ -313,7 +310,7 @@ const EstimatingServices = () => {
               className={`${service.color} rounded-3xl w-full relative px-4 py-4 md:px-7 md:py-8 lg:w-[654px] flex-shrink-0 transition-all duration-300 hover:ring-2 hover:ring-[#972A20]`}
             >
               <h3 className="text-[12px] md:text-2xl text-fg font-semibold mb-2">
-                {service.title}
+                {service.name}
               </h3>
               <p className="text-[#5E6272] text-xs md:text-[18px] mt-3 md:mt-4 mr-4 leading-5 md:leading-9">
                 {service.description}

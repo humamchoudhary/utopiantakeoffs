@@ -1,8 +1,10 @@
+import BlurBackground from "@/components/GlowGlobs";
 import Link from "next/link";
 
 export default function AboutUs() {
   return (
     <div className="flex flex-col items-center">
+      <BlurBackground blurCount={2} />
       {/* Hero Section */}
       <div className="flex flex-col gap-5 md:gap-6 items-center justify-center mt-32 px-4">
         <div className="md:px-5 md:py-3 py-2 px-4 border-2 text-nowrap w-min border-[#89261D] bg-[#531712] rounded-full text-[#FAFAFB] text-sm md:text-lg font-semibold text-center">
@@ -12,7 +14,8 @@ export default function AboutUs() {
           Utopian Takeoffs Your Trusted Construction Cost Partner
         </h1>
         <p className="text-center text-xs md:text-2xl text-[#5F6778] leading-6 md:leading-10 mt-3 justify-center md:w-[981px] md:tracking-[-1.2px] px-4">
-          Delivering Accurate, Efficient, and Cost-Effective Estimating Solutions Across North America, Africa, Caribbean, and Australia
+          Delivering Accurate, Efficient, and Cost-Effective Estimating
+          Solutions Across North America, Africa, Caribbean, and Australia
         </p>
         <div className="flex flex-row gap-1 md:gap-3 items-center justify-center mt-5 md:mt-6">
           <Link
@@ -66,7 +69,11 @@ export default function AboutUs() {
               Our Mission
             </h2>
             <p className="text-[#A8A8A8] text-base md:text-xl leading-relaxed">
-              Utopian Takeoffs is working with an aim to provide cost-effective and efficient cost estimating and consultation services to the real estate development and construction industry. Our expert team, being fully aware of the client's specific needs, strives to produce the most accurate and reliable estimating solutions.
+              Utopian Takeoffs is working with an aim to provide cost-effective
+              and efficient cost estimating and consultation services to the
+              real estate development and construction industry. Our expert
+              team, being fully aware of the client's specific needs, strives to
+              produce the most accurate and reliable estimating solutions.
             </p>
           </section>
 
@@ -76,7 +83,8 @@ export default function AboutUs() {
               Our Valuable Clients
             </h2>
             <p className="text-[#A8A8A8] text-base md:text-xl leading-relaxed mb-4">
-              We have successfully delivered construction cost estimates to many construction companies across the globe. Our clients include:
+              We have successfully delivered construction cost estimates to many
+              construction companies across the globe. Our clients include:
             </p>
             <ul className="text-[#A8A8A8] list-disc pl-6 text-base md:text-xl space-y-2">
               <li>General Contracting Corporations</li>

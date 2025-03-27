@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { CirclePlus, Download } from "lucide-react";
 import Faq from "./faq";
+import BlurBackground from "@/components/GlowGlobs";
 
 export default async function Sample() {
   const info = [
@@ -118,6 +119,7 @@ export default async function Sample() {
 
   return (
     <div className="flex flex-col items-center ">
+      <BlurBackground blurCount={3} />
       <div className="flex flex-col gap-5 md:[gap-6 mt-32] items-center justify-center mt-32">
         <div className="md:px-5 md:py-3 py-2 px-4  border-2 text-nowrap w-min border-[#89261D] bg-[#531712] rounded-full text-[#FAFAFB] text-sm md:text-lg font-semibold text-center">
           Save 60% of Your Estimating Expense

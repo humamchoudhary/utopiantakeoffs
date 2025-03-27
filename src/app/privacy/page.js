@@ -1,3 +1,4 @@
+import BlurBackground from "@/components/GlowGlobs";
 import { defaultHead } from "next/head";
 import React from "react";
 

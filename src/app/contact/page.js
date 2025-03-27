@@ -3,11 +3,15 @@
 import React, { useState } from "react";
 import ContactFileUpload from "@/components/ContactFileUpload";
 import Link from "next/link";
+
+import BlurBackground from "@/components/GlowGlobs";
+
 const ContactPage = () => {
   const [files, setFiles] = useState([]);
 
   return (
-    <main className="min-h-screen relative flex flex-col items-center ">
+    <main className="min-h-screen flex flex-col items-center ">
+      <BlurBackground blurCount={2} />
       <div className="w-60 h-screen bg-primaryhex/10 absolute my-auto mx-auto blur-[200px] z-0" />
 
       <div className="md:mt-[120px] mt-[176px] flex flex-col items-center justify-center gap-5 md:gap-6   2xl:w-[1440px] px-5 md:px-14 z-10">

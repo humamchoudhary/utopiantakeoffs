@@ -76,7 +76,7 @@ export const Services = [
       "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb",
 
     description:
-      "We provide accurate cost estimates for contractors and subcontractors using location-specific material.",
+      "Utopian Takeoffs provide accurate cost estimates for contractors and subcontractors using location-specific material.",
     icon: (
       <svg
         width="20"
@@ -127,12 +127,20 @@ export const Services = [
   },
   {
     name: "Residential Estimating",
-    link: "/",
+    link: "/service/residential-estimating",
     icon: <ChartSpline color="#fff" size={20} />,
+    imagePath:
+      "https://images.unsplash.com/photo-1489370321024-e0410ad08da4?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb",
+    description:
+      "Utopian Takeoffs provides accurate and efficient residential estimating services, helping contractors, developers, and homeowners streamline budgeting, bidding, and construction planning.",
   },
   {
     name: "Commercial Estimating",
-    link: "/",
+    link: "/service/commercial-estimating",
+    imagePath:
+      "https://images.unsplash.com/photo-1464938050520-ef2270bb8ce8?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb",
+    description:
+      "Utopian Takeoffs offers precise and efficient commercial estimating services for contractors, developers, and design firms, ensuring accurate budgeting, bidding, and cost control.",
     icon: (
       <svg
         width="20"
@@ -191,7 +199,9 @@ export const Services = [
   },
   {
     name: "Industrial Estimating",
-    link: "/",
+    link: "/service/industrial-estimating",
+    imagePath:
+      "https://images.unsplash.com/photo-1496247749665-49cf5b1022e9?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb",
     icon: (
       <svg
         width="20"
@@ -214,10 +224,16 @@ export const Services = [
         </defs>
       </svg>
     ),
+    description:
+      "Utopian Takeoffs provides precise industrial estimating services for EPC contractors, ensuring cost-effective, accurate, and fast estimates for various industrial projects.",
   },
   {
     name: "Estimating Consultant",
-    link: "/",
+    link: "/service/estimating-consultant",
+    imagePath:
+      "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb",
     icon: <ShieldCheck color="#fff" size={20} />,
+    description:
+      "Utopian Takeoffs provides expert construction estimating services to help contractors, developers, and builders streamline bidding, budgeting, and cost management for successful projects.",
   },
 ];
