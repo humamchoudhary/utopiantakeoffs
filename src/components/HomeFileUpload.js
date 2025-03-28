@@ -1,14 +1,16 @@
 "use client";
 import React, { useState, useCallback } from "react";
 import { useDropzone } from "react-dropzone";
-import { Upload } from "lucide-react";
+import { Upload, Mail } from "lucide-react";
 import toast from "react-hot-toast";
 
 const FileUpload = () => {
   const [files, setFiles] = useState([]);
+  const [email, setEmail] = useState("");
   const [uploaded, setUploaded] = useState(false);
   const [status, setStatus] = useState("");
   const [error, setError] = useState("");
+
   const onDrop = useCallback((acceptedFiles, rejectedFiles) => {
     setFiles(
       acceptedFiles.map((file) =>
@@ -25,20 +27,38 @@ const FileUpload = () => {
   const { getRootProps, getInputProps, isDragActive, fileRejections } =
     useDropzone({
       onDrop,
-      maxSize: 20 * 1024 * 1024,
+      // maxSize: 20 * 1024 * 1024,
     });
 
+  const validateEmail = (email) => {
+    const re = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    return re.test(String(email).toLowerCase());
+  };
+
   const sendFiles = async () => {
+    // Validate email
+    if (!email || !validateEmail(email)) {
+      toast.error("Please enter a valid email address");
+      return;
+    }
+
+    // Check if files are selected
     if (files.length === 0) {
       setStatus("No files to send");
+      toast.error("Please select files to upload");
       return;
     }
 
     setStatus("Sending...");
     const formData = new FormData();
+
+    // Append files
     files.forEach((file, index) => {
       formData.append(`file${index}`, file);
     });
+
+    // Append email
+    formData.append("email", email);
 
     try {
       const response = await fetch("/api/send_pdf", {
@@ -47,8 +67,12 @@ const FileUpload = () => {
       });
       const data = await response.json();
       setStatus(data.message);
+
       if (response.ok) {
         setUploaded(true);
+        toast.success("Files uploaded successfully!");
+      } else {
+        toast.error(data.message || "Failed to upload files");
       }
     } catch (error) {
       console.error("Error:", error);
@@ -59,6 +83,7 @@ const FileUpload = () => {
 
   return (
     <div className="flex flex-col gap-8">
+      {/* Dropzone Section */}
       <div
         {...getRootProps()}
         className={`border-2 border-dashed duration-300 rounded-lg px-7 py-12 md:px-28 md:py-14 flex items-center justify-center flex-col text-center cursor-pointer transition-colors
@@ -88,6 +113,22 @@ const FileUpload = () => {
           Supported formats for Plan will be PDF File, Word.
         </p>
       </div>
+
+      {/* Email Input Section */}
+      <div className="relative">
+        <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+          <Mail className="text-gray-400" size={20} />
+        </div>
+        <input
+          type="email"
+          placeholder="Enter your email address"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          className="w-full py-3 pl-10 pr-4 border border-primaryhex/50 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary text-[#FAFAFB] bg-transparent"
+        />
+      </div>
+
+      {/* File List Section */}
       {files.length > 0 && !uploaded && (
         <div>
           <h4 className="text-xl leading-6 font-semibold">Upload files:</h4>
@@ -101,6 +142,7 @@ const FileUpload = () => {
         </div>
       )}
 
+      {/* Initial Note Section */}
       {!files.length && !uploaded && (
         <div>
           <h4 className="text-xl leading-6 font-semibold mb-3">Note:</h4>
@@ -111,6 +153,7 @@ const FileUpload = () => {
         </div>
       )}
 
+      {/* Uploaded Success Section */}
       {uploaded && (
         <div className="">
           <h4 className="text-xl leading-6 font-semibold mb-3">Note:</h4>
@@ -120,7 +163,8 @@ const FileUpload = () => {
         </div>
       )}
 
-      <div className="flex flex-row w-full justify-end">
+      {/* Send Button Section */}
+      <div className="flex flex-row w-full justify-end items-center gap-4">
         {status && (
           <div className="">
             <p className="text-xl leading-8 text-[#475464]">{status}</p>
@@ -128,8 +172,18 @@ const FileUpload = () => {
         )}
         <button
           onClick={sendFiles}
-          disabled={!files.length && !uploaded}
-          className="flex mr-1 font-semibold text-[18px] disabled:bg-gray-500 hover:bg-[#601E1A]/90 duration-300 text-[#FFFF] bg-[#601E1A] px-6 py-4 rounded-full flex-row "
+          disabled={!files.length || !email}
+          className="flex mr-1 font-semibold text-[18px] 
+            disabled:bg-gray-500 
+            hover:bg-[#601E1A]/90 
+            duration-300 
+            text-[#FFFF] 
+            bg-[#601E1A] 
+            px-6 py-4 
+            rounded-full 
+            flex-row 
+            items-center 
+            gap-2"
         >
           Send Now
           <svg

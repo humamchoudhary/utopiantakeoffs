@@ -34,7 +34,6 @@ export default function RootLayout({ children }) {
       <body
         className={`relative antialiased  ${lato.className} w-screen md:w-screen overflow-x-hidden `}
       >
-        <BlurBackground />
         <Toaster position="bottom-center" />
         <Navbar />
         <main className=" bg-bg laptop:px-0 2xl:px-60 mx-2 md:mx-0">
