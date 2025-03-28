@@ -77,7 +77,7 @@ export default async function HeroSection() {
 
           <Link
             className="text-sm md:text-xl font-bold border-2 flex gap-2 items-center justify-center px-4 py-3 md:px-6 bg-white text-black rounded-full"
-            href="https://calendly.com/humamchoudhary/30min"
+            href="https://calendly.com/hashimest16/30min"
           >
             Book a Call
           </Link>

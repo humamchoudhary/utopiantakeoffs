@@ -32,6 +32,12 @@ export default function NavBar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // Close mobile menu when route changes
+  useEffect(() => {
+    setIsMobileMenuOpen(false);
+    setActiveSubmenu(null);
+  }, [path]);
+
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
     setActiveSubmenu(null);
@@ -50,7 +56,7 @@ export default function NavBar() {
     <div
       className={`fixed w-screen ${
         isScrolled ? "bg-bg/95 backdrop-blur-xl shadow-md" : "bg-transparent"
-      } z-50`}
+      } z-50 transition-all duration-300`}
     >
       {/* Desktop Navigation */}
       <div className="flex flex-row w-full 2xl:w-[1440px] mx-auto justify-between items-center px-5 pt-5 md:px-12 md:py-4">
@@ -133,13 +139,14 @@ export default function NavBar() {
         />
       )}
 
-      {/* Mobile Menu Slide-in */}
+      {/* Mobile Menu Slide-in - Fixed positioning so it's not affected by scroll */}
       <div
         className={`
-          fixed top-0 right-0 w-[85%] h-full bg-bg 
-          transform transition-transform duration-300 z-50
+         fixed top-0 right-0 w-[85%] h-full bg-bg 
+          transform transition-transform duration-300 ease-in-out z-50
           ${isMobileMenuOpen ? "translate-x-0" : "translate-x-full"}
         `}
+        style={{ height: "100vh" }}
       >
         <div className="p-6 space-y-4 overflow-y-auto h-full">
           {/* Mobile Menu Header */}

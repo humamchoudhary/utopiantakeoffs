@@ -29,7 +29,7 @@ const ContactPage = () => {
           </p>
         </div>
         <Link
-          href={"https://calendly.com/humamchoudhary/30min"}
+          href={"https://calendly.com/hashimest16/30min"}
           className="px-4 py-3 font-bold text-xl mt:px-6 mt:py-3 rounded-full bg-[#FAFAFB] text-[#0F142C] flex flex-row items-center justify-center gap-[6px]"
         >
           <svg
