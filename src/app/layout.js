@@ -26,7 +26,6 @@ const lato = Lato({
   weight: ["100", "300", "400", "700", "900"],
 });
 import emailjs from "@emailjs/browser";
-import BlobGenerator from "@/components/BlobGenerator";
 import BlurBackground from "@/components/GlowGlobs";
 export default function RootLayout({ children }) {
   emailjs.init({ publicKey: "3m5zvAEoGBZRSR7sJ" });

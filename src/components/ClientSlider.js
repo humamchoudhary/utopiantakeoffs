@@ -24,16 +24,11 @@ export default function CleintSlider({ clients }) {
     loop: true,
     renderMode: "performance",
     drag: false,
-    created(s) {
-      console.log(s.track.details.abs);
-      s.moveToIdx(5, true, animation);
-    },
+    created(s) {},
     updated(s) {
-      console.log("update", s.track.details.abs);
       s.moveToIdx(s.track.details.abs + 5, true, animation);
     },
     animationEnded(s) {
-      console.log("end", s.track.details.abs);
       s.moveToIdx(s.track.details.abs + 5, true, animation);
     },
   });

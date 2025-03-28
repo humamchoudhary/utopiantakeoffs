@@ -20,37 +20,6 @@ import BlurBackground from "@/components/GlowGlobs";
 
 export default async function Home() {
   // const data = await getAllData()
-  const services__remove = [
-    {
-      title: "Cost Estimates",
-      description:
-        "Accurate, fast, and affordable building cost estimates to keep your projects on budget and on schedule.",
-      // imagePath: Image1,
-      imagePath:
-        "https://images.unsplash.com/photo-1707157281599-d155d1da5b4c?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb",
-      link: "/service/cost-estimation",
-    },
-    {
-      title: "Material Takeoffs",
-      description:
-        "Reliable and detailed material takeoff services to streamline your construction estimates and budgeting.",
-      imagePath:
-        "https://images.unsplash.com/photo-1518096495978-56aa98bcd990?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb",
-      link: "/service/material-takeoffs",
-    },
-    {
-      title: "Construction Estimator",
-      description:
-        "We provide accurate cost estimates for contractors and subcontractors using location-specific material.",
-      imagePath: Image3,
-    },
-    {
-      title: "Construction Estimator",
-      description:
-        "We provide accurate cost estimates for contractors and subcontractors using location-specific material.",
-      imagePath: Image1,
-    },
-  ];
 
   const a_reviews = [
     {

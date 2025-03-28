@@ -53,7 +53,7 @@ const BlurBackground = ({
   });
 
   return (
-    <div className="absolute inset-0 overflow-hidden pointer-events-none z-0">
+    <div className="absolute hidden md:block inset-0 overflow-hidden pointer-events-none z-0">
       {leftBlurs.map((styles, index) => (
         <div
           key={`left-blur-${index}`}

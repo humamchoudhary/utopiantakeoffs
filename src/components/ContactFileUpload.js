@@ -5,7 +5,6 @@ import { Paperclip } from "lucide-react";
 import toast from "react-hot-toast";
 const ContactFileUpload = ({ files, setFiles }) => {
   const onDrop = useCallback((acceptedFiles, rejectedFiles) => {
-    console.log(acceptedFiles);
     setFiles(
       acceptedFiles.map((file) =>
         Object.assign(file, {
@@ -16,7 +15,6 @@ const ContactFileUpload = ({ files, setFiles }) => {
     if (rejectedFiles) {
       toast.error(rejectedFiles[0].errors[0].message);
     }
-    console.log(rejectedFiles);
   }, []);
 
   const { getRootProps, getInputProps, isDragActive } = useDropzone({

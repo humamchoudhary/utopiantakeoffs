@@ -20,7 +20,6 @@ const FileUpload = () => {
     if (rejectedFiles) {
       toast.error(rejectedFiles[0].errors[0].message);
     }
-    console.log(rejectedFiles);
   }, []);
 
   const { getRootProps, getInputProps, isDragActive, fileRejections } =

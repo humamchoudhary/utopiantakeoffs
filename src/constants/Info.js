@@ -1,4 +1,19 @@
-import { ChartPie, ChartSpline, ShieldCheck } from "lucide-react";
+import {
+  Anvil,
+  Axe,
+  Banknote,
+  BedDouble,
+  BrickWall,
+  Calculator,
+  ChartPie,
+  ChartSpline,
+  Construction,
+  Earth,
+  HardHat,
+  Lamp,
+  ShieldCheck,
+  ThermometerSun,
+} from "lucide-react";
 export const Services = [
   {
     name: "Cost Estimation",
@@ -235,5 +250,68 @@ export const Services = [
     icon: <ShieldCheck color="#fff" size={20} />,
     description:
       "Utopian Takeoffs provides expert construction estimating services to help contractors, developers, and builders streamline bidding, budgeting, and cost management for successful projects.",
+  },
+];
+
+export const Trade = [
+  {
+    name: "Concrete Estimating",
+    link: "/trades/concrete-estimating",
+    icon: <ChartPie color="#fff" size={20} />,
+  },
+  {
+    name: "Opening Estimating",
+    link: "/trades/opening-estimating",
+    icon: <Calculator color="#fff" size={20} />,
+  },
+  {
+    name: "Masonry Estimating",
+    link: "/trades/masonry-estimating",
+    icon: <BrickWall color="#fff" size={20} />,
+  },
+  {
+    name: "Interior & Exterior Finishes",
+    link: "/trades/finishes",
+    icon: <Lamp color="#fff" size={20} />,
+  },
+  {
+    name: "Metals Estimating",
+    link: "/trades/metals-estimating",
+    icon: <Anvil color="#fff" size={20} />,
+  },
+  {
+    name: "Furnishes",
+    link: "/trades/furnishes",
+    icon: <BedDouble color="#fff" size={20} />,
+  },
+  {
+    name: "Wood & Plastic Composites",
+    link: "/trades/composites",
+    icon: <Axe color="#fff" size={20} />,
+  },
+  {
+    name: "MEP",
+    link: "/trades/mep",
+    icon: <HardHat color="#fff" size={20} />,
+  },
+  {
+    name: "Thermal Protection",
+    link: "/trades/thermal-protection",
+    icon: <ThermometerSun color="#fff" size={20} />,
+  },
+  {
+    name: "Earthwork Estimating",
+    link: "/trades/earthwork-estimating",
+    icon: <Earth color="#fff" size={20} />,
+  },
+  {
+    name: "Sitework Estimating",
+    link: "/trades/sitework-estimating",
+    icon: <Construction color="#fff" size={20} />,
+  },
+  {
+    name: "Pricing",
+    link: "/trades/pricing",
+    icon: <Banknote color="#fff" size={20} />,
   },
 ];

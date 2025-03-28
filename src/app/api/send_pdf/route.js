@@ -42,8 +42,6 @@ export async function POST(request) {
       attachments: attachments,
     });
 
-    console.log("Email sent:", info);
-
     return NextResponse.json(
       { message: "Files sent successfully" },
       { status: 200 },

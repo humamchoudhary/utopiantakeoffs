@@ -61,7 +61,7 @@ const ReviewCard = ({ name, image, currentIdx, index }) => {
   );
 };
 
-const animation = { duration: 12000, easing: (t) => t };
+const animation = { duration: 25000, easing: (t) => t };
 const ReviewScoller = ({ data, rev, className }) => {
   const [sliderRef] = useKeenSlider({
     loop: true,
@@ -127,7 +127,6 @@ const ReviewSection = ({ a_reviews, w_reviews }) => {
     setInnerWidth(window.innerWidth);
   });
   const offset = innerWidth <= 600 ? 0 : 0;
-  console.log(innerWidth);
   const [sliderRef, instanceRef] = useKeenSlider({
     slides: {
       perView: 3.2,
@@ -160,7 +159,7 @@ const ReviewSection = ({ a_reviews, w_reviews }) => {
           </h1>
         </div>
       </div>
-      <div className="flex  flex-row items-center overflow-hidden w-full md:w-[1328px] relative md:px-4">
+      {/* <div className="flex  flex-row items-center overflow-hidden w-full md:w-[1328px] relative md:px-4">
         {loaded && instanceRef.current && (
           <button
             onClick={(e) => {
@@ -224,7 +223,7 @@ const ReviewSection = ({ a_reviews, w_reviews }) => {
             />
           </button>
         )}
-      </div>
+      </div> */}
       <div className="relative grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 mt-16 md:mt-32 w-full px-4">
         <ReviewScoller rev={false} data={w_reviews} />
         <ReviewScoller

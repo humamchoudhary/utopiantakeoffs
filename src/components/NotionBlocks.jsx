@@ -148,7 +148,6 @@ function renderCode(block) {
 
 // Helper function to render quote
 function renderQuote(block) {
-  console.log(block.quote.rich_text);
   const text = block.quote.text.split("\n");
   return (
     <div className="w-full py-10 rounded-lg bg-primary text-center pl-4 my-20">
@@ -161,7 +160,6 @@ function renderQuote(block) {
 // Helper function to render callout
 function renderCallout(block) {
   const emoji = block.callout.icon?.emoji;
-  console.log(block.callout);
 
   return (
     <div className="p-4 rounded-lg my-4 flex items-start">
