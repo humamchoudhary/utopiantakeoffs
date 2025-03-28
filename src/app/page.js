@@ -644,27 +644,27 @@ async function OurWork() {
     {
       title: "Water Proofing",
       desc: "Here are the samples which you can download of our work on water proofing.",
-      pdf: "https://drive.google.com/file/d/1G-sh_x0yyFcq5Jtkk4ry_GC6N20TLso4/view?usp=drive_link",
-      xlsx: "https://docs.google.com/spreadsheets/d/190_D-MfArSAsS3s6cQUdRXNuvfo5Sa9i/edit?usp=drive_link&ouid=113272403915799871398&rtpof=true&sd=true",
+      pdf: "https://drive.google.com/file/d/1yF1fgdLT6HPdTB1hzfOAbbwxBlaBXS8h/view?usp=drive_link",
+      xlsx: "https://drive.google.com/file/d/1LunjDs6d1GzdrgfES49iF7eoiSldBGOd/view?usp=drive_link",
     },
     {
       title: "Roofing",
       desc: "Here are the samples which you can download of our work on water proofing.",
-      xlsx: "https://docs.google.com/spreadsheets/d/1_2CQXGJvBk4GpUkJ34EObu8i4J-Cjfwb/edit?usp=drive_link&ouid=113272403915799871398&rtpof=true&sd=true",
-      pdf: "https://drive.google.com/file/d/1_nX3lcYZsLFHdZ8QCR1R50KMJd4t4QGA/view?usp=drive_link",
+      xlsx: "https://drive.google.com/file/d/1n39sXL2NbDdjC2izsD2M8NEkmp5B2_zM/view?usp=drive_link",
+      pdf: "https://drive.google.com/file/d/1rI--sGoIaq6nuFxaIjJr-1edu_Vho2y_/view?usp=drive_link",
     },
     {
       title: "Residential GC",
       desc: "Here are the samples which you can download of our work on water proofing.",
-      xlsx: "https://docs.google.com/spreadsheets/d/1NRAawu4gtAVKfxGlEWJYhvzlG5b7Saiw/edit?usp=drive_link&ouid=113272403915799871398&rtpof=true&sd=true",
-      pdf: "https://drive.google.com/file/d/1_Iozq4RpNQenGuN5Zlf5EeoAWms_YWFn/view?usp=drive_link",
+      xlsx: "https://drive.google.com/file/d/1TiN-UwEL_gp8FH1ssRRrqscIstbELbdj/view?usp=drive_link",
+      pdf: "https://drive.google.com/file/d/1cIKdp10vnNOpXZAUpyedVntLqpNhakRy/view?usp=drive_link",
     },
 
     {
-      title: "Lumber/Carpentary",
-      desc: "Here are the samples which you can download of our work on water proofing.",
-      xlsx: "https://docs.google.com/spreadsheets/d/1h7DR8_AR4hlDvJLEgvZ4YfeWKpRiaBzQ/edit?usp=drive_link&ouid=113272403915799871398&rtpof=true&sd=true",
-      pdf: "https://drive.google.com/file/d/1KsnI66WLu0TGlvpuU4v1FHnlRlGauqmy/view?usp=drive_link",
+      title: "Paint",
+      desc: "Here are the samples which you can download of our work on water proofing",
+      xlsx: "https://drive.google.com/file/d/1KANNfmUTJkYXwx_LleS6OYYmgC_lUvsK/view?usp=drive_link",
+      pdf: "https://drive.google.com/file/d/1Xn8fAEPeBBasNCdgM73QzGeIIu0B2Wes/view?usp=drive_link",
     },
   ];
 
