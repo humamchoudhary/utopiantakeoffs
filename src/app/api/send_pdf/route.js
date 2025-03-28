@@ -8,7 +8,9 @@ import path from "path";
 // Load Service Account JSON key
 const keyFilePath = path.join(process.cwd(), "google-service-account.json"); // Ensure this exists in your project
 const auth = new google.auth.GoogleAuth({
-  keyFile: keyFilePath,
+  credentials: JSON.parse(
+    Buffer.from(process.env.GOOGLE_KEY_FILE, "base64").toString("utf-8"),
+  ),
   scopes: ["https://www.googleapis.com/auth/drive"],
 });
 
