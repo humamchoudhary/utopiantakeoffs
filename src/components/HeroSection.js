@@ -1,10 +1,27 @@
-import { Phone, Video } from "lucide-react";
+import { Mouse, Phone, Video } from "lucide-react";
 import Link from "next/link";
 
-export default async function HeroSection() {
+export default function HeroSection() {
   return (
-    <div className="relative h-screen w-full 2xl:w-[1440px] rounded-b-[56px] flex flex-col items-center mt-12 md:mt-32 ">
-      <div className="absolute z-0 inset-0 w-full h-full pointer-events-none">
+    <div className=" h-screen w-full 2xl:w-[1440px] rounded-b-[56px] flex flex-col items-center">
+      {/* Video Background */}
+      <div className="absolute top-0 inset-0 w-full h-screen overflow-hidden z-0">
+        <video
+          className="absolute w-full h-full object-cover"
+          autoPlay
+          loop
+          muted
+          playsInline
+        >
+          <source src="/bg-vid.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        <div className="absolute inset-0 bg-black bg-opacity-40"></div>{" "}
+        {/* Optional overlay to improve text visibility */}
+      </div>
+
+      {/* Background grid pattern from your original code */}
+      {/* <div className="absolute z-1 inset-0 w-full h-full pointer-events-none">
         <svg
           width="100%"
           height="100%"
@@ -20,73 +37,88 @@ export default async function HeroSection() {
           />
           <path d="M480-16 0 806M960-16l480 822" stroke="#14161F" />
         </svg>
-      </div>
-      <div className="h-[80vh] md:h-auto flex justify-center gap-10 flex-col items-center ">
-        <div className="md:px-6 md:py-3 py-2 px-4 z-10 border-2 text-nowrap w-min   border-[#89261D] bg-[#531712] rounded-full text-[#FAFAFB] text-sm md:text-lg font-semibold text-center">
-          Save 60% of Your Estimating Expense
+      </div> */}
+
+      {/* Content container with animation */}
+      <div className="z-10 relative w-full h-full grid grid-cols-1 md:grid-cols-3 justify-between items-end mb-20">
+        <div className=" items-center md:items-start flex flex-col">
+          <p className=" text-[40px] font-black">Utopian TakeOffs</p>
         </div>
-        <div>
-          <div className="m-5 z-10 ">
-            <div className="relative flex flex-row items-center justify-center">
-              <h1 className="font-normal md:text-[120px] text-[32px] text-white tracking-[-2px] md:tracking-[-5%] text-center md:leading-[144px]">
-                Bid
-              </h1>
-              <div className="relative z-0">
-                <svg
-                  className="w-48 h-16 sm:w-64 sm:h-20 md:w-80 md:h-28 lg:w-96 lg:h-32 xl:w-full xl:h-36" // width="394"
-                  // height="144"
-                  viewBox="0 0 394 144"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M390 110.303C322.653 50.9415 297.659 26.0884 225.105 9.53394C152.551 -7.02051 -22.6636 11.3256 7.44372 95.1776C37.551 179.03 248.774 123.8 379.238 100.727"
-                    stroke="#972A20"
-                    strokeWidth="7"
-                    strokeLinecap="round"
-                  />
-                </svg>
-                <span className="absolute text-white ml-2 font-normal md:text-[120px] text-[32px] tracking-[-2px] md:tracking-[-4px] top-1/2 left-[40%] transform -translate-x-1/2 -translate-y-1/2">
-                  More
-                </span>
-              </div>
-            </div>
-          </div>
-
-          <h1 className="font-bold md:leading-[216px] md:text-[180px] text-[32px] tracking-[-1.6px] md:tracking-[-4.8px] text-center">
-            WIN MORE!
-          </h1>
-        </div>
-
-        <div className="md:flex hidden absolute bottom-20 left-20 flex-col md:flex-row md:justify-between w-full px-8 md:px-16 lg:px-24 ">
-          <div className="text-white text-xl md:text-[32px] font-medium leading-9 tracking-[-5%]">
-            <p>Material Takeoff &</p>
-            <p>Construction Estimating</p>
-            <p>Services</p>
-          </div>
-        </div>
-
-        <div className="flex flex-row gap-4 justify-center items-center mt-6 md:mt-0">
-          <Link
-            className="text-white text-sm md:text-xl font-bold border-2 flex gap-2 items-center justify-center px-4 py-3 md:px-6 border-white rounded-full"
-            href="/contact"
-          >
-            <Phone className="w-5 h-5" />
-            Contact Us
-          </Link>
-
-          <Link
-            className="text-sm md:text-xl font-bold border-2 flex gap-2 items-center justify-center px-4 py-3 md:px-6 bg-white text-black rounded-full"
-            href="https://calendly.com/hashimest16/30min"
-          >
-            Book a Call
-          </Link>
+        <p className=" hidden md:flex items-center justify-center animate-bounce">
+          <Mouse className="size-8 font-thin" />
+        </p>
+        <div className=" hidden md:flex flex-col items-end text-white text-xl md:text-[32px] font-medium leading-9 tracking-[-5%]">
+          <p className="text-nowrap text-sm">Material Takeoff &</p>
+          <p className="text-nowrap text-sm">Construction Estimating</p>
+          <p className="text-nowrap text-sm">Services</p>
         </div>
       </div>
     </div>
   );
 }
 
-const HeroBar = ({ h, color }) => {
-  return <div className={` w-72 rounded-t-[32px] ` + h + color}></div>;
-};
+/* <div
+  className={`h-[80vh] md:h-auto flex justify-center gap-10 flex-col items-center transition-all duration-1000 ease-in-out transform ${
+    isVisible ? "translate-y-0 opacity-100" : "translate-y-24 opacity-0"
+  }`}
+>
+  <div className="md:px-6 md:py-3 py-2 px-4 z-10 border-2 text-nowrap w-min border-[#89261D] bg-[#531712] rounded-full text-[#FAFAFB] text-sm md:text-lg font-semibold text-center">
+    Save 30% of Your Estimating Expense
+  </div>
+  <div>
+    <div className="m-5 z-10 ">
+      <div className="relative flex flex-row items-center justify-center">
+        <h1 className="font-normal md:text-[120px] text-[32px] text-white tracking-[-2px] md:tracking-[-5%] text-center md:leading-[144px]">
+          Bid
+        </h1>
+        <div className="relative z-0">
+          <svg
+            className="w-48 h-16 sm:w-64 sm:h-20 md:w-80 md:h-28 lg:w-96 lg:h-32 xl:w-full xl:h-36"
+            viewBox="0 0 394 144"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M390 110.303C322.653 50.9415 297.659 26.0884 225.105 9.53394C152.551 -7.02051 -22.6636 11.3256 7.44372 95.1776C37.551 179.03 248.774 123.8 379.238 100.727"
+              stroke="#972A20"
+              strokeWidth="7"
+              strokeLinecap="round"
+            />
+          </svg>
+          <span className="absolute text-white ml-2 font-normal md:text-[120px] text-[32px] tracking-[-2px] md:tracking-[-4px] top-1/2 left-[40%] transform -translate-x-1/2 -translate-y-1/2">
+            More
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <h1 className="font-bold md:leading-[216px] md:text-[180px] text-[32px] tracking-[-1.6px] md:tracking-[-4.8px] text-center">
+      WIN MORE!
+    </h1>
+  </div>
+
+  <div className="md:flex hidden absolute bottom-20 left-20 flex-col md:flex-row md:justify-between w-full px-8 md:px-16 lg:px-24 ">
+    <div className="text-white text-xl md:text-[32px] font-medium leading-9 tracking-[-5%]">
+      <p>Material Takeoff &</p>
+      <p>Construction Estimating</p>
+      <p>Services</p>
+    </div>
+  </div>
+
+  <div className="flex flex-row gap-4 justify-center items-center mt-6 md:mt-0">
+    <Link
+      className="text-white text-sm md:text-xl font-bold border-2 flex gap-2 items-center justify-center px-4 py-3 md:px-6 border-white rounded-full"
+      href="/contact"
+    >
+      <Phone className="w-5 h-5" />
+      Contact Us
+    </Link>
+
+    <Link
+      className="text-sm md:text-xl font-bold border-2 flex gap-2 items-center justify-center px-4 py-3 md:px-6 bg-white text-black rounded-full"
+      href="https://calendly.com/hashimest16/30min"
+    >
+      Book a Call
+    </Link>
+  </div>
+</div>; */

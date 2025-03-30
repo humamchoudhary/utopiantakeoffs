@@ -1,5 +1,4 @@
 "use client";
-// components/BlurBackground.jsx
 import React, { useEffect, useState } from "react";
 
 const BlurBackground = ({
@@ -8,21 +7,6 @@ const BlurBackground = ({
   maxSize = 600, // Maximum size in pixels
   colors = ["#972A20", "#444408"], // Your custom colors
 }) => {
-  const [pageHeight, setPageHeight] = useState(0);
-
-  useEffect(() => {
-    // Get page height on client side
-    setPageHeight(document.body.scrollHeight);
-
-    // Update on resize
-    const handleResize = () => {
-      setPageHeight(document.body.scrollHeight);
-    };
-
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
-
   // Generate blurs with positions distributed along the height
   const leftBlurs = Array.from({ length: blurCount }, (_, i) => {
     const topPosition = i * (100 / blurCount) + Math.random() * 5;
@@ -57,7 +41,7 @@ const BlurBackground = ({
       {leftBlurs.map((styles, index) => (
         <div
           key={`left-blur-${index}`}
-          className="absolute rounded-full blur-3xl"
+          className="absolute rounded-full blur-3xl animate-pulse"
           style={styles}
         />
       ))}
@@ -65,7 +49,7 @@ const BlurBackground = ({
       {rightBlurs.map((styles, index) => (
         <div
           key={`right-blur-${index}`}
-          className="absolute rounded-full blur-3xl"
+          className="absolute rounded-full blur-3xl animate-pulse"
           style={styles}
         />
       ))}

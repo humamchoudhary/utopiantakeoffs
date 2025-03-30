@@ -8,7 +8,7 @@ export default function AboutUs() {
       {/* Hero Section */}
       <div className="flex flex-col gap-5 md:gap-6 items-center justify-center mt-32 px-4">
         <div className="md:px-5 md:py-3 py-2 px-4 border-2 text-nowrap w-min border-[#89261D] bg-[#531712] rounded-full text-[#FAFAFB] text-sm md:text-lg font-semibold text-center">
-          15+ Years of Construction Estimating Expertise
+          10+ Years of Construction Estimating Expertise
         </div>
         <h1 className="text-center w-full mt-5 text-[32px] md:text-7xl md:mt-6 font-bold leading-normal">
           Utopian Takeoffs Your Trusted Construction Cost Partner
@@ -20,13 +20,13 @@ export default function AboutUs() {
         <div className="flex flex-row gap-1 md:gap-3 items-center justify-center mt-5 md:mt-6">
           <Link
             href="/contact"
-            className="border flex gap-1 md:gap-[10px] items-center justify-center py-[10px] px-4 md:px-6 md:py-3 border-fg text-xl font-bold rounded-xl md:rounded-full"
+            className="border flex gap-1 md:gap-[10px] items-center justify-center py-[10px] hover:bg-primary duration-200 transition-all hover:border-primary  px-4 md:px-6 md:py-3 border-fg text-xl font-bold rounded-xl md:rounded-full"
           >
             Contact Us
           </Link>
           <Link
             href="/get-quote"
-            className="flex gap-[10px] items-center justify-center py-[10px] px-4 md:px-6 md:py-3 bg-[#FAFAFB] text-[#0F142C] text-xl font-bold rounded-xl md:rounded-full"
+            className="flex gap-[10px] items-center justify-center py-[10px] px-4 md:px-6 md:py-3 bg-[#FAFAFB] text-[#0F142C] hover:bg-primary duration-200 transition-all hover:text-fg text-xl font-bold rounded-xl md:rounded-full"
           >
             Get a Quote
           </Link>
@@ -122,41 +122,41 @@ export default function AboutUs() {
               width={339}
               height={143}
               fill="none"
-              className="absolute right-0 md:hidden block w-[339px] h-[143px] md:w-[1119px] md:h-[342px] bottom-0"
+              className="absolute right-0 md:hidden block w-[339px] h-[143px] md:w-[1119px] z-0  md:h-[342px] bottom-0 pointer-events-none"
             >
               <path
                 fill="#fff"
                 fillOpacity={0.04}
                 d="M90.05 61.206C7.148 59.895 0 143 0 143h339V0s-22.632 80.11-85.524 97.33c-62.893 17.22-80.522-34.814-163.425-36.124Z"
               />
-            </svg>
+            </svg>{" "}
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="absolute right-0 hidden md:block w-[339px] h-[143px] md:w-[1119px] md:h-[342px] bottom-0"
+              className="absolute right-0 hidden md:block w-[339px] h-[143px] md:w-[1119px]  md:h-[342px] bottom-0"
               viewBox="0 0 1119 342"
               fill="none"
             >
               <path
                 d="M302.559 146.38C24.0127 143.246 0 342 0 342H1139V0C1139 0 1062.96 191.592 851.649 232.775C640.337 273.958 581.106 149.513 302.559 146.38Z"
                 fill="white"
-                fillOpacity="0.04"
-                className="absolute right-0 w-[339px] h-[143px] md:w-[1119px] md:h-[342px] bottom-0"
+                fill-opacity="0.04"
+                className="absolute right-0 w-[339px] h-[143px] md:w-[1119px]  md:h-[342px] bottom-0"
               />
             </svg>
-            <div className="px-4 py-2 md:px-5 md:py-3 mb-5 border rounded-full bg-[#FAF3F21A]">
-              <p className="text-lg font-semibold leading-[normal] text-[#FFFFFF]">
-                Save 30% on Your First Estimate
+            <div className="px-4 py-2 md:px-5 md:py-3 mb-5 border  rounded-full bg-[#FAF3F21A]">
+              <p className=" text-sm md:text-lg  font-semibold leading-[normal] text-[#FFFFFF]">
+                Save 30% of Your Estimating Expense
               </p>
             </div>
             <p className="text-[#E4E4E4] md:mx-[340px] md:w-[664px] font-semibold text-sm leading-[20px] md:leading-[normal] md:text-[32px] text-center">
-              Ready to Get Accurate Construction Cost Estimates?
+              Work With Us! We Are A Global Network Of Construction Cost Expert
             </p>
             <Link
-              href="/get-quote"
-              className="px-5 py-[10px] md:px-[32px] md:py-4 mt-7 bg-[#FFFFFF] rounded-full"
+              href="/contact"
+              className=" relative z-10 px-5 py-[10px] md:px-[32px] md:py-4 mt-7  bg-[#FFFFFF] rounded-full pointer-events-auto"
             >
               <p className="text-lg text-primary font-semibold text-[#601E1A] leading-[normal]">
-                Get Quotes Now
+                Get Quotes Nows
               </p>
             </Link>
           </div>

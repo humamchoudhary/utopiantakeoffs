@@ -421,7 +421,7 @@ async function WorkWithUs() {
           width={339}
           height={143}
           fill="none"
-          className="absolute right-0 md:hidden block w-[339px] h-[143px] md:w-[1119px]  md:h-[342px] bottom-0"
+          className="absolute right-0 md:hidden block w-[339px] h-[143px] md:w-[1119px] z-0  md:h-[342px] bottom-0 pointer-events-none"
         >
           <path
             fill="#fff"
@@ -443,18 +443,21 @@ async function WorkWithUs() {
           />
         </svg>
         <div className="px-4 py-2 md:px-5 md:py-3 mb-5 border  rounded-full bg-[#FAF3F21A]">
-          <p className="text-lg  font-semibold leading-[normal] text-[#FFFFFF]">
-            Save 60% of Your Estimating Expense
+          <p className=" text-sm md:text-lg  font-semibold leading-[normal] text-[#FFFFFF]">
+            Save 30% of Your Estimating Expense
           </p>
         </div>
         <p className="text-[#E4E4E4] md:mx-[340px] md:w-[664px] font-semibold text-sm leading-[20px] md:leading-[normal] md:text-[32px] text-center">
           Work With Us! We Are A Global Network Of Construction Cost Expert
         </p>
-        <div className="px-5 py-[10px] md:px-[32px] md:py-4 mt-7  bg-[#FFFFFF] rounded-full">
+        <Link
+          href="/contact"
+          className=" relative z-10 px-5 py-[10px] md:px-[32px] md:py-4 mt-7  bg-[#FFFFFF] rounded-full pointer-events-auto"
+        >
           <p className="text-lg text-primary font-semibold text-[#601E1A] leading-[normal]">
-            Get Quotes Now
+            Get Quotes Nows
           </p>
-        </div>
+        </Link>
       </div>
     </div>
   );

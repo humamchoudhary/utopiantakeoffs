@@ -5,6 +5,7 @@ import ContactFileUpload from "@/components/ContactFileUpload";
 import Link from "next/link";
 
 import BlurBackground from "@/components/GlowGlobs";
+import { Phone } from "lucide-react";
 
 const ContactPage = () => {
   const [files, setFiles] = useState([]);
@@ -16,7 +17,7 @@ const ContactPage = () => {
 
       <div className="md:mt-[120px] mt-[176px] flex flex-col items-center justify-center gap-5 md:gap-6   2xl:w-[1440px] px-5 md:px-14 z-10">
         <div className="md:px-5 md:py-3 py-2 px-4  border text-nowrap w-min border-[#972A20] bg-[#531712] rounded-full text-[#FAFAFB] text-sm md:text-lg font-semibold text-center">
-          Save 60% of Your Estimating Expense
+          Save 30% of Your Estimating Expense
         </div>
         <div className="flex flex-col items-center">
           <h1 className="text-[32px] text-center md:text-7xl font-bold text-fg  tracking-[-1.6px]">
@@ -152,17 +153,17 @@ const ContactPage = () => {
                   fill="none"
                 >
                   <path
-                    stroke="#AC554D"
+                    stroke="#972A20"
                     strokeWidth={2.5}
                     d="M16.666 11a2.667 2.667 0 1 1-5.333 0 2.667 2.667 0 0 1 5.333 0Z"
                   />
                   <path
-                    stroke="#AC554D"
+                    stroke="#972A20"
                     strokeWidth={2.5}
                     d="M23.333 10.81c0 3.046-2.264 6.853-4.743 9.394C16.959 21.876 15.234 23 14 23c-1.235 0-2.959-1.124-4.59-2.796-2.48-2.541-4.744-6.348-4.744-9.394 0-5.05 4.18-9.143 9.334-9.143s9.333 4.093 9.333 9.143Z"
                   />
                   <path
-                    stroke="#AC554D"
+                    stroke="#972A20"
                     strokeLinecap="round"
                     strokeWidth={2.5}
                     d="M18.206 20.586c4.553.568 7.794 2.032 7.794 3.747 0 2.21-5.373 4-12 4s-12-1.79-12-4c0-1.715 3.241-3.18 7.794-3.747"
@@ -187,7 +188,7 @@ const ContactPage = () => {
                   fill="none"
                 >
                   <path
-                    stroke="#AC554D"
+                    stroke="#972A20"
                     strokeLinecap="round"
                     strokeWidth={2.5}
                     d="M2.667 16V9.333A5.333 5.333 0 0 1 8 4h16a5.333 5.333 0 0 1 5.333 5.333v13.334A5.333 5.333 0 0 1 24 28H10.666M8 10.667l5.041 3.36a5.333 5.333 0 0 0 5.917 0L24 10.668M2.666 20h8m-8 4h8"
@@ -196,19 +197,7 @@ const ContactPage = () => {
                 utopiantakeoffs10@gmail.com
               </p>
               <p className="flex flex-row items-center font-semibold gap-[6px] md:gap-[14px] text-xs md:text-[20px] underline">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width={32}
-                  height={32}
-                  fill="none"
-                >
-                  <path
-                    stroke="#13151B"
-                    strokeLinejoin="round"
-                    strokeWidth={2.5}
-                    d="M28 25.333V23.14c0-1.09-.664-2.071-1.676-2.476l-2.713-1.085a2.667 2.667 0 0 0-3.375 1.283l-.236.472s-3.333-.666-6-3.333c-2.667-2.667-3.333-6-3.333-6l.472-.236a2.667 2.667 0 0 0 1.283-3.376l-1.085-2.712A2.667 2.667 0 0 0 8.861 4H6.667A2.667 2.667 0 0 0 4 6.667C4 18.449 13.551 28 25.333 28A2.667 2.667 0 0 0 28 25.333Z"
-                  />
-                </svg>
+                <Phone className="text-primary size-7" />
                 +1 315 784 0484
               </p>
             </div>
@@ -228,26 +217,26 @@ const ContactPage = () => {
                   fill="none"
                 >
                   <path
-                    stroke="#AC554D"
+                    stroke="#972A20"
                     strokeWidth={2.5}
                     d="M4 8.667a4 4 0 0 1 4-4h16a4 4 0 0 1 4 4v16.666a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4V8.667Z"
                   />
                   <path
-                    stroke="#AC554D"
+                    stroke="#972A20"
                     strokeLinecap="round"
                     strokeWidth={2.5}
                     d="M4 12h24"
                   />
                   <path
-                    stroke="#AC554D"
+                    stroke="#972A20"
                     strokeLinecap="round"
                     strokeLinejoin="round"
                     strokeWidth={2.5}
                     d="M10.666 2.667v4M21.334 2.667v4"
                   />
-                  <circle cx={16} cy={20} r={1.333} fill="#AC554D" />
-                  <circle cx={21.333} cy={20} r={1.333} fill="#AC554D" />
-                  <circle cx={10.667} cy={20} r={1.333} fill="#AC554D" />
+                  <circle cx={16} cy={20} r={1.333} fill="#972A20" />
+                  <circle cx={21.333} cy={20} r={1.333} fill="#972A20" />
+                  <circle cx={10.667} cy={20} r={1.333} fill="#972A20" />
                 </svg>
                 Monday to Saturday
               </p>
@@ -259,13 +248,13 @@ const ContactPage = () => {
                   fill="none"
                 >
                   <path
-                    stroke="#AC554D"
+                    stroke="#972A20"
                     strokeLinecap="round"
                     strokeWidth={2.5}
                     d="M29.333 16V6.667a4 4 0 0 0-4-4H6.667a4 4 0 0 0-4 4v18.666a4 4 0 0 0 4 4H12"
                   />
                   <path
-                    stroke="#AC554D"
+                    stroke="#972A20"
                     strokeLinecap="round"
                     strokeLinejoin="round"
                     strokeWidth={2.5}
@@ -292,7 +281,7 @@ const ContactPage = () => {
         </div>
       </div>
       <div>
-        <h2 className="flex flex-row justify-center items-center text-center font-semibold mt-16 mb-6 md:mb-16 text-2xl text-[#AC554D] leading-[48px] tracking-[-1.28px]">
+        <h2 className="flex flex-row justify-center items-center text-center font-semibold mt-16 mb-6 md:mb-16 text-2xl text-[#972A20] leading-[48px] tracking-[-1.28px]">
           Other Ways To Get In Touch
         </h2>
         <div className="flex flex-col md:grid md:grid-cols-1 md:sm:grid-cols-2 w-auto md:2xl:w-[1440px] md:lg:grid-cols-4 gap-4 md:gap-6 md:max-w-7xl mx-5 md:mx-4 ">
@@ -375,7 +364,6 @@ const ContactPage = () => {
 
           <div className="p-6 rounded-xl bg-[#1F2129]">
             <div className="p-3 bg-[#2F3138] rounded-xl  w-min">
-              {" "}
               <svg
                 className=""
                 xmlns="http://www.w3.org/2000/svg"

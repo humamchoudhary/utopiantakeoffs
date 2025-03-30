@@ -18,19 +18,29 @@ const MenuItem = ({ name, icon, link, onClick }) => (
   </Link>
 );
 
+// Custom Link component with animated underline
+const NavLink = ({ href, children, className }) => {
+  const path = usePathname();
+  const isActive = path === href;
+
+  return (
+    <Link href={href} className={`${className} relative group`}>
+      <span className={`${isActive ? "font-semibold" : "font-normal"}`}>
+        {children}
+      </span>
+      <span
+        className={`absolute -bottom-1 left-0  h-0.5 bg-primary 
+        transition-all duration-300 ease-in-out
+        ${isActive ? "w-full" : "w-0 group-hover:w-full"}`}
+      />
+    </Link>
+  );
+};
+
 export default function NavBar() {
   const path = usePathname();
-  const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeSubmenu, setActiveSubmenu] = useState(null);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
 
   // Close mobile menu when route changes
   useEffect(() => {
@@ -54,83 +64,73 @@ export default function NavBar() {
 
   return (
     <div
-      className={`fixed w-screen ${
-        isScrolled ? "bg-bg/95 backdrop-blur-xl shadow-md" : "bg-transparent"
-      } z-50 transition-all duration-300`}
+      className={`fixed w-screen z-50 transition-all duration-300 pt-5 px-5`}
     >
       {/* Desktop Navigation */}
-      <div className="flex flex-row w-full 2xl:w-[1440px] mx-auto justify-between items-center px-5 pt-5 md:px-12 md:py-4">
-        <Image src={Logo} width={60} height={60} alt="Utopian Takeoff Logo" />
 
-        {/* Desktop Menu */}
-        <div className="hidden md:flex flex-row gap-24 items-center">
-          <Link
-            className={` ${path === "/" && "font-semibold"} hover:cursor-pointer`}
-            href={"/"}
-          >
-            Home
-          </Link>
-          <div className="group flex flex-col ">
-            <p className="hover:cursor-pointer flex flex-row">Service</p>
-            <div className="group-hover:flex duration-300 transition-all hover:flex hidden w-min flex-col gap-4 absolute -translate-x-12 shadow-md mt-6 p-6 bg-bg rounded-[16px] border-primary border ">
-              {Services.map((item, index) => (
-                <MenuItem
-                  key={index}
-                  name={item.name}
-                  link={`${item.link}`}
-                  icon={item.icon}
-                />
-              ))}
-            </div>
-          </div>
-          <div className="group flex flex-col  ">
-            <p className="hover:cursor-pointer text-nowarp flex flex-row ">
-              Trades{" "}
-            </p>
-            <div className="group-hover:grid hover:grid hidden grid-cols-2 gap-x-4 gap-y-5 absolute -translate-x-12 shadow-md mt-6 p-6 bg-bg rounded-[16px] border-primary border ">
-              {Trade.map((item, index) => (
-                <MenuItem
-                  key={index}
-                  name={item.name}
-                  link={item.link}
-                  icon={item.icon}
-                />
-              ))}
-            </div>
-          </div>
-          <Link
-            className={` ${path === "/sample" && "font-semibold"} hover:cursor-pointer`}
-            href={"/sample"}
-          >
-            Sample
-          </Link>
-          <Link
-            className={` ${path === "/about" && "font-semibold"} hover:cursor-pointer`}
-            href={"/about"}
-          >
-            About Us
-          </Link>
-        </div>
-
-        {/* Desktop CTA */}
-        <div className="hidden md:flex flex-row justify-center items-center gap-4">
-          <Link
-            href={"/contact"}
-            className="py-[14px] px-6 rounded-full font-bold text-xl bg-[#FAFAFB] text-bg "
-          >
-            Get Estimated
-          </Link>
-        </div>
-
-        {/* Mobile Menu Toggle */}
+      <div className="relative">
+        <div className="h-full rounded-md left-0 right-0 z-0 bg-bg opacity-60 absolute flex flex-row w-full 2xl:w-[1440px] mx-auto justify-between items-center px-5 md:px-12 md:py-4" />
         <div
-          className="md:hidden bg-[#601E1A2B]/10 p-3 rounded-lg cursor-pointer"
-          onClick={toggleMobileMenu}
+          className={`relative rounded-md flex flex-row w-full z-10 2xl:w-[1440px] mx-auto justify-between items-center px-5 py-2 md:px-12 md:py-4 bg-bg/95 backdrop-blur-xl shadow-md`}
         >
-          {isMobileMenuOpen ? <X /> : <Menu />}
+          <Image src={Logo} width={45} height={45} alt="Utopian Takeoff Logo" />
+
+          {/* Desktop Menu */}
+          <div className="hidden md:flex flex-row gap-24 items-center">
+            <NavLink href="/">Home</NavLink>
+
+            <div className="group flex flex-col ">
+              <p className="hover:cursor-pointer flex flex-row">Service</p>
+              <div className="group-hover:flex duration-300 transition-all hover:flex hidden w-min flex-col gap-4 absolute -translate-x-12 shadow-md mt-6 p-6 bg-bg rounded-[16px] border-primary border ">
+                {Services.map((item, index) => (
+                  <MenuItem
+                    key={index}
+                    name={item.name}
+                    link={`${item.link}`}
+                    icon={item.icon}
+                  />
+                ))}
+              </div>
+            </div>
+            <div className="group flex flex-col  ">
+              <p className="hover:cursor-pointer text-nowarp flex flex-row ">
+                Trades{" "}
+              </p>
+              <div className="group-hover:grid hover:grid hidden grid-cols-2 gap-x-4 gap-y-5 absolute -translate-x-12 shadow-md mt-6 p-6 bg-bg rounded-[16px] border-primary border ">
+                {Trade.map((item, index) => (
+                  <MenuItem
+                    key={index}
+                    name={item.name}
+                    link={item.link}
+                    icon={item.icon}
+                  />
+                ))}
+              </div>
+            </div>
+
+            <NavLink href="/sample">Sample</NavLink>
+            <NavLink href="/about">About Us</NavLink>
+          </div>
+
+          {/* Desktop CTA */}
+          <div className="hidden md:flex flex-row justify-center items-center gap-4">
+            <Link
+              href={"/contact"}
+              className="py-2 px-6 rounded-full font-bold text-lg bg-[#FAFAFB] hover:bg-primary hover:text-white duration-300 transition-all text-bg"
+            >
+              Get Estimated
+            </Link>
+          </div>
+
+          {/* Mobile Menu Toggle */}
+          <div
+            className="md:hidden hover:bg-[#0F142C]/40 border border-fghex/50 p-3 rounded-lg cursor-pointer"
+            onClick={toggleMobileMenu}
+          >
+            {isMobileMenuOpen ? <X /> : <Menu />}
+          </div>
         </div>
       </div>
-
       {/* Mobile Menu Overlay */}
       {isMobileMenuOpen && (
         <div
@@ -142,7 +142,7 @@ export default function NavBar() {
       {/* Mobile Menu Slide-in - Fixed positioning so it's not affected by scroll */}
       <div
         className={`
-         fixed top-0 right-0 w-[85%] h-full bg-bg 
+         fixed top-0 right-0 w-[90%] h-full bg-bg 
           transform transition-transform duration-300 ease-in-out z-50
           ${isMobileMenuOpen ? "translate-x-0" : "translate-x-full"}
         `}
@@ -162,13 +162,20 @@ export default function NavBar() {
 
           {/* Mobile Menu Items */}
           <div className="space-y-2">
-            <Link
-              href="/"
-              onClick={closeMobileMenu}
-              className={`block p-3 ${path === "/" ? "font-semibold" : ""}`}
-            >
-              Home
-            </Link>
+            {/* Mobile nav links with underline animation */}
+            <div className="relative group">
+              <Link
+                href="/"
+                onClick={closeMobileMenu}
+                className={`block p-3 ${path === "/" ? "font-semibold" : ""}`}
+              >
+                Home
+              </Link>
+              <span
+                className={`absolute bottom-0 left-3 h-0.5 bg-primary transition-all duration-300 ease-in-out
+                ${path === "/" ? "w-12" : "w-0 group-hover:w-12"}`}
+              />
+            </div>
 
             {/* Services Submenu */}
             <div>
@@ -184,7 +191,7 @@ export default function NavBar() {
                 />
               </div>
               {activeSubmenu === "services" && (
-                <div className="pl-4 space-y-2">
+                <div className="pl-0 space-y-2">
                   {Services.map((item, index) => (
                     <MenuItem
                       key={index}
@@ -212,7 +219,7 @@ export default function NavBar() {
                 />
               </div>
               {activeSubmenu === "trades" && (
-                <div className="grid grid-cols-1 gap-2 pl-4">
+                <div className="grid grid-cols-1 gap-2 pl-0">
                   {Trade.map((item, index) => (
                     <MenuItem
                       key={index}
@@ -226,21 +233,35 @@ export default function NavBar() {
               )}
             </div>
 
-            <Link
-              href="/sample"
-              onClick={closeMobileMenu}
-              className={`block p-3 ${path === "/sample" ? "font-semibold" : ""}`}
-            >
-              Sample
-            </Link>
+            {/* Sample link with underline animation */}
+            <div className="relative group">
+              <Link
+                href="/sample"
+                onClick={closeMobileMenu}
+                className={`block p-3 ${path === "/sample" ? "font-semibold" : ""}`}
+              >
+                Sample
+              </Link>
+              <span
+                className={`absolute bottom-0 left-3 h-0.5 bg-primary transition-all duration-300 ease-in-out
+                ${path === "/sample" ? "w-16" : "w-0 group-hover:w-16"}`}
+              />
+            </div>
 
-            <Link
-              href="/about"
-              onClick={closeMobileMenu}
-              className={`block p-3 ${path === "/about" ? "font-semibold" : ""}`}
-            >
-              About Us
-            </Link>
+            {/* About Us link with underline animation */}
+            <div className="relative group">
+              <Link
+                href="/about"
+                onClick={closeMobileMenu}
+                className={`block p-3 ${path === "/about" ? "font-semibold" : ""}`}
+              >
+                About Us
+              </Link>
+              <span
+                className={`absolute bottom-0 left-3 h-0.5 bg-primary transition-all duration-300 ease-in-out
+                ${path === "/about" ? "w-20" : "w-0 group-hover:w-20"}`}
+              />
+            </div>
 
             {/* Mobile CTA */}
             <Link

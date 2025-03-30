@@ -110,7 +110,11 @@ const ReviewScoller = ({ data, rev, className }) => {
     >
       <div ref={sliderRef} className="keen-slider" style={{ height: "100%" }}>
         {data.map((item, index) => (
-          <div className="keen-slider__slide" style={{ height: "min-content" }}>
+          <div
+            className="keen-slider__slide"
+            key={index}
+            style={{ height: "min-content" }}
+          >
             <WrittenReviewTile key={index} {...item} />
           </div>
         ))}

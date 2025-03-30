@@ -3,7 +3,7 @@ import React, { useEffect } from "react";
 import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
 
-const animation = { duration: 20000, easing: (t) => t };
+const animation = { duration: 6000, easing: (t) => t };
 
 export default function CleintSlider({ clients }) {
   const [sliderRef] = useKeenSlider({
@@ -24,12 +24,14 @@ export default function CleintSlider({ clients }) {
     loop: true,
     renderMode: "performance",
     drag: false,
-    created(s) {},
+    created(s) {
+      s.moveToIdx(s.track.details.abs + (clients.length - 1), true, animation);
+    },
     updated(s) {
-      s.moveToIdx(s.track.details.abs + 5, true, animation);
+      s.moveToIdx(s.track.details.abs + (clients.length - 1), true, animation);
     },
     animationEnded(s) {
-      s.moveToIdx(s.track.details.abs + 5, true, animation);
+      s.moveToIdx(s.track.details.abs + (clients.length - 1), true, animation);
     },
   });
   return (
