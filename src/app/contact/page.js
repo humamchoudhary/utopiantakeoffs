@@ -3,12 +3,82 @@
 import React, { useState } from "react";
 import ContactFileUpload from "@/components/ContactFileUpload";
 import Link from "next/link";
-
 import BlurBackground from "@/components/GlowGlobs";
 import { Phone } from "lucide-react";
 
 const ContactPage = () => {
   const [files, setFiles] = useState([]);
+  const [formData, setFormData] = useState({
+    companyName: "",
+    companyEmail: "",
+    phoneNumber: "",
+    projectDescription: "",
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState(null);
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitStatus(null);
+
+    try {
+      const data = new FormData();
+
+      // Add form fields
+      data.append("companyName", formData.companyName);
+      data.append("companyEmail", formData.companyEmail);
+      data.append("phoneNumber", formData.phoneNumber);
+      data.append("projectDescription", formData.projectDescription);
+
+      // Add files
+      files.forEach((file, index) => {
+        data.append(`file${index}`, file);
+      });
+
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        body: data,
+      });
+
+      const result = await response.json();
+
+      // console.log(result);
+      if (response.ok) {
+        setSubmitStatus({
+          type: "success",
+          message: "Your request has been submitted successfully!",
+        });
+
+        // Reset form
+        setFormData({
+          companyName: "",
+          companyEmail: "",
+          phoneNumber: "",
+          projectDescription: "",
+        });
+        setFiles([]);
+      } else {
+        throw new Error(result.message || "Failed to submit form");
+      }
+    } catch (error) {
+      console.error("Form submission error:", error);
+      setSubmitStatus({
+        type: "error",
+        message: error.message || "An error occurred. Please try again.",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   return (
     <main className="min-h-screen flex flex-col items-center ">
@@ -55,7 +125,22 @@ const ContactPage = () => {
         </Link>
       </div>
       <div className="flex flex-col md:flex-row w-full md:2xl:w-[1440px] gap-10 mt-32 px-[14px] md:px-[110px] rounded-lg ">
-        <form className="flex flex-col md:w-1/2 md:gap-8  gap-4">
+        <form
+          onSubmit={handleSubmit}
+          className="flex flex-col md:w-1/2 md:gap-8 gap-4"
+        >
+          {submitStatus && (
+            <div
+              className={`p-4 rounded-xl ${
+                submitStatus.type === "success"
+                  ? "bg-green-900/20 border border-green-700 text-green-400"
+                  : "bg-red-900/20 border border-red-700 text-red-400"
+              }`}
+            >
+              {submitStatus.message}
+            </div>
+          )}
+
           <div className="">
             <label
               htmlFor="companyName"
@@ -67,8 +152,11 @@ const ContactPage = () => {
               type="text"
               id="companyName"
               name="companyName"
+              value={formData.companyName}
+              onChange={handleInputChange}
               className="md:px-4 px-3 py-[10px] font-medium text-lg md:py-[14px] text-[#5E6272] block w-full bg-[#1F2129] rounded-xl border-[#2F323C] border shadow-sm "
               placeholder="Your Company Name"
+              required
             />
           </div>
           <div className="">
@@ -82,25 +170,32 @@ const ContactPage = () => {
               type="email"
               id="companyEmail"
               name="companyEmail"
-              className="md:px-4 px-3 py-[10px] md:py-[14px] block  w-full rounded-xl font-medium text-lg text-[#5E6272] bg-[#1F2129] border-[#2F323C] border shadow-sm "
+              value={formData.companyEmail}
+              onChange={handleInputChange}
+              className="md:px-4 px-3 py-[10px] md:py-[14px] block w-full rounded-xl font-medium text-lg text-[#5E6272] bg-[#1F2129] border-[#2F323C] border shadow-sm "
               placeholder="you@company.com"
+              required
             />
           </div>
 
           <ContactFileUpload files={files} setFiles={setFiles} />
+
           <div className="">
             <label
-              htmlFor="phoneNo"
+              htmlFor="phoneNumber"
               className="block text-sm font-semibold text-fg md:text-[16px] mb-2 md:mb-[13px]"
             >
               Phone Number
             </label>
             <input
               type="tel"
-              id="companyEmail"
-              name="companyEmail"
-              className="px-3 py-[10px] md:px-4 md:py-[14px] block w-full rounded-xl font-medium text-lg text-[#5E6272] bg-[#1F2129] border-[#2F323C]  border shadow-sm "
+              id="phoneNumber"
+              name="phoneNumber"
+              value={formData.phoneNumber}
+              onChange={handleInputChange}
+              className="px-3 py-[10px] md:px-4 md:py-[14px] block w-full rounded-xl font-medium text-lg text-[#5E6272] bg-[#1F2129] border-[#2F323C] border shadow-sm "
               placeholder="XXX XXXXXXX"
+              required
             />
           </div>
           <div>
@@ -113,17 +208,23 @@ const ContactPage = () => {
             <textarea
               id="projectDescription"
               name="projectDescription"
+              value={formData.projectDescription}
+              onChange={handleInputChange}
               rows="8"
-              className="px-3 py-[10px] md:px-4 md:py-[14px] block w-full rounded-xl font-medium text-lg text-[#5E6272] bg-[#1F2129] border-[#2F323C]  border shadow-sm "
+              className="px-3 py-[10px] md:px-4 md:py-[14px] block w-full rounded-xl font-medium text-lg text-[#5E6272] bg-[#1F2129] border-[#2F323C] border shadow-sm "
               placeholder="Leave the project description here"
+              required
             ></textarea>
           </div>
           <div>
             <button
               type="submit"
-              className="w-full md:h-14 md:py-3 px-[12px 16px] py-3 md:px-4 justify-center items-center gap-2 rounded-xl bg-[#601E1A]  text-[#FAFAFB] text-lg font-semibold leading-[normal] "
+              disabled={isSubmitting}
+              className={`w-full md:h-14 md:py-3 px-[12px 16px] py-3 md:px-4 hover:bg-fg transition-all duration-200 hover:text-primary justify-center items-center gap-2 rounded-xl bg-[#601E1A] text-[#FAFAFB] text-lg font-semibold leading-[normal] ${
+                isSubmitting ? "opacity-70 cursor-not-allowed" : ""
+              }`}
             >
-              Submit
+              {isSubmitting ? "Submitting..." : "Submit"}
             </button>
           </div>
         </form>
@@ -307,7 +408,7 @@ const ContactPage = () => {
             <p className="text-lg  font-medium leading-7 text-[#5E6272] mt-3">
               You can directly call us at{" "}
             </p>
-            <p className="text-lg font-semibold ">+1 (347) 480-1903</p>
+            <p className="text-lg font-semibold ">+1 (315) 784-0484 </p>
             <p className="text-lg font-medium text-[#5E6272]">
               to discuss your project specifications.
             </p>
@@ -392,10 +493,11 @@ const ContactPage = () => {
               </svg>
             </div>
             <h2 className="mt-6 font-semibold text-2xl">Visit Us</h2>
-            <p className="text-lg text-[#5E6272] mt-3">
-              You can directly call us at 
+            <p className="text-lg text-[#5E6272] mt-3">You can visit us in</p>
+            <p className="text-lg font-semibold ">
+              {" "}
+              7901 4th St N # 22518 St. Petersburg, FL 33702
             </p>
-            <p className="text-lg font-semibold ">+1 (347) 480-1903</p>
             <p className="text-lg text-[#5E6272]">
               {" "}
                to discuss your project specifications.
