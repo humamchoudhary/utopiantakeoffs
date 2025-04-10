@@ -4,11 +4,11 @@ import Image from "next/image";
 import Link from "next/link";
 const ServiceCard = ({ name, description, imagePath, link }) => (
   <div className="flex flex-col items-stretch bg-[#13151B] rounded-3xl overflow-hidden h-full transition-all duration-300 hover:ring-2 hover:ring-[#972A20] group">
-    <div className="relative h-80">
+    <div className="relative h-full rounded-xl  m-6 mb-2 overflow-hidden">
       <Image
         src={imagePath}
         alt={name}
-        className="h-80 object-cover w-full p-6 rounded-xl"
+        className="h-80 object-cover w-full "
         width={380}
         height={300}
       />

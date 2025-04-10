@@ -278,10 +278,10 @@ const EstimatingServices = () => {
               key={index}
               className={`${service.color} rounded-3xl w-full relative px-4 py-4 md:px-7 md:py-8 lg:w-[654px] flex-shrink-0 transition-all duration-300 hover:ring-2 hover:ring-[#972A20]`}
             >
-              <h3 className="text-[12px] md:text-2xl text-fg font-semibold mb-2">
-                {service.name}
+              <h3 className="text-[16px] md:text-2xl text-fg font-semibold mb-2">
+                {service.title}
               </h3>
-              <p className="text-[#5E6272] text-xs md:text-[18px] mt-3 md:mt-4 mr-4 leading-5 md:leading-9">
+              <p className="text-[#5E6272] text-sm md:text-[18px] mt-3 md:mt-4 mr-4 leading-5 md:leading-9">
                 {service.description}
               </p>
               <p className="text-[40px] md:text-7xl font-semibold absolute right-4 top-[8px] md:right-7 md:top-5 text-[#5E6272] opacity-20">
@@ -684,11 +684,11 @@ async function OurWork() {
               className="flex p-6 flex-col bg-[#26272D] gap-4 border-[#4E4E4E] border rounded-[24px]"
             >
               <div className="">
-                <p className="text-semibold text-[28px] md:text-2xl leading-[33.6px] text-[#FFFFFF] font-bold">
+                <p className="text-semibold text-[20px] md:text-2xl leading-[33.6px] text-[#FFFFFF] font-bold">
                   {item.title}
                 </p>
 
-                <p className="leading-5 md:leading-8 text-2xl md:text-xl text-[#A8A8A8] font-medium">
+                <p className="leading-5 md:leading-8 text-lg md:text-xl text-[#A8A8A8] font-medium">
                   {item.desc}
                 </p>
               </div>
@@ -746,7 +746,7 @@ async function OurWork() {
       <div className="text-center relative z-10 mt-20">
         <Link
           href="/sample"
-          className="bg-transparent border rounded-full text-[#FAFAFB] text-2xl leading-[normal] font-semibold py-4 px-6 gap-2 inline-flex items-center"
+          className="bg-transparent border rounded-full text-[#FAFAFB] text-md leading-[normal] font-semibold py-4 px-6 gap-2 inline-flex items-center"
         >
           View All Samples
           <svg

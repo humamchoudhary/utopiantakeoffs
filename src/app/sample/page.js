@@ -217,11 +217,11 @@ export default async function Sample() {
                 className="flex p-[18px] md:p-7 flex-col bg-[#1F212A] gap-4 border-[#4E4E4E] border rounded-[20px] md:rounded-[24px]"
               >
                 <div className="">
-                  <p className=" text-base md:text-[28px] text-[#fff] font-semibold">
+                  <p className=" text-md md:text-2xl text-[#fff] font-semibold">
                     {item.title}
                   </p>
 
-                  <p className="leading-5 mt-2 md:leading-8 text-sm md:text-2xl text-[#A8A8A8] font-medium">
+                  <p className="leading-5 mt-2 md:leading-8 text-sm md:text-xl text-[#A8A8A8] font-medium">
                     {item.desc}
                   </p>
                 </div>
@@ -229,17 +229,17 @@ export default async function Sample() {
                   <Link
                     target="_blank"
                     href={item.pdf}
-                    className="flex items-center text-xl font-semibold bg-[#1F212A] hover:bg-gray-500 border border-[#fff] text-white py-[10px] px-6 rounded-full"
+                    className="flex items-center text-lg font-semibold bg-[#1F212A] hover:bg-gray-500 border border-[#fff] text-white py-2 px-6 rounded-full"
                   >
-                    <Download size={20} className="mr-1" />
+                    <Download size={16} className="mr-1" />
                     .pdf
                   </Link>
                   <Link
                     target="_blank"
                     href={item.xlsx}
-                    className="flex items-center text-xl font-semibold bg-[#531712] text-white py-[10px] px-6 rounded-full"
+                    className="flex items-center text-lg font-semibold bg-[#531712] text-white py-2 px-6 rounded-full"
                   >
-                    <Download size={20} className="mr-1" />
+                    <Download size={16} className="mr-1" />
                     .xsl
                   </Link>
                 </div>
